@@ -10,7 +10,7 @@ export function Contact({ onOpenForm }: { onOpenForm: () => void }) {
   return (
     <>
       {/* ── World Presence Map ───────────────────────── */}
-      <section style={{ backgroundColor: "#0C1A0D" }}>
+      <section style={{ backgroundColor: "#023306" }}>
         <div className="max-w-7xl mx-auto px-6">
           {/* Section label */}
           <motion.div
@@ -27,7 +27,7 @@ export function Contact({ onOpenForm }: { onOpenForm: () => void }) {
                   fontStyle: "italic",
                   fontWeight: 400,
                   fontSize: "clamp(2rem, 3.5vw, 3rem)",
-                  color: "#178B4C",
+                  color: "#e6eeea",
                   lineHeight: 1,
                 }}
               >
@@ -35,25 +35,25 @@ export function Contact({ onOpenForm }: { onOpenForm: () => void }) {
               </span>
               <span
                 style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontWeight: 600,
-                  fontSize: "14px",
-                  letterSpacing: "0.22em",
-                  textTransform: "uppercase",
+                  fontFamily: "'Playfair Display', Georgia, serif",
+                  fontStyle: "italic",
+                  fontWeight: 400,
+                  fontSize: "clamp(2rem, 3.5vw, 3rem)",
                   color: "#A0780E",
-                  paddingBottom: "5px",
+                  lineHeight: 1,
                 }}
               >
-                Presence
+                presence
               </span>
+              
             </div>
             <p
               className="max-w-sm"
               style={{
                 fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 300,
+                fontWeight: 500,
                 fontSize: "0.9rem",
-                color: "rgba(245,240,232,0.45)",
+                color: "rgba(245,240,232,0.95)",
                 lineHeight: 1.7,
               }}
             >
@@ -68,7 +68,10 @@ export function Contact({ onOpenForm }: { onOpenForm: () => void }) {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.2 }}
           className="relative w-full overflow-hidden"
-          style={{ backgroundColor: "#0C1A0D" }}
+          style={{
+    backgroundColor: "#023306",
+    paddingBottom: "40px", // Add space below the image
+  }}
         >
           <img
             src={worldMap}
@@ -157,49 +160,53 @@ export function Contact({ onOpenForm }: { onOpenForm: () => void }) {
             >
               {/* Label */}
               <div className="flex items-end gap-4 mb-8">
-                <span
-                  style={{
-                    fontFamily: "'Playfair Display', Georgia, serif",
-                    fontStyle: "italic",
-                    fontWeight: 400,
-                    fontSize: "clamp(2rem, 3.5vw, 3rem)",
-                    color: "#0D8239",
-                    lineHeight: 1,
-                  }}
-                >
-                  Connect
-                </span>
-                <span
-                  style={{
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontWeight: 600,
-                    fontSize: "14px",
-                    letterSpacing: "0.22em",
-                    textTransform: "uppercase",
-                    color: "#A0780E",
-                    paddingBottom: "5px",
-                  }}
-                >
-                  With Us
-                </span>
+                 <span
+              style={{
+                fontFamily: "'Playfair Display', Georgia, serif",
+                fontStyle: "italic",
+                fontWeight: 400,
+                fontSize: "clamp(2.2rem, 3.5vw, 3.5rem)",
+                color: "#0D8239",
+                lineHeight: 1,
+              }}
+            >
+              Connect
+            </span>
+
+               <span
+              style={{
+                fontFamily: "'Playfair Display', Georgia, serif",
+                fontStyle: "italic",
+                fontWeight: 400,
+                fontSize: "clamp(2.2rem, 3.5vw, 3rem)",
+                color: "#A0780E",
+                lineHeight: 1,
+              }}
+            >
+               with Us
+            </span>
               </div>
 
               <h2
-                className="mb-6"
-                style={{
-                  fontFamily: "'Playfair Display', Georgia, serif",
-                  fontWeight: 700,
-                  fontSize: "clamp(2.4rem, 5vw, 4rem)",
-                  color: "#0C1A0D",
-                  lineHeight: 1.1,
-                }}
-              >
-                Ready to Turn Your
-                <br />
-                <em style={{ color: "#0D8239", fontStyle: "italic" }}>
-                  Waste into Value?
-                </em>
-              </h2>
+  className="mb-6"
+  style={{
+    fontFamily: "'Playfair Display', Georgia, serif",
+    fontWeight: 700,
+    fontSize: "clamp(2.4rem, 5vw, 2.7rem)",
+    color: "#0C1A0D",
+    lineHeight: 1.1,
+  }}
+>
+  Ready to Turn Your
+  <br />
+  <span
+    style={{
+      color: "#0D8239",
+    }}
+  >
+    Waste into Value?
+  </span>
+</h2>
 
               <p
                 className="mb-10 max-w-xl"

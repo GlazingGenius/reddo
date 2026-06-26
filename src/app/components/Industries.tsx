@@ -88,26 +88,28 @@ export function Industries() {
                 fontFamily: "'Playfair Display', Georgia, serif",
                 fontStyle: "italic",
                 fontWeight: 400,
-                fontSize: "clamp(2.2rem, 3.5vw, 3rem)",
+                fontSize: "clamp(2.2rem, 3.5vw, 3.5rem)",
                 color: "#0D8239",
                 lineHeight: 1,
               }}
             >
               Industries
             </span>
-            <span
+
+               <span
               style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 600,
-                fontSize: "14px",
-                letterSpacing: "0.22em",
-                textTransform: "uppercase",
+                fontFamily: "'Playfair Display', Georgia, serif",
+                fontStyle: "italic",
+                fontWeight: 400,
+                fontSize: "clamp(2.2rem, 3.5vw, 3rem)",
                 color: "#A0780E",
-                paddingBottom: "5px",
+                lineHeight: 1,
               }}
             >
-              We Serve
+               We Serve
             </span>
+            
+            
           </div>
           <h2
             className="hidden md:block"

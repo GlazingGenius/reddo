@@ -119,7 +119,7 @@ export function Clients() {
   return (
     <section
       ref={ref}
-      style={{ backgroundColor: "#0C1A0D" }}
+      style={{ backgroundColor: "rgb(2, 53, 5)" }}
       className="overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6">
@@ -131,27 +131,32 @@ export function Clients() {
           className="pt-20 pb-12 flex flex-col sm:flex-row sm:items-end justify-between gap-5"
         >
           <div className="flex items-end gap-4">
-            <span style={{
-              fontFamily: "'Playfair Display', Georgia, serif",
-              fontStyle: "italic",
-              fontWeight: 400,
-              fontSize: "clamp(2rem, 3.5vw, 3rem)",
-              color: "#178B4C",
-              lineHeight: 1,
-            }}>
-              Trusted
-            </span>
-            <span style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontWeight: 600,
-              fontSize: "14px",
-              letterSpacing: "0.22em",
-              textTransform: "uppercase",
-              color: "#A0780E",
-              paddingBottom: "5px",
-            }}>
-              Clients & Partners
-            </span>
+            
+            <span
+                style={{
+                  fontFamily: "'Playfair Display', Georgia, serif",
+                  fontStyle: "italic",
+                  fontWeight: 400,
+                  fontSize: "clamp(2rem, 3.5vw, 3rem)",
+                  color: "#e6eeea",
+                  lineHeight: 1,
+                }}
+              >
+                Trusted
+              </span>
+              <span
+                style={{
+                  fontFamily: "'Playfair Display', Georgia, serif",
+                  fontStyle: "italic",
+                  fontWeight: 400,
+                  fontSize: "clamp(2rem, 3.5vw, 3rem)",
+                  color: "#A0780E",
+                  lineHeight: 1,
+                }}
+              >
+                Clients & Partners
+              </span>
+            
           </div>
 
           {/* Arrow controls */}
@@ -249,7 +254,7 @@ export function Clients() {
           fontFamily: "'DM Mono', monospace",
           fontSize: "11px",
           letterSpacing: "0.16em",
-          color: "rgba(245,240,232,0.7)",
+          color: "rgba(249, 248, 246, 0.7)",
           textTransform: "uppercase",
         }}>
           Among 7,000+ clients worldwide · 20 countries · CE Certified
@@ -260,10 +265,10 @@ export function Clients() {
           fontFamily: "'DM Mono', monospace",
           fontSize: "11px",
           letterSpacing: "0.16em",
-          color: "#178B4C",
+          color: "#e6ede9",
           textTransform: "uppercase",
         }}>
-          Click to pause · Resumes in 2s
+          Delivering Excellence Across Industries
         </span>
       </motion.div>
     </section>

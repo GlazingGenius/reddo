@@ -1,7 +1,10 @@
 import { motion } from "motion/react";
 import { ArrowRight, ArrowDown } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import heroBg from "../../imports/image-10.png";
+//import heroBg from "../../imports/image-10.png";
+import heroDesktop from "../../imports/hero-desktop.png";
+import heroMobile from "../../imports/hero-mobile.png";
+
 
 export function Hero({ onOpenForm }: { onOpenForm: () => void }) {
   return (
@@ -10,30 +13,39 @@ export function Hero({ onOpenForm }: { onOpenForm: () => void }) {
       className="relative min-h-screen flex flex-col overflow-hidden"
     >
       {/* Full-bleed background image */}
-      <div className="absolute inset-0 overflow-hidden">
-        <img
-          src={heroBg}
-          alt="Forest meeting organic waste — nature and sustainability"
-          className="absolute inset-0 w-full h-full"
-          style={{
-            objectFit: "cover",
-            objectPosition: "65% top",
-            minWidth: "100%",
-            minHeight: "100%",
-          }}
-        />
-        <div
-          className="absolute inset-0"
-          style={{ backgroundColor: "rgba(11,31,16,0.60)" }}
-        />
-      </div>
+    {/* Full-bleed background image */}
+<div className="absolute inset-0 overflow-hidden">
+  <picture>
+    <source
+      media="(max-width: 767px)"
+      srcSet={heroMobile}
+    />
+
+    <img
+      src={heroDesktop}
+      alt="Forest meeting organic waste — nature and sustainability"
+      className="absolute inset-0 w-full h-full object-cover"
+    />
+  </picture>
+</div>
+
+
+
+{/* Overlay */}
+<div
+  className="absolute inset-0"
+  style={{
+    backgroundColor: "rgba(11,31,16,0.60)",
+  }}
+/>
+
 
       {/* Thin top accent line */}
       <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ backgroundColor: "#A0780E" }} />
 
       {/* Main content */}
-      <div className="relative flex-1 max-w-7xl mx-auto w-full px-6 pt-28 sm:pt-44 pb-16 sm:pb-28 flex items-center">
-        <div className="max-w-2xl">
+      <div className="relative flex-1 max-w-7xl mx-auto w-full px-6 pt-[12rem] sm:pt-[16rem] pb-16 sm:pb-28 flex items-center">
+        <div className="max-w-6xl">
 
           {/* Eyebrow */}
           <motion.div
@@ -42,48 +54,37 @@ export function Hero({ onOpenForm }: { onOpenForm: () => void }) {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="flex items-center gap-3 mb-8"
           >
-            <span className="w-8 h-px" style={{ backgroundColor: "#A0780E" }} />
-            <span
-              className="text-[10.5px] tracking-[0.2em] uppercase"
-              style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 500,
-                color: "#A0780E",
-              }}
-            >
-              Sustainable Waste Management
-            </span>
+            
           </motion.div>
 
           {/* Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
-            className="mb-8 leading-[1.08]"
-            style={{
-              fontFamily: "'Playfair Display', Georgia, serif",
-              fontWeight: 700,
-              fontSize: "clamp(2.8rem, 6vw, 5rem)",
-              color: "#F5F0E8",
-            }}
-          >
-            A Waste System
-            <br />
-            That{" "}
-            <em style={{ fontStyle: "italic", color: "#178B4C" }}>
-              Gives Back
-            </em>
-            <br />
-            to Nature
-          </motion.h1>
+         <motion.h1
+  initial={{ opacity: 0, y: 24 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+  className="mb-8 leading-[1.08]"
+  style={{
+    fontFamily: "'Playfair Display', Georgia, serif",
+    fontWeight: 700,
+    fontSize: "clamp(2.4rem, 5vw, 4.4rem)",
+    color: "#F5F0E8",
+  }}
+>
+  A Waste Management System
+  <br />
+  That{" "}
+  <em style={{ fontStyle: "italic", color: "#178B4C" }}>
+    Gives Back
+  </em>{" "}
+  to Nature
+</motion.h1>
 
           {/* Body */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
-            className="mb-10 leading-relaxed max-w-lg"
+            className="mb-10 leading-relaxed max-w-3xl"
             style={{
               fontFamily: "'DM Sans', sans-serif",
               fontWeight: 300,

@@ -36,46 +36,46 @@ export function About() {
           >
             About
           </span>
-          <span
+
+           <span
             style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontWeight: 600,
-              fontSize: "14px",
-              letterSpacing: "0.22em",
-              textTransform: "uppercase",
+              fontFamily: "'Playfair Display', Georgia, serif",
+              fontStyle: "italic",
+              fontWeight: 400,
+              fontSize: "clamp(2.2rem, 3.5vw, 3rem)",
               color: "#A0780E",
-              paddingBottom: "5px",
+              lineHeight: 1,
             }}
           >
             Reddonatura
           </span>
+          
         </motion.div>
 
         {/* Main content grid */}
-        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-16 xl:gap-28 pb-28 items-start">
+        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-14 xl:gap-24 pb-24 items-start">
           {/* Left — editorial content */}
           <div>
             <motion.h2
-              initial={{ opacity: 0, y: 24 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.7, delay: 0.1 }}
-              className="mb-8"
-              style={{
-                fontFamily: "'Playfair Display', Georgia, serif",
-                fontWeight: 700,
-                fontSize: "clamp(2rem, 3.5vw, 3rem)",
-                color: "#0C1A0D",
-                lineHeight: 1.15,
-              }}
-            >
-              Leading the World{" "}
-              <em style={{ fontStyle: "italic", color: "#0D8239" }}>
-                Toward
-              </em>{" "}
-              <br />
-              a Greener Tomorrow
-            </motion.h2>
-
+  initial={{ opacity: 0, y: 20 }}
+  animate={inView ? { opacity: 1, y: 0 } : {}}
+  transition={{ duration: 0.7, delay: 0.1 }}
+  className="mb-6"
+  style={{
+    fontFamily: "'Playfair Display', Georgia, serif",
+    fontWeight: 600,
+    fontSize: "clamp(1.8rem, 3vw, 2.2rem)", // slightly smaller
+    color: "#0C1A0D",
+    lineHeight: 1.2,
+  }}
+>
+  Leading the World{" "}
+  <span style={{ color: "#0D8239" }}>
+    Toward
+  </span>
+  <br />
+  a Greener Tomorrow
+</motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
