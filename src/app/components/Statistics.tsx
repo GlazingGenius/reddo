@@ -5,6 +5,7 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 import bgVideo from "../../imports/Reddonatura_presentation_2026.pptx-3.MP4";
 
 
+
 function CountUp({
   end,
   inView,
@@ -131,7 +132,7 @@ export function Statistics() {
               fontFamily: "'DM Sans', sans-serif",
               fontWeight: 300,
               fontSize: "1rem",
-              color: "rgba(245,240,232,0.55)",
+              color: "rgba(245,240,232,0.80)",
             }}
           >
             A high-performing team delivering sustainable waste management solutions at scale.
@@ -182,7 +183,7 @@ export function Statistics() {
                   fontFamily: "'DM Sans', sans-serif",
                   fontWeight: 300,
                   fontSize: "0.875rem",
-                  color: "rgba(245,240,232,0.45)",
+                  color: "rgba(245,240,232,0.85)",
                   lineHeight: 1.6,
                 }}
               >
@@ -193,5 +194,218 @@ export function Statistics() {
         </div>
       </div>
     </section>
+  );
+}
+
+
+export function VisionMission() {
+  const { ref, inView } = useInView();
+
+  return (
+    <section className="px-6 lg:px-8 my-8">
+      <div
+        ref={ref}
+        className="relative overflow-hidden rounded-3xl"
+        style={{ backgroundColor: "#053114" }}
+      >
+       <div className="max-w-6xl mx-auto px-3 pt-8 pb-10">
+
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-10"
+        >
+         <div className="flex justify-center items-end gap-4 mb-3">
+            <span
+              style={{
+                fontFamily: "'Playfair Display', Georgia, serif",
+                fontStyle: "italic",
+                fontWeight: 400,
+                fontSize: "clamp(2.2rem, 3.5vw, 3rem)",
+                color: "#178B4C",
+                lineHeight: 1,
+              }}
+            >
+              Our
+            </span>
+
+            <span
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 600,
+                fontSize: "14px",
+                letterSpacing: "0.22em",
+                textTransform: "uppercase",
+                color: "#A0780E",
+                paddingBottom: "5px",
+              }}
+            >
+              PURPOSE
+            </span>
+          </div>
+
+          <h2
+            style={{
+              fontFamily: "'Playfair Display', Georgia, serif",
+              fontWeight: 700,
+              fontSize: "clamp(2rem,4vw,3.2rem)",
+              color: "#F5F0E8",
+              lineHeight: 1.15,
+            }}
+          >
+            Vision & Mission
+          </h2>
+
+          <p
+            className="mt-4 max-w-2xl mx-auto"
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 300,
+              fontSize: "1rem",
+              color: "rgba(245,240,232,0.90)",
+              lineHeight: 1.7,
+            }}
+          >
+            Driving sustainable waste management through innovation,
+            resource recovery, and environmental responsibility.
+          </p>
+        </motion.div>
+
+        {/* Cards */}
+        <div className="grid lg:grid-cols-2 gap-10">
+
+          {/* Vision */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6 }}
+            className="rounded-3xl border border-white/10 p-10 backdrop-blur-sm"
+            style={{
+              background: "rgba(255,255,255,0.03)",
+            }}
+          >
+            <div
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                color: "#A0780E",
+                letterSpacing: "0.18em",
+                fontSize: "12px",
+                fontWeight: 600,
+                textTransform: "uppercase",
+              }}
+            >
+              OUR VISION
+            </div>
+
+            <h3
+              className="mt-4 mb-6"
+              style={{
+                fontFamily: "'Playfair Display', Georgia, serif",
+                color: "#178B4C",
+                fontWeight: 700,
+                fontSize: "2rem",
+              }}
+            >
+              Creating Cleaner Cities Through Resource Recovery
+            </h3>
+
+            <p
+              style={{
+                color: "rgba(245,240,232,0.92)",
+                fontFamily: "'DM Sans', sans-serif",
+                lineHeight: 1.8,
+                marginBottom: "24px",
+              }}
+            >
+              Our vision is to empower municipalities and industries with
+              innovative waste management solutions that transform waste into
+              valuable resources while creating cleaner, healthier communities.
+            </p>
+
+            <ul
+              className="space-y-4"
+              style={{
+                color: "#F5F0E8",
+                fontFamily: "'DM Sans', sans-serif",
+              }}
+            >
+              <li>✓ Reduce landfill dependency</li>
+              <li>✓ Recover valuable resources from waste</li>
+              <li>✓ Strengthen compliance with evolving regulations</li>
+              <li>✓ Improve operational efficiency</li>
+              <li>✓ Create sustainable circular economy outcomes</li>
+            </ul>
+          </motion.div>
+
+          {/* Mission */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="rounded-3xl border border-white/10 p-10 backdrop-blur-sm"
+            style={{
+              background: "rgba(255,255,255,0.03)",
+            }}
+          >
+            <div
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                color: "#A0780E",
+                letterSpacing: "0.18em",
+                fontSize: "12px",
+                fontWeight: 600,
+                textTransform: "uppercase",
+              }}
+            >
+              OUR MISSION
+            </div>
+
+            <h3
+              className="mt-4 mb-6"
+              style={{
+                fontFamily: "'Playfair Display', Georgia, serif",
+                color: "#178B4C",
+                fontWeight: 700,
+                fontSize: "2rem",
+              }}
+            >
+              Delivering Sustainable Waste Management Solutions
+            </h3>
+
+            <p
+              style={{
+                color: "rgba(245,240,232,0.92)",
+                fontFamily: "'DM Sans', sans-serif",
+                lineHeight: 1.8,
+                marginBottom: "24px",
+              }}
+            >
+              Our mission is to design and deliver reliable, high-performance
+              organic waste recycling systems that help organizations reduce
+              environmental impact while maximizing operational value.
+            </p>
+
+            <ul
+              className="space-y-4"
+              style={{
+                color: "#F5F0E8",
+                fontFamily: "'DM Sans', sans-serif",
+              }}
+            >
+              <li>✓ Convert organic waste into useful resources</li>
+              <li>✓ Promote environmentally responsible practices</li>
+              <li>✓ Deliver innovative and energy-efficient technologies</li>
+              <li>✓ Support clients with reliable service and expertise</li>
+              <li>✓ Build a cleaner and more sustainable future together</li>
+            </ul>
+          </motion.div>
+</div>
+        </div>
+      </div>
+      
+    </section>
+    
   );
 }

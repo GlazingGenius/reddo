@@ -4,11 +4,12 @@ import { Hero } from "./components/Hero";
 import { About } from "./components/About";
 import { Clients } from "./components/Clients";
 import { Products } from "./components/Products";
-import { Statistics } from "./components/Statistics";
+import { Statistics, VisionMission } from "./components/Statistics";
 import { Industries } from "./components/Industries";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { LeadFormModal } from "./components/LeadFormModal";
+
 
 export default function App() {
   const [formOpen, setFormOpen] = useState(false);
@@ -35,8 +36,16 @@ export default function App() {
         <About />
         <Clients />
         <Products />
-        <Statistics />
-        <Industries />
+
+<Statistics />
+
+<div className="h-16"></div>
+
+<VisionMission />
+
+<div className="h-2"></div>
+
+<Industries />
         <Contact onOpenForm={() => setFormOpen(true)} />
       </main>
       <Footer />

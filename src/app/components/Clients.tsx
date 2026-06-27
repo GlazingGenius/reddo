@@ -132,30 +132,35 @@ export function Clients() {
         >
           <div className="flex items-end gap-4">
             
-            <span
-                style={{
-                  fontFamily: "'Playfair Display', Georgia, serif",
-                  fontStyle: "italic",
-                  fontWeight: 400,
-                  fontSize: "clamp(2rem, 3.5vw, 3rem)",
-                  color: "#e6eeea",
-                  lineHeight: 1,
-                }}
-              >
-                Trusted
-              </span>
-              <span
-                style={{
-                  fontFamily: "'Playfair Display', Georgia, serif",
-                  fontStyle: "italic",
-                  fontWeight: 400,
-                  fontSize: "clamp(2rem, 3.5vw, 3rem)",
-                  color: "#A0780E",
-                  lineHeight: 1,
-                }}
-              >
-                Clients & Partners
-              </span>
+           
+              <div className="text-center">
+  <span
+    style={{
+      fontFamily: "'Playfair Display', Georgia, serif",
+      fontStyle: "italic",
+      fontWeight: 400,
+      fontSize: "clamp(2rem, 3.5vw, 3rem)",
+      color: "#e6eeea",
+      lineHeight: 1,
+    }}
+  >
+    Trusted
+  </span>{" "}
+
+  <span
+    style={{
+      fontFamily: "'Playfair Display', Georgia, serif",
+      fontStyle: "italic",
+      fontWeight: 400,
+      fontSize: "clamp(2rem, 3.5vw, 3rem)",
+      color: "#A0780E",
+      lineHeight: 1,
+    }}
+  >
+    Clients &<br className="sm:hidden" />
+    <span className="sm:inline block">Partners</span>
+  </span>
+</div>
             
           </div>
 
