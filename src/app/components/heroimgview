@@ -1,7 +1,9 @@
 import { motion } from "motion/react";
 import { ArrowRight, ArrowDown } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import heroVideo from "../../imports/Reddonatura_presentation_2026.pptx-3.MP4";
+//import heroBg from "../../imports/image-10.png";
+import heroDesktop from "../../imports/hero-desktop.png";
+import heroMobile from "../../imports/hero-mobile.png";
 
 
 export function Hero({ onOpenForm }: { onOpenForm: () => void }) {
@@ -13,19 +15,18 @@ export function Hero({ onOpenForm }: { onOpenForm: () => void }) {
       {/* Full-bleed background image */}
     {/* Full-bleed background image */}
 <div className="absolute inset-0 overflow-hidden">
-  <video
-    autoPlay
-    muted
-    loop
-    playsInline
-    preload="auto"
-    className="absolute inset-0 w-full h-full object-cover"
-    style={{
-      objectPosition: "center center",
-    }}
-  >
-    <source src={heroVideo} type="video/mp4" />
-  </video>
+  <picture>
+    <source
+      media="(max-width: 767px)"
+      srcSet={heroMobile}
+    />
+
+    <img
+      src={heroDesktop}
+      alt="Forest meeting organic waste — nature and sustainability"
+      className="absolute inset-0 w-full h-full object-cover"
+    />
+  </picture>
 </div>
 
 
@@ -33,22 +34,18 @@ export function Hero({ onOpenForm }: { onOpenForm: () => void }) {
 {/* Overlay */}
 <div
   className="absolute inset-0"
-  style={{backgroundColor: "rgba(11,31,16,0.30)",
+  style={{
+    backgroundColor: "rgba(11,31,16,0.60)",
   }}
 />
-<video
-  className="absolute inset-0 w-full h-full object-cover"
-  style={{
-    filter: "brightness(1.08) contrast(1.08) saturate(1.15)",
-  }}
-></video>
+
 
       {/* Thin top accent line */}
       <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ backgroundColor: "#A0780E" }} />
 
       {/* Main content */}
-      <div className="relative flex-1 max-w-7xl mx-auto w-full px-6 pt-[14rem] sm:pt-[18rem] pb-16 sm:pb-20 flex items-center">
-                <div className="max-w-6xl">
+      <div className="relative flex-1 max-w-7xl mx-auto w-full px-6 pt-[12rem] sm:pt-[16rem] pb-16 sm:pb-28 flex items-center">
+        <div className="max-w-6xl">
 
           {/* Eyebrow */}
           <motion.div
@@ -75,11 +72,11 @@ export function Hero({ onOpenForm }: { onOpenForm: () => void }) {
 >
   A Waste Management System
   <br />
-  That Gives Back{" "}
-  
-   Nature
-  
-  
+  That{" "}
+  <em style={{ fontStyle: "italic", color: "#178B4C" }}>
+    Gives Back
+  </em>{" "}
+  to Nature
 </motion.h1>
 
           {/* Body */}
@@ -92,7 +89,7 @@ export function Hero({ onOpenForm }: { onOpenForm: () => void }) {
               fontFamily: "'DM Sans', sans-serif",
               fontWeight: 300,
               fontSize: "1.05rem",
-             color: "rgba(255,255,255,0.88)",
+              color: "rgba(245,240,232,0.65)",
             }}
           >
             A globally recognised leader in food waste management,
@@ -120,18 +117,18 @@ export function Hero({ onOpenForm }: { onOpenForm: () => void }) {
               Get a Quote
               <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" />
             </button>
-           <a
-  href="#about"
-  className="inline-flex items-center gap-3 px-7 py-3.5 text-[11.5px] tracking-[0.12em] uppercase transition-all duration-200 hover:bg-white hover:text-[#0D8239]"
-  style={{
-    fontFamily: "'DM Sans', sans-serif",
-    fontWeight: 500,
-    border: "1.5px solid #FFFFFF",
-    color: "#FFFFFF",
-  }}
->
-  Learn More
-</a>
+            <a
+              href="#about"
+              className="inline-flex items-center gap-3 px-7 py-3.5 text-[11.5px] tracking-[0.12em] uppercase transition-all duration-200"
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 500,
+                border: "1px solid rgba(245,240,232,0.25)",
+                color: "rgba(245,240,232,0.8)",
+              }}
+            >
+              Learn More
+            </a>
           </motion.div>
 
           {/* Stat row */}
@@ -186,7 +183,27 @@ export function Hero({ onOpenForm }: { onOpenForm: () => void }) {
         </div>
       </div>
 
-      
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+      >
+        <span
+          className="text-[9px] tracking-[0.22em] uppercase"
+          style={{
+            fontFamily: "'DM Mono', monospace",
+            color: "rgba(245,240,232,0.3)",
+          }}
+        >
+          Scroll
+        </span>
+        <ArrowDown
+          className="w-3.5 h-3.5 animate-bounce"
+          style={{ color: "rgba(245,240,232,0.3)" }}
+        />
+      </motion.div>
     </section>
   );
 }

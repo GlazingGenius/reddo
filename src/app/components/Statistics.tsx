@@ -303,7 +303,7 @@ export function VisionMission() {
               className="mt-4 mb-6"
               style={{
                 fontFamily: "'Playfair Display', Georgia, serif",
-                color: "#178B4C",
+                color: "#F5F0E8",
                 fontWeight: 700,
                 fontSize: "2rem",
               }}
@@ -366,7 +366,7 @@ export function VisionMission() {
               className="mt-4 mb-6"
               style={{
                 fontFamily: "'Playfair Display', Georgia, serif",
-                color: "#178B4C",
+                color: "#F5F0E8",
                 fontWeight: 700,
                 fontSize: "2rem",
               }}
