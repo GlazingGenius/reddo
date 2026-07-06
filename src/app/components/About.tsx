@@ -1,8 +1,11 @@
 import { motion } from "motion/react";
 import { useInView } from "./hooks/useInView";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
-import aboutImg from "../../imports/WhatsApp_Image_2026-06-22_at_5.48.15_PM.jpeg";
+//import { ArrowRight, CheckCircle2 } from "lucide-react";
+import aboutImg from "../../imports/aboutimg.jpeg";
+import { ArrowRight, CheckCircle2, Leaf } from "lucide-react";
+import { Link } from "react-router-dom";
+
 
 const credentials = [
   "CE Certified machinery across all product lines",
@@ -18,39 +21,71 @@ export function About() {
     <section id="about" ref={ref} className="bg-[#F5F4EF] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section label */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.55 }}
-          className="pt-24 pb-14 flex items-end gap-4"
-        >
-          <span
-            style={{
-              fontFamily: "'Playfair Display', Georgia, serif",
-              fontStyle: "italic",
-              fontWeight: 400,
-              fontSize: "clamp(2.2rem, 3.5vw, 3rem)",
-              color: "#0D8239",
-              lineHeight: 1,
-            }}
-          >
-            About
-          </span>
+       <motion.div
+  initial={{ opacity: 0, y: 16 }}
+  animate={inView ? { opacity: 1, y: 0 } : {}}
+  transition={{ duration: 0.55 }}
+  className="pt-24 pb-10"
+>
+  {/* Title */}
+  <div className="flex items-end gap-3">
+    <span
+      style={{
+        fontFamily: "'Cormorant Garamond', serif",
+       
+        fontWeight: 400,
+        fontSize: "clamp(2.4rem, 3.8vw, 3.3rem)",
+        color: "#0D8239",
+        lineHeight: 1,
+        letterSpacing: "-0.02em",
+      }}
+    >
+      About
+    </span>
 
-           <span
-            style={{
-              fontFamily: "'Playfair Display', Georgia, serif",
-              fontStyle: "italic",
-              fontWeight: 400,
-              fontSize: "clamp(2.2rem, 3.5vw, 3rem)",
-              color: "#A0780E",
-              lineHeight: 1,
-            }}
-          >
-            Reddonatura
-          </span>
-          
-        </motion.div>
+    <span
+      style={{
+        fontFamily: "'Cormorant Garamond', serif",
+        
+        fontWeight: 400,
+        fontSize: "clamp(2.4rem, 3.8vw, 3.3rem)",
+        color: "#A0780E",
+        lineHeight: 1,
+        letterSpacing: "-0.02em",
+      }}
+    >
+      Reddonatura
+    </span>
+  </div>
+
+  {/* Decorative Divider */}
+  <div className="flex items-center gap-3 mt-5 w-fit">
+    <div
+      className="h-[1.5px] rounded-full"
+      style={{
+        width: "85px",
+        backgroundColor: "#0D8239",
+      }}
+    />
+
+    <Leaf
+      size={16}
+      strokeWidth={1.8}
+      style={{
+        color: "#0D8239",
+        transform: "rotate(-20deg)",
+      }}
+    />
+
+    <div
+      className="h-[1.5px] rounded-full"
+      style={{
+        width: "85px",
+        backgroundColor: "#0D8239",
+      }}
+    />
+  </div>
+</motion.div>
 
         {/* Main content grid */}
         <div className="grid lg:grid-cols-[1fr_1.2fr] gap-14 xl:gap-24 pb-24 items-start">
@@ -63,7 +98,7 @@ export function About() {
   className="mb-6"
   style={{
     fontFamily: "'Playfair Display', Georgia, serif",
-    fontWeight: 600,
+    fontWeight: 550,
     fontSize: "clamp(1.8rem, 3vw, 2.2rem)", // slightly smaller
     color: "#0C1A0D",
     lineHeight: 1.2,
@@ -138,21 +173,18 @@ export function About() {
             </motion.div>
 
             <motion.a
-              initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1 } : {}}
-              transition={{ duration: 0.5, delay: 0.55 }}
-              href="#contact"
-              className="group inline-flex items-center gap-3 text-[11.5px] tracking-[0.12em] uppercase pb-0.5 transition-all duration-200"
-              style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 500,
-                color: "#0D8239",
-                borderBottom: "1.5px solid #0D8239",
-              }}
-            >
-              Work With Us
-              <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" />
-            </motion.a>
+  initial={{ opacity: 0 }}
+  animate={inView ? { opacity: 1 } : {}}
+  transition={{ duration: 0.5, delay: 0.55 }}
+  href="#contact"
+  className="group inline-flex items-center gap-3 text-[11.5px] tracking-[0.12em] uppercase pb-0.5 transition-all duration-200"
+  style={{
+    fontFamily: "'DM Sans', sans-serif",
+    fontWeight: 500,
+    color: "#0D8239",
+    borderBottom: "1.5px solid #0D8239",
+  }}
+></motion.a>
           </div>
 
           {/* Right — image composition */}
@@ -163,7 +195,7 @@ export function About() {
             className="relative"
           >
             {/* Main image */}
-            <div className="relative overflow-hidden w-full" style={{ aspectRatio: "4/3" }}>
+            <div className="relative overflow-hidden w-full" style={{ aspectRatio: "4/3", boxShadow: "0 30px 60px rgba(5,49,20,0.18)" }}>
               <ImageWithFallback
                 src={aboutImg}
                 alt="Reddonatura G2G facility — Garbage to Green"
@@ -211,20 +243,9 @@ export function About() {
             </div>
 
             {/* Secondary small image */}
-            <div
-              className="absolute -top-6 -right-6 overflow-hidden hidden xl:block"
-              style={{ width: "140px", height: "140px" }}
-            >
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=300&h=300&fit=crop&auto=format"
-                alt="Solar energy"
-                className="w-full h-full object-cover"
-              />
-              <div
-                className="absolute inset-0"
-                style={{ backgroundColor: "rgba(13,130,57,0.25)" }}
-              />
-            </div>
+            
+              
+              
           </motion.div>
         </div>
       </div>

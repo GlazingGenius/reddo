@@ -17,17 +17,60 @@ import img4 from "../../imports/image-4.png";
 import img5 from "../../imports/image-5.png";
 import img6 from "../../imports/image-6.png";
 
+import heroVideo from "../../imports/Wetwastemanagement.webp";
+import Windrow from "../../imports/windrow2.png";
+import Biogas from "../../imports/image-2.png";
+import Solar from "../../imports/solar.jpeg";
+import Biomining from "../../imports/windrow1.png";
+import pyrolysis from "../../imports/pyrolysis.png";
+
+
+
 const machines = [
-  { label: "Composting & Digester", href: "/products/organic-waste-digester" },
-  { label: "Shredders",             href: "/products/shredders" },
-  { label: "De-Watering",           href: "/products/dewatering" },
-  { label: "Trommel Screen",        href: "/products/trommel-screens" },
+ 
+  {
+    label: "Wet Waste Management",
+    href: "/products/wet-waste",
+    img: heroVideo,
+    desc: "Organic waste management solutions",
+  },
+  {
+    label: "Windrow Composting",
+    href: "/products/windrow-compost",
+    img: Windrow,
+    desc: "Large-scale composting systems",
+  },
+  {
+    label: "Bio Mining",
+    href: "/products/biomining",
+    img: Biomining,
+    desc: "Legacy waste remediation",
+  },
+  {
+    label: "Pyrolysis",
+    href: "/products/pyrolysis",
+    img: pyrolysis,
+    desc: "Waste-to-fuel technology",
+  },
+
 ];
 
 const productGroups = [
-  { label: "RN - Machines",          href: null,                   children: machines },
-  { label: "RN - Biogas",            href: "/products/biogas",     children: null },
-  { label: "RN - Solar",             href: "/products/solar",      children: null },
+  {
+    label: "RN - Machines",
+    href: null,
+    children: machines,
+  },
+  {
+    label: "Biogas Solutions",
+    href: "/products/biogas",
+    children: null,
+  },
+  {
+    label: "Solar Solutions",
+    href: "/products/solar",
+    children: null,
+  },
 ];
 
 const navLinks = [
@@ -35,6 +78,7 @@ const navLinks = [
   { label: "Products",          href: null,        children: productGroups },
   { label: "Service",           href: "/service",  children: null },
   { label: "Clients & Partners",href: "/clients",  children: null },
+  { label: "FAQs",               href: "/faqs",     children: null },
   { label: "Contact Us",        href: "/contact",  children: null },
 ];
 
@@ -90,17 +134,39 @@ export function Header({ onOpenForm }: { onOpenForm?: () => void }) {
     >
       {/* Top strip */}
       <div className="hidden md:block" style={{ backgroundColor: "#053114" }}>
-        <div className="max-w-7xl mx-auto px-6 py-2 flex justify-end items-center gap-8">
+        <div className="max-w-7xl mx-auto px-6 py-2 flex justify-end items-center gap-6">
           <a href="tel:+917760987934"
-            className="flex items-center gap-1.5 hover:opacity-80 transition-opacity"
-            style={{ ...F, fontSize: "11px", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.75)" }}>
-            <Phone className="w-3 h-3" /> +91 77609 87934
+            className="group flex items-center gap-2 hover:opacity-95 transition-opacity"
+            style={{ ...F, fontSize: "11px", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.8)" }}>
+            <span
+              className="flex items-center justify-center rounded-full transition-all duration-200 group-hover:scale-110"
+              style={{
+                width: "20px",
+                height: "20px",
+                background: "linear-gradient(135deg, rgba(160,120,14,0.35), rgba(23,139,76,0.25))",
+                border: "1px solid rgba(160,120,14,0.5)",
+              }}
+            >
+              <Phone className="w-2.5 h-2.5" style={{ color: "#D9B65C" }} />
+            </span>
+            +91 77609 87934
           </a>
           <span className="w-px h-3 bg-white/20" />
           <a href="mailto:info@reddonatura.com"
-            className="flex items-center gap-1.5 hover:opacity-80 transition-opacity"
-            style={{ ...F, fontSize: "11px", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.75)" }}>
-            <Mail className="w-3 h-3" /> info@reddonatura.com
+            className="group flex items-center gap-2 hover:opacity-95 transition-opacity"
+            style={{ ...F, fontSize: "11px", letterSpacing: "0.02em", textTransform: "lowercase", color: "rgba(255,255,255,0.8)" }}>
+            <span
+              className="flex items-center justify-center rounded-full transition-all duration-200 group-hover:scale-110"
+              style={{
+                width: "20px",
+                height: "20px",
+                background: "linear-gradient(135deg, rgba(160,120,14,0.35), rgba(23,139,76,0.25))",
+                border: "1px solid rgba(160,120,14,0.5)",
+              }}
+            >
+              <Mail className="w-2.5 h-2.5" style={{ color: "#D9B65C" }} />
+            </span>
+            info@reddonatura.com
           </a>
         </div>
       </div>
@@ -121,8 +187,13 @@ export function Header({ onOpenForm }: { onOpenForm?: () => void }) {
                 <div key={link.label} className="relative">
                   <button
                     onClick={() => toggle(link.label)}
-                    className="flex items-center gap-1 px-3 py-2 transition-colors duration-150 hover:text-[#178B4C]"
-                    style={{ ...F, fontSize: "11.5px", letterSpacing: "0.08em", textTransform: "uppercase", color: activeMenu === link.label ? "#178B4C" : "#053114" }}>
+                    className="flex items-center gap-1 px-4 py-2 rounded-full border border-transparent transition-all duration-200 hover:border-[rgba(23,139,76,0.35)] hover:bg-[rgba(23,139,76,0.06)]"
+                    style={{
+                      ...F, fontSize: "11.5px", letterSpacing: "0.08em", textTransform: "uppercase",
+                      color: activeMenu === link.label ? "#178B4C" : "#053114",
+                      backgroundColor: activeMenu === link.label ? "rgba(23,139,76,0.06)" : undefined,
+                      borderColor: activeMenu === link.label ? "rgba(23,139,76,0.35)" : undefined,
+                    }}>
                     {link.label}
                     <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${activeMenu === link.label ? "rotate-180" : ""}`} />
                   </button>
@@ -130,12 +201,13 @@ export function Header({ onOpenForm }: { onOpenForm?: () => void }) {
                   {/* ── Mega-menu ── */}
                   {activeMenu === link.label && (
                     <div
-  className="fixed left-0 right-0 shadow-2xl z-50"
+  className="fixed left-0 right-0 z-50"
   style={{
     top: "100px", // increase to 105px or 110px if needed
     backgroundColor: "#ffffff",
     borderTop: "3px solid #178B4C",
     borderBottom: "1px solid rgba(5,49,20,0.08)",
+    boxShadow: "0 24px 48px rgba(5,49,20,0.14)",
   }}
 >
                       <div className="max-w-7xl mx-auto px-6 py-8">
@@ -149,13 +221,33 @@ export function Header({ onOpenForm }: { onOpenForm?: () => void }) {
                             </div>
                             <div className="grid grid-cols-2 gap-3">
                               {[
-                                { label: "Composting & Digester", href: "/products/organic-waste-digester", img: img1, desc: "CE certified OWC units" },
-                                { label: "Shredders", href: "/products/shredders", img: img5, desc: "Industrial waste shredding" },
-                                { label: "De-Watering", href: "/products/dewatering", img: img3, desc: "60–70% volume reduction" },
-                                { label: "Trommel Screen", href: "/products/trommel-screens", img: img6, desc: "Efficient waste sorting" },
-                              ].map(item => (
+  {
+    label: "Wet Waste Management",
+    href: "/products/wet-waste",
+    img: heroVideo,
+    desc: "Organic waste management solutions",
+  },
+  {
+    label: "Windrow Composting",
+    href: "/products/windrow-compost",
+    img: Windrow,
+    desc: "Large-scale composting systems",
+  },
+  {
+    label: "Bio Mining",
+    href: "/products/biomining",
+    img: Biomining,
+    desc: "Legacy waste remediation",
+  },
+  {
+    label: "Pyrolysis",
+    href: "/products/pyrolysis",
+    img: pyrolysis,
+    desc: "Waste-to-fuel technology",
+  },
+].map(item => (
                                 <Link key={item.href} to={item.href}
-                                  className="group flex items-center gap-3 p-3 transition-all duration-200 hover:bg-[#F5F4EF]"
+                                  className="group flex items-center gap-3 p-3 transition-all duration-200 hover:bg-[#F5F4EF] hover:-translate-y-0.5"
                                   style={{ border: "1px solid rgba(5,49,20,0.08)" }}>
                                   <div className="w-18 h-18 flex-shrink-0 overflow-hidden" style={{ border: "1px solid rgba(23,139,76,0.2)" }}>
                                     <img src={item.img} alt={item.label} className="w-full h-full object-cover" />
@@ -187,8 +279,8 @@ export function Header({ onOpenForm }: { onOpenForm?: () => void }) {
                             </div>
                             <div className="flex flex-col gap-3">
                               {[
-                                { label: "RN Biogas", href: "/products/biogas", img: img2, desc: "Convert waste to renewable biogas — up to 90% GHG reduction.", tag: "Energy Recovery" },
-                                { label: "RN Solar", href: "/products/solar", img: img4, desc: "High-efficiency solar systems for residential and commercial use.", tag: "Clean Energy" },
+                                { label: "RN Biogas", href: "/products/biogas", img:  Biogas, desc: "Convert waste to renewable biogas — up to 90% GHG reduction.", tag: "Energy Recovery" },
+                                { label: "RN Solar", href: "/products/solar", img: Solar, desc: "High-efficiency solar systems for residential and commercial use.", tag: "Clean Energy" },
                               ].map(item => (
                                 <Link key={item.href} to={item.href}
                                  className="group relative overflow-hidden flex gap-4 p-4 transition-all duration-200 hover:bg-[#F5F4EF]"
@@ -221,8 +313,8 @@ export function Header({ onOpenForm }: { onOpenForm?: () => void }) {
                               </span>
                               <button
                                 onClick={() => { setActiveMenu(null); window.dispatchEvent(new Event("openLeadForm")); }}
-                                className="px-4 py-1.5 text-[10px] tracking-[0.1em] uppercase hover:opacity-90 transition-opacity"
-                                style={{ backgroundColor: "#178B4C", color: "#fff", ...F }}>
+                                className="px-4 py-1.5 rounded-full text-[10px] tracking-[0.1em] uppercase transition-all duration-200 hover:-translate-y-0.5"
+                                style={{ backgroundColor: "#178B4C", color: "#fff", ...F, boxShadow: "0 6px 14px rgba(23,139,76,0.3)" }}>
                                 Get a Quote
                               </button>
                             </div>
@@ -235,11 +327,14 @@ export function Header({ onOpenForm }: { onOpenForm?: () => void }) {
                 </div>
               ) : (
                 <Link key={link.href} to={link.href!}
-                  className="relative px-3 py-2 transition-colors duration-150 hover:text-[#178B4C] group"
-                  style={{ ...F, fontSize: "11.5px", letterSpacing: "0.08em", textTransform: "uppercase", color: location.pathname === link.href ? "#178B4C" : "#053114" }}>
+                  className="px-4 py-2 rounded-full border border-transparent transition-all duration-200 hover:border-[rgba(23,139,76,0.35)] hover:bg-[rgba(23,139,76,0.06)]"
+                  style={{
+                    ...F, fontSize: "11.5px", letterSpacing: "0.08em", textTransform: "uppercase",
+                    color: location.pathname === link.href ? "#178B4C" : "#053114",
+                    backgroundColor: location.pathname === link.href ? "rgba(23,139,76,0.06)" : undefined,
+                    borderColor: location.pathname === link.href ? "rgba(23,139,76,0.35)" : undefined,
+                  }}>
                   {link.label}
-                  <span className="absolute bottom-1 left-3 right-3 h-[1.5px] origin-left transition-transform duration-300 bg-[#178B4C]"
-                    style={{ transform: location.pathname === link.href ? "scaleX(1)" : "scaleX(0)" }} />
                 </Link>
               )
             )}
@@ -249,8 +344,8 @@ export function Header({ onOpenForm }: { onOpenForm?: () => void }) {
           <div className="flex items-center gap-3">
             <button
               onClick={onOpenForm}
-              className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 hover:opacity-90 transition-opacity text-[11px] tracking-[0.12em] uppercase"
-              style={{ ...F, backgroundColor: "#178B4C", color: "#ffffff" }}>
+              className="hidden lg:inline-flex items-center gap-2 px-6 py-2.5 rounded-full transition-all duration-200 hover:-translate-y-0.5 text-[11px] tracking-[0.12em] uppercase"
+              style={{ ...F, backgroundColor: "#178B4C", color: "#ffffff", boxShadow: "0 6px 16px rgba(23,139,76,0.3)" }}>
               Get a Quote
             </button>
             <button
@@ -326,8 +421,8 @@ export function Header({ onOpenForm }: { onOpenForm?: () => void }) {
           )}
           <button
             onClick={() => { setMobileOpen(false); onOpenForm?.(); }}
-            className="mt-4 py-3 text-[11px] tracking-[0.12em] uppercase text-center"
-            style={{ ...F, backgroundColor: "#178B4C", color: "#ffffff" }}>
+            className="mt-4 py-3 rounded-full text-[11px] tracking-[0.12em] uppercase text-center transition-all duration-200 active:scale-[0.98]"
+            style={{ ...F, backgroundColor: "#178B4C", color: "#ffffff", boxShadow: "0 8px 20px rgba(23,139,76,0.3)" }}>
             Get a Quote
           </button>
         </div>

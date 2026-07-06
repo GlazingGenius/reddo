@@ -137,7 +137,7 @@ export function Clients() {
   <span
     style={{
       fontFamily: "'Playfair Display', Georgia, serif",
-      fontStyle: "italic",
+      //fontStyle: "normal",
       fontWeight: 400,
       fontSize: "clamp(2rem, 3.5vw, 3rem)",
       color: "#e6eeea",
@@ -150,14 +150,14 @@ export function Clients() {
   <span
     style={{
       fontFamily: "'Playfair Display', Georgia, serif",
-      fontStyle: "italic",
+      //fontStyle: "normal",
       fontWeight: 400,
       fontSize: "clamp(2rem, 3.5vw, 3rem)",
       color: "#A0780E",
       lineHeight: 1,
     }}
   >
-    Clients &<br className="sm:hidden" />
+    Clients & <br className="sm:hidden" />
     <span className="sm:inline block">Partners</span>
   </span>
 </div>
@@ -229,11 +229,11 @@ export function Clients() {
               key={i}
               className="flex-shrink-0 flex items-center justify-center"
               style={{
-                width: `${CARD_W}px`,
-                height: "100px",
-                backgroundColor: "#ffffff",
-                padding: "12px 16px",
-              }}
+  width: `${CARD_W}px`,
+  height: "135px", // increased from 100px
+  backgroundColor: "#ffffff",
+  padding: "18px 20px",
+}}
             >
               <img
                 src={logo.src}

@@ -1,6 +1,8 @@
 import { motion } from "motion/react";
 import { PageLayout, Section, SectionLabel, FeatureCard, PageCTA } from "./PageLayout";
 import { CheckCircle2, Zap, Wrench, BarChart3, Clock, ShieldCheck } from "lucide-react";
+import { Link } from "react-router-dom";
+import aboutImg from "../../imports/aboutimg.jpeg";
 
 const features = [
   { icon: <CheckCircle2 className="w-5 h-5" />, title: "Regular Inspection", desc: "We conduct regular inspections to ensure the smooth operation of your recycling plant, providing detailed mechanical and electrical inspection reports to identify any potential issues." },
@@ -37,7 +39,7 @@ export function ServicePage() {
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}>
             <div style={{ border: "2px solid #178B4C", overflow: "hidden" }}>
-              <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=800&h=500&fit=crop&auto=format" alt="Service team"
+              <img src={aboutImg} alt="Service team"
                 className="w-full object-cover" style={{ height: "340px", objectFit: "cover" }} />
             </div>
           </motion.div>
@@ -83,10 +85,18 @@ export function ServicePage() {
                   </li>
                 ))}
               </ul>
-              <a href="mailto:info@reddonatura.com" className="block text-center py-3 text-[11px] tracking-[0.12em] uppercase hover:opacity-90 transition-opacity"
-                style={{ backgroundColor: pkg.highlighted ? "#178B4C" : "#053114", color: "#ffffff", fontFamily: "'DM Sans', sans-serif", fontWeight: 600 }}>
-                Enquire Now
-              </a>
+              <Link
+  to="/contact"
+  className="block text-center py-3 text-[11px] tracking-[0.12em] uppercase hover:opacity-90 transition-opacity"
+  style={{
+    backgroundColor: pkg.highlighted ? "#178B4C" : "#053114",
+    color: "#ffffff",
+    fontFamily: "'DM Sans', sans-serif",
+    fontWeight: 600,
+  }}
+>
+  Enquire Now
+</Link>
             </motion.div>
           ))}
         </div>

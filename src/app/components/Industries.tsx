@@ -1,66 +1,67 @@
 import { motion } from "motion/react";
 import { useInView } from "./hooks/useInView";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import Muncipalimg from "../../imports/municipalimghero.jpeg";
 
 const industries = [
   {
     name: "Restaurants &\nFood Chains",
     description: "Tailored organic waste digesters for high-volume kitchens and food service operations, converting daily food waste into compost on-site.",
-    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&h=400&fit=crop&auto=format",
+    image: "https://images7.alphacoders.com/345/345182.jpg",
     accent: "#0D8239",
   },
   {
     name: "Hotels &\nResorts",
     description: "End-to-end waste management for luxury hospitality — from kitchen scraps to biogas energy recovery, reducing operational costs and carbon footprint.",
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&h=400&fit=crop&auto=format",
+    image: "https://wallpaperaccess.com/full/902493.jpg",
     accent: "#64812C",
   },
   {
     name: "Hospitals &\nHealthcare",
     description: "Safe, hygienic, and compliant organic waste processing solutions designed for the strict standards of healthcare environments.",
-    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=500&h=400&fit=crop&auto=format",
+    image: "https://static.vecteezy.com/system/resources/thumbnails/059/240/224/small_2x/modern-hospital-building-with-ambulance-entering-at-sunset-delivering-healthcare-services-photo.jpg",
     accent: "#178B4C",
   },
   {
     name: "Municipal\nCorporations",
     description: "Scalable trommel screens and de-watering systems that help cities manage organic waste streams efficiently at a community level.",
-    image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=500&h=400&fit=crop&auto=format",
+    image: "https://thumbs.dreamstime.com/b/brihanmumbai-municipal-corporation-bmc-building-mumbai-brihanmumbai-municipal-corporation-bmc-building-mumbai-maharashtra-india-256294928.jpg",
     accent: "#A0780E",
   },
   {
     name: "Airports &\nTransit Hubs",
     description: "High-capacity waste digestion systems built for the non-stop operations of airports, metro stations, and large transit facilities.",
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=500&h=400&fit=crop&auto=format",
+    image: "https://static.vecteezy.com/system/resources/previews/035/851/832/non_2x/ai-generated-panoramic-view-of-an-airport-runway-with-planes-parked-and-in-motion-free-photo.jpg",
     accent: "#0D8239",
   },
   {
-    name: "Agriculture &\nFood Processing",
-    description: "Converting agricultural by-products and processing waste into valuable compost and biogas — closing the loop on the food supply chain.",
-    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=500&h=400&fit=crop&auto=format",
+    name: "Food Processing &\nOrganic Waste",
+    description: "Converting food processing waste and organic by-products into valuable compost and biogas — closing the loop on the food supply chain.",
+    image: "https://www.lianmachinery.com/wp-content/uploads/2024/12/image-32.jpeg",
     accent: "#64812C",
   },
   {
     name: "Commercial\nComplexes",
     description: "Integrated waste solutions for malls, office parks, and mixed-use developments that simplify waste handling across multiple tenants.",
-    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=500&h=400&fit=crop&auto=format",
+    image: "https://jll-global-gdim-res.cloudinary.com/image/upload/f_auto,dpr_auto,w_1920,q_70/v1505554323/IN_ML20170916/Downtown---The-City-Centre_7287_20170916_002.jpg",
     accent: "#178B4C",
   },
   {
     name: "Tourism &\nParks",
     description: "Eco-friendly waste management for national parks, eco-resorts, and tourist destinations committed to preserving natural beauty.",
-    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500&h=400&fit=crop&auto=format",
+    image: "https://images.pexels.com/photos/158063/bellingrath-gardens-alabama-landscape-scenic-158063.jpeg?cs=srgb&dl=pexels-pixabay-158063.jpg&fm=jpg",
     accent: "#A0780E",
   },
   {
     name: "Railway\nStations",
     description: "Robust organic waste processing for railway stations and transit corridors handling large volumes of food and organic waste daily.",
-    image: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=500&h=400&fit=crop&auto=format",
+    image: "https://th.bing.com/th/id/R.31ffc50e1971b5c3d39be76a35a071ef?rik=g7uro4MavyVSsQ&riu=http%3a%2f%2f3.bp.blogspot.com%2f_5xkDx_-kv3I%2fTRVOZA-mfKI%2fAAAAAAAAA5Y%2fnE0yCwZa0xI%2fs1600%2fmum%2bcentral%2b5.jpg&ehk=taKzjIWrZ2PtVTu4o5vUrvCBb1Ic23KAfSDxUholntM%3d&risl=&pid=ImgRaw&r=0",
     accent: "#0D8239",
   },
   {
     name: "Residential\nApartments",
     description: "Compact, odour-free waste digesters designed for apartment complexes and gated communities, turning household waste into garden compost.",
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=500&h=400&fit=crop&auto=format",
+    image: "https://luxuryproperties.in/wp-content/uploads/2019/03/Peninsula-Heights-View-1.jpg",
     accent: "#64812C",
   },
 ];
@@ -86,7 +87,7 @@ export function Industries() {
             <span
               style={{
                 fontFamily: "'Playfair Display', Georgia, serif",
-                fontStyle: "italic",
+               // fontStyle: "normal",
                 fontWeight: 400,
                 fontSize: "clamp(2.2rem, 3.5vw, 3.5rem)",
                 color: "#0D8239",
@@ -99,7 +100,7 @@ export function Industries() {
                <span
               style={{
                 fontFamily: "'Playfair Display', Georgia, serif",
-                fontStyle: "italic",
+                //fontStyle: "normal",
                 fontWeight: 400,
                 fontSize: "clamp(2.2rem, 3.5vw, 3rem)",
                 color: "#A0780E",
@@ -145,7 +146,7 @@ export function Industries() {
       </div>
 
       {/* Full-width image grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5" style={{ backgroundColor: "#0B1F10" }}>
         {industries.map((industry, i) => (
           <motion.div
             key={industry.name}
@@ -153,7 +154,7 @@ export function Industries() {
             animate={inView ? { opacity: 1 } : {}}
             transition={{ duration: 0.5, delay: 0.04 * i }}
             className="group relative overflow-hidden cursor-pointer"
-            style={{ aspectRatio: "1/1.2" }}
+            style={{ aspectRatio: "1/1.2", backgroundColor: "#0B1F10" }}
           >
             {/* Background image */}
             <ImageWithFallback
