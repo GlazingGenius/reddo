@@ -313,7 +313,7 @@ const biomassSpecs: SpecBlock = {
   ],
   tableRows: [
     ["Model", "Capacity", "Bio-Oil Output", "Biochar Output", "Connected Load", "Footprint"],
-    ["RN-BM 500",  "500 kg/hour",  "175–225 kg/day",  "125–175 kg/day",  "18 kW",  "~30 m²"],
+    ["RN-BM 500",  "500 kg/hour",  "175–225 kg/hour",  "125–175 kg/hour",  "18 kW",  "~30 m²"],
    
   ],
   notes: {
