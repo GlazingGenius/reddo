@@ -226,7 +226,7 @@ export function About() {
                   lineHeight: 1,
                 }}
               >
-                15+
+                13+
               </div>
               <div
                 className="mt-1.5"

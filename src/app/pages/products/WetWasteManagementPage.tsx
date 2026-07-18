@@ -10,9 +10,9 @@ import Nonheating from "../../../imports/non-heating .png";
 import Biofilter from "../../../imports/biofilter.webp";
 import Shredders from "../../../imports/shredders.png";
 import Testimonials from "../../components/Testimonials";
-
+import EnquiryModal from "../../components/EnquiryModal";
 import binfilter from "../../../imports/bin lifter  (1).png";
-
+import pretreatment from "../../../imports/pretreatment.png";
 
 /* ── Composting Machine types ─────────────────────────── */
 const composingSubTabs = [
@@ -21,8 +21,39 @@ const composingSubTabs = [
     label: "Automatic",
     title: "Fully Automatic OWC",
     subtitle: "CE Certified · Zero Manual Intervention",
-    desc: " The Food Waste Composting Machine is designed to efficiently process food and organic waste into compostable material within 24–36 hours. Through a controlled biological process, specialized microorganisms break down organic waste into a nutrient-rich, soil-like output suitable for reuse as a soil amendment.This fully automatic and compact system converts all types of organic waste using high-performance microbial cultures. These microorganisms thrive in high-temperature environments and remain effective even in high-acidity or high-salinity waste conditions. The process achieves a volume reduction of 80–90%, making waste handling significantly more efficient and sustainable.Designed for long-term deployment, the system emphasizes reliability, consistent performance, and low operational intervention—making it ideal for continuous daily use.",
-   features: [
+    desc: (
+  <>
+    <p className="mb-4">
+      The Food Waste Composting Machine is designed to efficiently process food
+      and organic waste into compostable material within <strong>24–36 hours</strong>.
+      Through a controlled biological process, specialized microorganisms break
+      down organic waste into a nutrient-rich, soil-like output suitable for
+      reuse as a soil amendment.
+    </p>
+
+    <p className="mb-4">
+      This fully automatic and compact system converts all types of organic
+      waste using high-performance microbial cultures. These microorganisms
+      thrive in high-temperature environments and remain effective even in
+      high-acidity or high-salinity waste conditions.
+    </p>
+
+    <p className="mb-4">
+      The process achieves an <strong>80–90% volume reduction</strong>, making
+      waste handling significantly more efficient, hygienic, and sustainable.
+      Its compact design allows easy installation while ensuring reliable
+      day-to-day operation.
+    </p>
+
+    <p>
+      Designed for long-term deployment, the system emphasizes reliability,
+      consistent performance, and minimal operational intervention, making it
+      ideal for continuous daily use across commercial, industrial, and
+      institutional facilities.
+    </p>
+  </>
+),
+    features: [
   "Predictable processing – Consistent decomposition cycles with stable output quality",
   "Scalable capacity – Available in standard and customized configurations based on waste volume",
   "Durable construction – Built for continuous operation with minimal maintenance",
@@ -77,6 +108,8 @@ const composingSubTabs = [
   },
 ];
 
+
+
 /* ── Main top-level tabs ──────────────────────────────── */
 const mainTabs = [
   { id: "composting", label: "Composting Machines" },
@@ -86,28 +119,106 @@ const mainTabs = [
   { id: "shredders",  label: "Shredders" },
 ];
 
-function SpecTable({ rows }: { rows: string[][] }) {
+function SpecTable({
+  rows,
+  onQuote,
+}: {
+  rows: string[][];
+  onQuote: (capacity: string) => void;
+}) {
   return (
-    <div className="overflow-x-auto mt-6" style={{ border: "1px solid rgba(5,49,20,0.08)", boxShadow: "0 1px 2px rgba(5,49,20,0.04), 0 16px 32px rgba(5,49,20,0.06)" }}>
+    <div
+      className="overflow-x-auto mt-6"
+      style={{
+        border: "1px solid rgba(5,49,20,0.08)",
+        boxShadow:
+          "0 1px 2px rgba(5,49,20,0.04), 0 16px 32px rgba(5,49,20,0.06)",
+      }}
+    >
       <table
-  className="w-full border-collapse text-left"
-  style={{ minWidth: "650px" }}
->
+        className="w-full border-collapse text-left"
+        style={{ minWidth: "820px" }}
+      >
         <thead>
           <tr style={{ backgroundColor: "#053114" }}>
             {rows[0].map((h, i) => (
-              <th key={i} className="px-4 py-3 text-[11px] tracking-[0.1em] uppercase"
-                style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 600, color: "#fff", borderRight: "1px solid rgba(255,255,255,0.1)" }}>{h}</th>
+              <th
+                key={i}
+                className="px-4 py-3 text-[11px] tracking-[0.1em] uppercase"
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontWeight: 600,
+                  color: "#fff",
+                  borderRight: "1px solid rgba(255,255,255,0.1)",
+                }}
+              >
+                {h}
+              </th>
             ))}
+
+            <th
+              className="px-4 py-3 text-center"
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 600,
+                color: "#fff",
+              }}
+            >
+              Action
+            </th>
           </tr>
         </thead>
+
         <tbody>
           {rows.slice(1).map((row, i) => (
-            <tr key={i} className="transition-colors duration-150 hover:bg-[rgba(23,139,76,0.06)]" style={{ backgroundColor: i % 2 === 0 ? "#fff" : "#F5F4EF", borderBottom: "1px solid rgba(5,49,20,0.06)" }}>
+            <tr
+              key={i}
+              className="transition-colors duration-150 hover:bg-[rgba(23,139,76,0.06)]"
+              style={{
+                backgroundColor: i % 2 === 0 ? "#fff" : "#F5F4EF",
+                borderBottom: "1px solid rgba(5,49,20,0.06)",
+              }}
+            >
               {row.map((cell, j) => (
-                <td key={j} className="px-4 py-3"
-                  style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.85rem", color: "#053114", borderRight: "1px solid rgba(5,49,20,0.06)" }}>{cell}</td>
+                <td
+                  key={j}
+                  className="px-4 py-3"
+                  style={{
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontSize: "0.85rem",
+                    color: "#053114",
+                    borderRight: "1px solid rgba(5,49,20,0.06)",
+                  }}
+                >
+                  {cell}
+                </td>
               ))}
+
+              <td className="px-4 py-3 text-center">
+                <button
+                  onClick={() => onQuote(row[0])}
+                  style={{
+                    background: "#178B4C",
+                    color: "#fff",
+                    border: "none",
+                    padding: "8px 16px",
+                    borderRadius: "999px",
+                    cursor: "pointer",
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontWeight: 600,
+                    fontSize: "13px",
+                    transition: "0.25s",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.background = "#0D8239")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.background = "#178B4C")
+                  }
+                >
+                  Get Quote
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>
@@ -115,9 +226,10 @@ function SpecTable({ rows }: { rows: string[][] }) {
     </div>
   );
 }
-
 function CompositingMachinesTab() {
   const [sub, setSub] = useState("automatic");
+  const [showQuote, setShowQuote] = useState(false);
+const [selectedCapacity, setSelectedCapacity] = useState("");
   const current = composingSubTabs.find(t => t.id === sub)!;
   return (
     <div>
@@ -240,7 +352,21 @@ style={{
   <span style={{ color: "#A0780E" }}>Specifications</span>
 </h3>
 
-  <SpecTable rows={current.specs} />
+<SpecTable
+  rows={current.specs}
+  onQuote={(capacity) => {
+    setSelectedCapacity(capacity);
+    setShowQuote(true);
+  }}
+/>
+
+<EnquiryModal
+  open={showQuote}
+  onClose={() => setShowQuote(false)}
+  product={current.title}
+  capacity={selectedCapacity}
+/>
+
   <div
   className="mt-6 rounded-lg p-5"
   style={{
@@ -304,8 +430,8 @@ function BinFilterTab() {
     marginBottom: "16px",
   }}
 >
-  <span style={{ color: "#178B4C" }}>Bio-Lifter </span>
-  <span style={{ color: "#A0780E" }}> with UV Treatment</span>
+  <span style={{ color: "#178B4C" }}>Bin-</span>
+  <span style={{ color: "#A0780E" }}>Lifter </span>
 </h3>
 
 
@@ -634,17 +760,20 @@ function DewateringTab() {
         
       </div>
       <div
-  className="overflow-hidden h-[260px] lg:h-[460px]"
+  className="flex justify-center items-start"
   style={{
-    boxShadow: "0 20px 45px rgba(5,49,20,0.15)",
+    minHeight: "620px", // increase from 460px
+    paddingTop: "40px", // move image down slightly
   }}
 >
   <img
-    src={img3}
-    alt="De-Watering System"
-    className="w-full h-full"
+    src={pretreatment}
+    alt="Pre-Treatment Machine"
     style={{
-      objectFit: "cover",
+      width: "100%",
+      maxWidth: "520px",
+      height: "auto",
+      objectFit: "contain",
     }}
   />
 </div>
@@ -882,8 +1011,8 @@ function BioFilterTab() {
     fontSize: "2rem",
   }}
 >
-  <span style={{ color: "#178B4C" }}>Bio-Filter</span>
-  <span style={{ color: "#A0780E" }}> Systems</span>
+  <span style={{ color: "#178B4C" }}>Bio-Filter With</span>
+  <span style={{ color: "#A0780E" }}> UV Treatment</span>
 </h3>
         
         <div
@@ -1047,8 +1176,8 @@ function ShreddersTab() {
     fontSize: "2rem",
   }}
 >
-  <span style={{ color: "#178B4C" }}>Industrial</span>
-  <span style={{ color: "#A0780E" }}> Shredders</span>
+  <span style={{ color: "#178B4C" }}>Shre</span>
+  <span style={{ color: "#A0780E" }}>dders</span>
 </h3>
 
 
@@ -1066,7 +1195,9 @@ function ShreddersTab() {
     marginBottom: "14px",
   }}
 >
-  Efficient shredding for food, organic & garden waste 
+  Reddonatura shredders are engineered for efficient size reduction of
+            food and organic waste to optimize composting efficiency and
+            accelerate biodegradation.
 </div>
           <p
             style={{
@@ -1078,9 +1209,7 @@ function ShreddersTab() {
               marginBottom: "20px",
             }}
           >
-            Reddonatura shredders are engineered for efficient size reduction of
-            food and organic waste to optimize composting efficiency and
-            accelerate biodegradation. Designed for continuous-duty operation,
+           Designed for continuous-duty operation,
             they deliver consistent throughput and reliable performance in
             demanding waste management environments. Each unit is configured
             based on waste characteristics and processing capacity, providing

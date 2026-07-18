@@ -134,50 +134,115 @@ export function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
-            <div className="mb-5" style={labelStyle}>
-              Contact
-            </div>
-            <div className="space-y-5">
-              <a
-                href="tel:+917760987934"
-                className="flex items-start gap-3 group"
-              >
-                <Phone
-                  className="w-3.5 h-3.5 mt-0.5 flex-shrink-0"
-                  style={{ color: "#A0780E" }}
-                />
-                <span
-                  className="group-hover:text-white transition-colors duration-200"
-                  style={linkStyle}
-                >
-                  +91 7760987934
-                </span>
-              </a>
-              <a
-                href="mailto:info@reddonatura.com"
-                className="flex items-start gap-3 group"
-              >
-                <Mail
-                  className="w-3.5 h-3.5 mt-0.5 flex-shrink-0"
-                  style={{ color: "#A0780E" }}
-                />
-                <span
-                  className="group-hover:text-white transition-colors duration-200"
-                  style={linkStyle}
-                >
-                  info@reddonatura.com
-                </span>
-              </a>
-              <div className="flex items-start gap-3">
-                <MapPin
-                  className="w-3.5 h-3.5 mt-0.5 flex-shrink-0"
-                  style={{ color: "#A0780E" }}
-                />
-                <span style={linkStyle}>
-                  Sy. No 41/1, Veerenahalli Village, Virgonagar Industrial Estate, Bidarahalli Hobli, Post, beside Cipla Factory, Virgonagar, J.I.Veerenahalli, Karnataka 560049
-                </span>
-              </div>
+<div>
+  <div className="mb-5" style={labelStyle}>
+    Contact
+  </div>
+
+  <div className="space-y-5">
+    {/* Phone Numbers */}
+    <div className="flex items-start gap-3">
+      <Phone
+        className="w-3.5 h-3.5 mt-0.5 flex-shrink-0"
+        style={{ color: "#A0780E" }}
+      />
+
+      <div className="space-y-2">
+        <a
+          href="tel:+917760987934"
+          className="block group"
+        >
+          <span
+            className="group-hover:text-white transition-colors duration-200"
+            style={linkStyle}
+          >
+            +91 77609 87934
+          </span>
+        </a>
+
+        <a
+          href="tel:+917338462806"
+          className="block group"
+        >
+          <span
+            className="group-hover:text-white transition-colors duration-200"
+            style={linkStyle}
+          >
+            +91 73384 62806
+          </span>
+        </a>
+      </div>
+    </div>
+
+    {/* Email Addresses */}
+    <div className="flex items-start gap-3">
+      <Mail
+        className="w-3.5 h-3.5 mt-0.5 flex-shrink-0"
+        style={{ color: "#A0780E" }}
+      />
+
+      <div className="space-y-2">
+        <a
+          href="mailto:geetha@reddonatura.com"
+          className="block group"
+        >
+          <span
+            className="group-hover:text-white transition-colors duration-200"
+            style={linkStyle}
+          >
+            geetha@reddonatura.com
+          </span>
+        </a>
+
+        <a
+          href="mailto:naziya@reddonatura.com"
+          className="block group"
+        >
+          <span
+            className="group-hover:text-white transition-colors duration-200"
+            style={linkStyle}
+          >
+            naziya@reddonatura.com
+          </span>
+        </a>
+
+        <a
+          href="mailto:info@reddonatura.com"
+          className="block group"
+        >
+          <span
+            className="group-hover:text-white transition-colors duration-200"
+            style={linkStyle}
+          >
+            info@reddonatura.com
+          </span>
+        </a>
+      </div>
+    </div>
+
+    {/* Address */}
+    <div className="flex items-start gap-3">
+      <MapPin
+        className="w-3.5 h-3.5 mt-0.5 flex-shrink-0"
+        style={{ color: "#A0780E" }}
+      />
+      <span style={linkStyle}>
+        Sy. No 41/1, Veerenahalli Village,
+        Virgonagar Industrial Estate,
+        Bidarahalli Hobli, Post, beside Cipla
+        Factory, Virgonagar,
+        J.I.Veerenahalli,
+        Karnataka 560049
+      </span>
+    </div>
+
+    <div
+      
+    >
+      
+    </div>
+  
+
 
               <div
                 className="mt-8 pt-8"

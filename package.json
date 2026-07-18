@@ -9,8 +9,10 @@
   },
   "dependencies": {
     "framer-motion": "^12.42.2",
+    "libphonenumber-js": "^1.13.9",
     "lucide-react": "0.487.0",
     "motion": "12.23.24",
+    "react-phone-number-input": "^3.4.17",
     "react-router": "7.13.0",
     "react-router-dom": "^7.18.0",
     "react-simple-maps": "^3.0.0",

@@ -3,8 +3,12 @@ import { motion, AnimatePresence } from "motion/react";
 import { Phone, Mail, Bot, X, Sparkles } from "lucide-react";
 
 const PHONE = "+917760987934";
-const EMAIL = "info@reddonatura.com";
-const WHATSAPP = "917760987934";
+const EMAILS = [
+  "info@reddonatura.com",
+  "naziya@reddonatura.com",
+];
+
+const WHATSAPP = "7338462806";
 const WHATSAPP_MESSAGE = "Hi Reddonatura! I'd like to know more about your waste management solutions.";
 
 function WhatsAppGlyph({ className, style }: { className?: string; style?: React.CSSProperties }) {
@@ -27,15 +31,20 @@ const actions = [
     glow: "#178B4C",
   },
   {
-    key: "mail",
-    label: "Email Us",
-    sub: EMAIL,
-    icon: Mail,
-    href: `mailto:${EMAIL}`,
-    bg: "linear-gradient(145deg, #D9B65C, #A0780E 70%)",
-    ring: "rgba(160,120,14,0.45)",
-    glow: "#C99A1A",
-  },
+  key: "mail",
+  label: "Email Us",
+  sub: (
+    <>
+      <div>info@reddonatura.com</div>
+      <div>naziya@reddonatura.com</div>
+    </>
+  ),
+  icon: Mail,
+  href: "mailto:info@reddonatura.com,naziya@reddonatura.com",
+  bg: "linear-gradient(145deg, #D9B65C, #A0780E 70%)",
+  ring: "rgba(160,120,14,0.45)",
+  glow: "#C99A1A",
+},
   {
     key: "whatsapp",
     label: "WhatsApp",

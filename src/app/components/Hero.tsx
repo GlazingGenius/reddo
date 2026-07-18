@@ -34,9 +34,9 @@ function CountUp({
 }
 
 const heroStats = [
-  { value: 7000, suffix: "+", label: "Clients Worldwide" },
-  { value: 20, suffix: "+", label: "Countries" },
-  { value: 10, suffix: "+", label: "Industries" },
+  { value: 1500, suffix: "+", label: "projects" },
+  { value: 150, suffix: "+", label: "Cities" },
+  { value: 22, suffix: "+", label: "Countries" },
 ];
 
 export function Hero({ onOpenForm }: { onOpenForm: () => void }) {
