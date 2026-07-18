@@ -3,20 +3,21 @@ import logo from "../../imports/footer.png";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram, ArrowUpRight } from "lucide-react";
 
 const quickLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About Us" },
-  { href: "#products", label: "Products" },
-  { href: "#industries", label: "Industries" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+  { href: "/service", label: "Services" },
+  { href: "/clients", label: "Clients & Partners" },
+  { href: "/faqs", label: "FAQs" },
+  { href: "/contact", label: "Contact Us" },
 ];
 
 const productLinks = [
-  "Organic Waste Digester",
-  "Biogas Solutions",
-  "De-Watering Systems",
-  "Solar Solutions",
-  "Industrial Shredders",
-  "Trommel Screens",
+  { label: "Wet Waste Management", href: "/products/wet-waste" },
+  { label: "Windrow Composting", href: "/products/windrow-compost" },
+  { label: "Bio Mining", href: "/products/biomining" },
+  { label: "Pyrolysis", href: "/products/pyrolysis" },
+  { label: "Biogas Solutions", href: "/products/biogas" },
+  { label: "Solar Solutions", href: "/products/solar" },
 ];
 
 const socials = [
@@ -100,13 +101,13 @@ export function Footer() {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <a
-                    href={link.href}
-                    className="inline-block hover:text-[#D9B65C] hover:translate-x-1.5 transition-all duration-200"
-                    style={linkStyle}
-                  >
-                    {link.label}
-                  </a>
+                  <Link
+  to={link.href}
+  className="inline-block hover:text-[#D9B65C] hover:translate-x-1.5 transition-all duration-200"
+  style={linkStyle}
+>
+  {link.label}
+</Link>
                 </li>
               ))}
             </ul>
@@ -119,16 +120,16 @@ export function Footer() {
             </div>
             <ul className="space-y-3">
               {productLinks.map((p) => (
-                <li key={p}>
-                  <a
-                    href="#products"
-                    className="inline-block hover:text-[#D9B65C] hover:translate-x-1.5 transition-all duration-200"
-                    style={linkStyle}
-                  >
-                    {p}
-                  </a>
-                </li>
-              ))}
+  <li key={p.href}>
+    <Link
+      to={p.href}
+      className="inline-block hover:text-[#D9B65C] hover:translate-x-1.5 transition-all duration-200"
+      style={linkStyle}
+    >
+      {p.label}
+    </Link>
+  </li>
+))}
             </ul>
           </div>
 

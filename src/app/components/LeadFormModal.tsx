@@ -70,19 +70,9 @@ const Q4_SOLUTION = {
   ],
 };
 
-const Q5_TIMELINE = {
-  question: "What is your expected project timeline?",
-  hint: "This helps our team prioritise and plan the right support for you.",
-  options: [
-    { label: "Immediate",          sub: "Need a solution within 1 month" },
-    { label: "1 – 3 Months",       sub: "Short-term planning" },
-    { label: "3 – 6 Months",       sub: "Mid-term project" },
-    { label: "6 Months or more",   sub: "Long-term planning phase" },
-    { label: "Just Exploring",     sub: "Gathering information for now" },
-  ],
-};
 
-const QUESTIONS = [Q1_FACILITY, Q2_WASTE_VOLUME, Q3_WASTE_TYPE, Q4_SOLUTION, Q5_TIMELINE];
+
+const QUESTIONS = [Q1_FACILITY, Q2_WASTE_VOLUME, Q3_WASTE_TYPE, Q4_SOLUTION];
 const TOTAL_STEPS = QUESTIONS.length + 1; // 5 questions + personal details
 
 const countryCodes = [
@@ -137,24 +127,60 @@ export function LeadFormModal({ open, onClose }: Props) {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const labels = ["Facility", "Daily Waste", "Waste Type", "Solution", "Timeline"];
-    const lines = [
-      "🌿 *New Lead — Reddonatura Website*",
-      "",
-      ...answers.map((a, i) => `*${labels[i]}:* ${a}`),
-      "",
-      `*Name:* ${form.name}`,
-      `*Company:* ${form.company || "—"}`,
-      `*Email:* ${form.email}`,
-      `*Phone:* ${form.dialCode} ${form.phone}`,
-      `*Country:* ${form.country}`,
-    ];
-    const message = encodeURIComponent(lines.join("\n"));
-    window.open(`https://wa.me/917760987934?text=${message}`, "_blank");
-    setSubmitted(true);
+ const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  const labels = ["Facility", "Daily Waste", "Waste Type", "Solution", "Timeline"];
+
+  const lines = [
+    "🌿 *New Lead — Reddonatura Website*",
+    "",
+    ...answers.map((a, i) => `*${labels[i]}:* ${a}`),
+    "",
+    `*Name:* ${form.name}`,
+    `*Company:* ${form.company || "—"}`,
+    `*Email:* ${form.email}`,
+    `*Phone:* ${form.dialCode} ${form.phone}`,
+    `*Country:* ${form.country}`,
+  ];
+
+  const message = encodeURIComponent(lines.join("\n"));
+
+  const data = {
+    facility: answers[0],
+    dailyWaste: answers[1],
+    wasteType: answers[2],
+    solution: answers[3],
+    timeline: answers[4],
+    name: form.name,
+    company: form.company,
+    email: form.email,
+    phone: `${form.dialCode} ${form.phone}`,
+    country: form.country,
   };
+
+  try {
+    await fetch(
+      "https://script.google.com/macros/s/AKfycbyodE1J-kGhUtxka5A3Tb-xtp1lc5htQ_NrFZ05ZneWsQ6Q-i40dpbJxboUlcdsqsQc/exec",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    );
+  } catch (err) {
+    console.error(err);
+  }
+
+  window.open(
+    `https://wa.me/917760987934?text=${message}`,
+    "_blank"
+  );
+
+  setSubmitted(true);
+};
 
   const reset = () => {
     setStep(0);

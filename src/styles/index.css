@@ -150,3 +150,9 @@ textarea,
 select {
   cursor: none;
 }
+
+html,
+body,
+* {
+  cursor: none !important;
+}

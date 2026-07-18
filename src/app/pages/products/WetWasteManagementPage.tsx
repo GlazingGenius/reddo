@@ -21,19 +21,29 @@ const composingSubTabs = [
     label: "Automatic",
     title: "Fully Automatic OWC",
     subtitle: "CE Certified · Zero Manual Intervention",
-    desc: "Our fully automatic Organic Waste Converters are CE certified machines that require no manual intervention during the composting cycle. Simply load organic waste and collect finished compost — the machine handles grinding, aeration, temperature regulation, and pre-compost separation automatically.",
-    features: ["Automated loading and processing", "Inbuilt temperature & moisture control", "24-hour composting cycle", "Zero odour emission", "Remote monitoring ready", "CE certified — globally compliant"],
-    specs: [
-       ["Model", "Capacity", "Power", "Dimensions (mm)"],
-  ["RN 25",   "25 kg/day",   "1.5 kW, 3Ph 440V",  "L1600×W600×H875"],
-  ["RN 75",   "75 kg/day",   "4.5 kW, 3Ph 440V",  "L1860×W792×H1127"],
-  ["RN 125",  "125 kg/day",  "5.5 kW, 3Ph 440V",  "L2286×W944×H1432"],
-  ["RN 250",  "250 kg/day",  "8.0 kW, 3Ph 440V",  "L2750×W1158×H1554"],
-  ["RN 500",  "500 kg/day",  "16 kW, 3Ph 440V",   "L3000×W1432×H1860"],
-  ["RN 700",  "700 kg/day",  "23 kW, 3Ph 440V",   "L3535×W1402×H1950"],
-  ["RN 1000", "1000 kg/day", "25 kW, 3Ph 440V",   "L3962×W2100×H2133"],
-  ["RN 1250", "1250 kg/day", "27 kW, 3Ph 440V",   "L4600×W2100×H2347"],
-    ],
+    desc: " The Food Waste Composting Machine is designed to efficiently process food and organic waste into compostable material within 24–36 hours. Through a controlled biological process, specialized microorganisms break down organic waste into a nutrient-rich, soil-like output suitable for reuse as a soil amendment.This fully automatic and compact system converts all types of organic waste using high-performance microbial cultures. These microorganisms thrive in high-temperature environments and remain effective even in high-acidity or high-salinity waste conditions. The process achieves a volume reduction of 80–90%, making waste handling significantly more efficient and sustainable.Designed for long-term deployment, the system emphasizes reliability, consistent performance, and low operational intervention—making it ideal for continuous daily use.",
+   features: [
+  "Predictable processing – Consistent decomposition cycles with stable output quality",
+  "Scalable capacity – Available in standard and customized configurations based on waste volume",
+  "Durable construction – Built for continuous operation with minimal maintenance",
+  "Space-conscious design – Compact footprint suitable for restricted installation areas",
+  "Usable output – Final product suitable for soil conditioning and compost applications",
+  "Automatic output removal – Ensures smooth and automatic output removal, reducing manual handling"
+],
+   specs: [
+  ["Capacity", "Length (mm)", "Width (mm)", "Height (mm)", "Connected Load (kW)"],
+  ["25 KG", "1493", "580", "1188", "1.86"],
+  ["50 KG", "1676", "700", "1341", "1.98"],
+  ["75 KG", "1860", "792", "1127", "4.25"],
+  ["125 KG", "2286", "944", "1432", "5.35"],
+  ["200 KG", "2500", "975", "1432", "6.6"],
+  ["250 KG", "2750", "1158", "1554", "8"],
+  ["500 KG", "3000", "1432", "1860", "16.5"],
+  ["750 KG", "3535", "1402", "1950", "22.5"],
+  ["1000 KG", "3962", "2100", "2133", "21.5"],
+  ["1500 KG", "4600", "2100", "2347", "30"],
+  ["2000 KG", "4100", "2011", "2500", "58"],
+],
     image: img1,
   },
   {
@@ -71,7 +81,7 @@ const composingSubTabs = [
 const mainTabs = [
   { id: "composting", label: "Composting Machines" },
   { id: "binfilter",  label: "Bin Lifter" },
-  { id: "dewatering", label: "De-Watering" },
+  { id: "dewatering", label: "Pre-Treatment Machine" },
   { id: "biofilter",  label: "Bio-Filter" },
   { id: "shredders",  label: "Shredders" },
 ];
@@ -149,9 +159,43 @@ function CompositingMachinesTab() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
             <div className="text-[10px] tracking-[0.18em] uppercase mb-2" style={{ fontFamily: "'DM Mono', monospace", color: "#A0780E" }}>{current.subtitle}</div>
-            <h3 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "clamp(1.4rem, 2.5vw, 2rem)", color: "#053114", marginBottom: "16px" }}>
-              {current.title}
-            </h3>
+            <h3
+  style={{
+    fontFamily: "'Playfair Display', serif",
+    fontWeight: 700,
+    fontSize: "clamp(1.4rem, 2.5vw, 2rem)",
+    marginBottom: "16px",
+  }}
+>
+  <span style={{ color: "#178B4C" }}>
+    {current.title.split(" ").slice(0, -1).join(" ")}{" "}
+  </span>
+  <span style={{ color: "#A0780E" }}>
+    {current.title.split(" ").slice(-1)}
+  </span>
+</h3>
+
+
+
+{sub === "automatic" && (
+  <div
+    style={{
+      display: "inline-block",
+      background: "rgba(23,139,76,0.12)",
+      color: "#178B4C",
+      padding: "4px 10px",
+      borderRadius: "3px",
+      fontFamily: "'DM Sans', sans-serif",
+      fontWeight: 600,
+      fontSize: "1rem",
+      lineHeight: 1.5,
+      marginBottom: "14px",
+    }}
+  >
+    Engineered for sustainable food waste processing
+  </div>
+)}
+
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.975rem", color: "#5A6B5C", lineHeight: 1.8, marginBottom: "20px" }}>
               {current.desc}
             </p>
@@ -163,7 +207,7 @@ function CompositingMachinesTab() {
                 </div>
               ))}
             </div>
-            <SpecTable rows={current.specs} />
+            
           </div>
           <div
  className="w-full h-full"
@@ -180,73 +224,414 @@ style={{
     }}
   />
 </div>
-        </div>
+
+</div>
+
+<div className="mt-16">
+  <h3
+  className="mb-6"
+  style={{
+    fontFamily: "'Playfair Display', serif",
+    fontWeight: 700,
+    fontSize: "2rem",
+  }}
+>
+  <span style={{ color: "#178B4C" }}>Technical </span>
+  <span style={{ color: "#A0780E" }}>Specifications</span>
+</h3>
+
+  <SpecTable rows={current.specs} />
+  <div
+  className="mt-6 rounded-lg p-5"
+  style={{
+    background: "#F8FAF7",
+    border: "1px solid rgba(5,49,20,0.1)",
+  }}
+>
+  <h4
+    className="mb-3"
+    style={{
+      fontFamily: "'DM Sans', sans-serif",
+      fontWeight: 600,
+      color: "#053114",
+    }}
+  >
+    Notes
+  </h4>
+
+  <ul
+    className="space-y-2"
+    style={{
+      fontFamily: "'DM Sans', sans-serif",
+      fontSize: "0.9rem",
+      color: "#5A6B5C",
+      lineHeight: 1.7,
+    }}
+  >
+    <li>• Power supply can be configured as per country-specific standards (50 Hz / 60 Hz).</li>
+    <li>• Machine dimensions and connected load are tentative and may change with design upgrades. Please confirm with the manufacturer prior to ordering.</li>
+  </ul>
+</div>
+</div>
+
+
       </motion.div>
     </div>
   );
 }
-
 function BinFilterTab() {
   return (
-    <div className="grid lg:grid-cols-2 gap-12 items-start">
-      <div>
-        <div className="text-[10px] tracking-[0.18em] uppercase mb-2" style={{ fontFamily: "'DM Mono', monospace", color: "#A0780E" }}>Odour Control · Compact Design</div>
-        <h3 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "clamp(1.4rem, 2.5vw, 2rem)", color: "#053114", marginBottom: "16px" }}>
-          Bio-Filter Bin Systems
-        </h3>
-        <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.975rem", color: "#5A6B5C", lineHeight: 1.8, marginBottom: "20px" }}>
-          Bin filter systems integrate biological filtration media directly into the waste collection bin, neutralising odours and initiating pre-decomposition at the point of collection. Ideal for apartment complexes, commercial kitchens, and institutional settings where odour management is critical.
-        </p>
-        {["Activated carbon + bio-media filtration layer", "Reduces odour by up to 85% at source", "Compatible with all organic waste streams", "Easy media replacement every 6 months", "Available in 120L, 240L, 660L and 1100L sizes", "Stackable design for high-density installations"].map((f, i) => (
-          <div key={i} className="flex items-start gap-2 mb-2">
-            <CheckCircle2 className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style={{ color: "#178B4C" }} />
-            <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.85rem", color: "#5A6B5C" }}>{f}</span>
+    <div>
+      {/* Top Section */}
+      <div className="grid lg:grid-cols-2 gap-12 items-start">
+        {/* Left Content */}
+        <div>
+          <div
+            className="text-[10px] tracking-[0.18em] uppercase mb-2"
+            style={{
+              fontFamily: "'DM Mono', monospace",
+              color: "#A0780E",
+            }}
+          >
+            Bin Handling · Safe & Efficient
           </div>
-        ))}
-      </div>
-      <div
-  className="overflow-hidden h-[260px] lg:h-[460px]"
+
+          <h3
   style={{
-    boxShadow: "0 20px 45px rgba(5,49,20,0.15)",
+    fontFamily: "'Playfair Display', serif",
+    fontWeight: 700,
+    fontSize: "clamp(1.4rem, 2.5vw, 2rem)",
+    marginBottom: "16px",
   }}
 >
-  <img
-    src={binfilter}
-    alt="Bin Filter System"
-    className="w-full h-full"
-style={{
-  objectFit: "cover",
-}}className="w-full h-full"
-style={{
-  objectFit: "cover",
-}}
-  />
+  <span style={{ color: "#178B4C" }}>Bio-Lifter </span>
+  <span style={{ color: "#A0780E" }}> with UV Treatment</span>
+</h3>
+
+
+<div
+  style={{
+    display: "inline-block",
+    background: "rgba(23,139,76,0.12)",
+    color: "#178B4C",
+    padding: "4px 10px",
+    borderRadius: "3px",
+    fontFamily: "'DM Sans', sans-serif",
+    fontWeight: 600,
+    fontSize: "1rem", // Increase this value
+    lineHeight: 1.5,
+    marginBottom: "14px",
+  }}
+>
+  Reddonatura Bin Lifters are engineered to ensure safe, efficient and hygienic handling of organic waste during feeding operations. 
 </div>
+
+          <p
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 300,
+              fontSize: "0.975rem",
+              color: "#5A6B5C",
+              lineHeight: 1.8,
+              marginBottom: "20px",
+            }}
+          >
+            
+            Designed to eliminate manual lifting, they enable precise and
+            controlled transfer of waste into the composting system,
+            significantly improving operational efficiency and operator safety.
+            The bin lifter is compatible with composting machines having
+            processing capacities of 125 kg per day and above. Each unit is
+            custom-configured based on the machine model, bin size, and required
+            lifting capacity, ensuring seamless integration with the composting
+            system.
+          </p>
+
+          <div className="grid sm:grid-cols-2 gap-3">
+            {[
+              "Safe bin handling with controlled lifting and tipping",
+              "Available for machines having processing capacities of 125 kg per day and above",
+              "Configured lifting capacity to suit machine size requirements",
+              "Robust construction for repeated lifting cycles",
+              "Manual push-button operation for controlled movement",
+              "Integrated safety systems including limit switches",
+            ].map((f, i) => (
+              <div key={i} className="flex items-start gap-2">
+                <CheckCircle2
+                  className="w-3.5 h-3.5 mt-0.5 flex-shrink-0"
+                  style={{ color: "#178B4C" }}
+                />
+                <span
+                  style={{
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontSize: "0.85rem",
+                    color: "#5A6B5C",
+                  }}
+                >
+                  {f}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Right Image */}
+        <div
+          className="overflow-hidden h-[260px] lg:h-[460px]"
+          style={{
+            boxShadow: "0 20px 45px rgba(6, 92, 35, 0.15)",
+          }}
+        >
+          <img
+            src={binfilter}
+            alt="Bin Lifter"
+            className="w-full h-full"
+            style={{
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </div>
+
+      {/* System Integration */}
+      <div className="mt-16">
+       <h3
+  className="mb-4"
+  style={{
+    fontFamily: "'Playfair Display', serif",
+    fontWeight: 700,
+    fontSize: "2rem",
+  }}
+>
+  <span style={{ color: "#178B4C" }}>System </span>
+  <span style={{ color: "#A0780E" }}>Integration</span>
+</h3>
+
+        <p
+          style={{
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: "0.95rem",
+            color: "#5A6B5C",
+            lineHeight: 1.9,
+          }}
+        >
+          The bin lifter is engineered for direct integration with Reddonatura
+          composting machines of 125 kg capacity and above. It lifts and
+          positions waste bins at the required height and angle to ensure safe,
+          controlled, and efficient discharge of food waste into the machine,
+          supporting a streamlined waste management process.
+        </p>
+      </div>
+
+      {/* Applications + Technical Overview */}
+      <div className="mt-16 grid lg:grid-cols-2 gap-16">
+        {/* Applications */}
+        <div>
+          <h3
+  className="mb-4"
+  style={{
+    fontFamily: "'Playfair Display', serif",
+    fontWeight: 700,
+    fontSize: "2rem",
+  }}
+>
+  <span style={{ color: "#178B4C" }}>Typical </span>
+  <span style={{ color: "#A0780E" }}>Applications</span>
+</h3>
+
+          {[
+            "Labour camps",
+            "Hotels, resorts and hospitality properties",
+            "Commercial kitchens and food courts",
+            "Universities and institutional facilities",
+            "Municipal corporations",
+            "Poultry farms and animal slaughter house",
+          ].map((item, i) => (
+            <div key={i} className="flex items-start gap-2 mb-3">
+              <CheckCircle2
+                className="w-3.5 h-3.5 mt-0.5 flex-shrink-0"
+                style={{ color: "#178B4C" }}
+              />
+              <span
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: "0.9rem",
+                  color: "#5A6B5C",
+                }}
+              >
+                {item}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/* Technical Overview */}
+        <div>
+         <h3
+  className="mb-4"
+  style={{
+    fontFamily: "'Playfair Display', serif",
+    fontWeight: 700,
+    fontSize: "2rem",
+  }}
+>
+  <span style={{ color: "#178B4C" }}>Technical </span>
+  <span style={{ color: "#A0780E" }}>Overview</span>
+</h3>
+
+          {[
+            "Applicable for composting machines: 125 kg capacity and above",
+            "Lifting capacity: Up to 240 kg per cycle",
+            "Power supply: Customizable based on country-specific electrical standards (50 Hz / 60 Hz)",
+            "Operation: Manual control for precise and safe handling",
+            "Safety: Equipped with limit switches and an overload relay for enhanced operational safety",
+          ].map((item, i) => (
+            <div key={i} className="flex items-start gap-2 mb-3">
+              <CheckCircle2
+                className="w-3.5 h-3.5 mt-0.5 flex-shrink-0"
+                style={{ color: "#178B4C" }}
+              />
+              <span
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: "0.9rem",
+                  color: "#5A6B5C",
+                }}
+              >
+                {item}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
-
 function DewateringTab() {
   return (
-    <div className="grid lg:grid-cols-2 gap-12 items-start">
+    <>
+      <div className="grid lg:grid-cols-2 gap-12 items-start">
       <div>
         <div className="text-[10px] tracking-[0.18em] uppercase mb-2" style={{ fontFamily: "'DM Mono', monospace", color: "#A0780E" }}>60–70% Volume Reduction · Plug & Play</div>
-        <h3 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "clamp(1.4rem, 2.5vw, 2rem)", color: "#053114", marginBottom: "16px" }}>
-          rNATURE Dewatering Systems
-        </h3>
-        <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.975rem", color: "#5A6B5C", lineHeight: 1.8, marginBottom: "20px" }}>
-          The rNATURE Dewaterer rapidly processes all kinds of organic food waste using a special centrifugal technique, reducing volume by 60–70%. Compact enough for any commercial kitchen or garbage room, it dramatically lowers waste storage and municipality disposal costs.
-        </p>
-        {["Reduces food waste volume by 60–70%", "Compact standalone unit — fits any space", "Centrifugal dewatering, no chemicals needed", "SS 304 body — easy to clean and maintain", "Grey water outlet connects directly to STP", "100 kg/hr processing capacity (RN DW 100)"].map((f, i) => (
-          <div key={i} className="flex items-start gap-2 mb-2">
-            <CheckCircle2 className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style={{ color: "#178B4C" }} />
-            <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.85rem", color: "#5A6B5C" }}>{f}</span>
-          </div>
-        ))}
-        <div className="mt-5 p-4 rn-card-shadow" style={{ backgroundColor: "rgba(23,139,76,0.08)", border: "1px solid rgba(23,139,76,0.2)" }}>
-          <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "1.8rem", color: "#178B4C" }}>60–70%</div>
-          <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.875rem", color: "#5A6B5C" }}>Food waste volume reduction — model RN DW 100</div>
-        </div>
+       <h3
+  style={{
+    fontFamily: "'Playfair Display', serif",
+    fontWeight: 700,
+    fontSize: "clamp(1.4rem, 2.5vw, 2rem)",
+    marginBottom: "16px",
+  }}
+>
+  <span style={{ color: "#178B4C" }}>Pre-Treatment </span>
+  <span style={{ color: "#A0780E" }}>Machine</span>
+</h3>
+        <div style={{ marginBottom: "22px" }}>
+  {/* Highlight Strip */}
+  <div
+    style={{
+      display: "inline-block",
+      background: "rgba(23,139,76,0.12)",
+      color: "#178B4C",
+      padding: "4px 10px",
+      borderRadius: "3px",
+      fontFamily: "'DM Sans', sans-serif",
+      fontWeight: 600,
+      fontSize: "1rem",
+      lineHeight: 1.5,
+      marginBottom: "14px",
+    }}
+  >
+    Designed to efficiently reduce food waste volume prior to composting or
+    further processing.
+  </div>
+
+  <p
+    style={{
+      fontFamily: "'DM Sans', sans-serif",
+      fontWeight: 300,
+      fontSize: "0.975rem",
+      color: "#5A6B5C",
+      lineHeight: 1.9,
+      marginBottom: "14px",
+    }}
+  >
+    Reddonatura pre-treatment machines operate on a two-stage processing
+    system. In the first stage, food waste is shredded into smaller particle
+    sizes. In the second stage, excess moisture is removed through a
+    centrifugal dewatering mechanism. This process achieves a volume reduction
+    of approximately 60–70%, making the waste highly suitable for further
+    composting, storage, or transportation.
+  </p>
+
+  <p
+    style={{
+      fontFamily: "'DM Sans', sans-serif",
+      fontWeight: 300,
+      fontSize: "0.975rem",
+      color: "#5A6B5C",
+      lineHeight: 1.9,
+      marginBottom: "14px",
+    }}
+  >
+    By significantly reducing moisture content, the system improves handling
+    efficiency and enhances the performance of downstream composting processes.
+  </p>
+
+  <p
+    style={{
+      fontFamily: "'DM Sans', sans-serif",
+      fontWeight: 300,
+      fontSize: "0.975rem",
+      color: "#5A6B5C",
+      lineHeight: 1.9,
+      marginBottom: "14px",
+    }}
+  >
+    Each machine is configured based on the quantity of food waste generated
+    per hour. Motor rating, throughput capacity, and internal components are
+    selected to match site-specific conditions and duty cycles, ensuring stable
+    and reliable performance in high-volume operating environments.
+  </p>
+
+  <p
+    style={{
+      fontFamily: "'DM Sans', sans-serif",
+      fontWeight: 300,
+      fontSize: "0.975rem",
+      color: "#5A6B5C",
+      lineHeight: 1.9,
+    }}
+  >
+    Design priorities focus on durability, operational simplicity, and long
+    service life—delivering dependable performance without unnecessary
+    complexity.
+  </p>
+</div>
+       {[
+  "Effective dewatering for substantial reduction in food waste volume.",
+  "Throughput capacity configured based on hourly waste generation.",
+  "Motor rating matched to processing load and operating conditions.",
+  "Robust cutting and dewatering components for continuous operation.",
+  "Compact, standalone design suitable for confined service areas.",
+  "Low-maintenance construction with easy access to components.",
+].map((f, i) => (
+  <div key={i} className="flex items-start gap-2 mb-2">
+    <CheckCircle2
+      className="w-3.5 h-3.5 mt-0.5 flex-shrink-0"
+      style={{ color: "#178B4C" }}
+    />
+    <span
+      style={{
+        fontFamily: "'DM Sans', sans-serif",
+        fontSize: "0.85rem",
+        color: "#5A6B5C",
+        lineHeight: 1.8,
+      }}
+    >
+      {f}
+    </span>
+  </div>
+))}
+        
       </div>
       <div
   className="overflow-hidden h-[260px] lg:h-[460px]"
@@ -264,21 +649,274 @@ function DewateringTab() {
   />
 </div>
     </div>
+
+{/* ================= TECHNICAL OVERVIEW ================= */}
+
+<div className="mt-20 w-full">
+  <h3
+    className="mb-8"
+    style={{
+      fontFamily: "'Playfair Display', serif",
+      fontWeight: 700,
+      fontSize: "2rem",
+    }}
+  >
+    <span style={{ color: "#178B4C" }}>Technical </span>
+    <span style={{ color: "#A0780E" }}>Overview</span>
+  </h3>
+
+  <div
+    style={{
+      border: "1px solid rgba(5,49,20,0.08)",
+      borderRadius: "8px",
+      overflow: "hidden",
+    }}
+  >
+    {[
+      [
+        "Working Capacity",
+        "Customizable based on waste availability, from 100 kg/hr to 500 kg/hr",
+      ],
+      [
+        "Power Supply",
+        "Configurable as per country-specific standards (50 Hz / 60 Hz)",
+      ],
+      [
+        "Mobility Arrangement",
+        "Available",
+      ],
+      [
+        "Outer Body Material",
+        "Stainless Steel (SS)",
+      ],
+    ].map(([title, value], i) => (
+      <div
+        key={i}
+        className="grid md:grid-cols-[320px_1fr]"
+        style={{
+          borderBottom:
+            i !== 3 ? "1px solid rgba(5,49,20,0.08)" : "none",
+        }}
+      >
+        <div
+          style={{
+            background: "#F8FAF7",
+            padding: "18px 24px",
+            fontFamily: "'DM Sans', sans-serif",
+            fontWeight: 700,
+            color: "#053114",
+          }}
+        >
+          {title}
+        </div>
+
+        <div
+          style={{
+            padding: "18px 24px",
+            fontFamily: "'DM Sans', sans-serif",
+            color: "#5A6B5C",
+            lineHeight: 1.8,
+          }}
+        >
+          {value}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+
+{/* ================= SYSTEM INFORMATION ================= */}
+
+<div className="mt-20 w-full">
+  <div className="grid lg:grid-cols-2 gap-10">
+
+    {/* System Integration */}
+    <div
+      style={{
+        background: "#F8FAF7",
+        border: "1px solid rgba(5,49,20,0.08)",
+        borderRadius: "12px",
+        padding: "32px",
+      }}
+    >
+      <h3
+        style={{
+          fontFamily: "'Playfair Display', serif",
+          fontWeight: 700,
+          fontSize: "1.8rem",
+          marginBottom: "18px",
+        }}
+      >
+        <span style={{ color: "#178B4C" }}>System </span>
+        <span style={{ color: "#A0780E" }}>Integration</span>
+      </h3>
+
+      <p
+        style={{
+          fontFamily: "'DM Sans', sans-serif",
+          fontSize: "0.95rem",
+          color: "#5A6B5C",
+          lineHeight: 1.9,
+        }}
+      >
+        The pre-treatment machine can operate as a standalone unit or as part
+        of an integrated waste management system. Separated grey water can be
+        discharged to a sewage treatment plant or drainage line, while the
+        reduced solid fraction can be directly fed into composting systems or
+        stored and transported efficiently.
+      </p>
+    </div>
+
+    {/* Capacity & Configuration */}
+    <div
+      style={{
+        background: "#F8FAF7",
+        border: "1px solid rgba(5,49,20,0.08)",
+        borderRadius: "12px",
+        padding: "32px",
+      }}
+    >
+      <h3
+        style={{
+          fontFamily: "'Playfair Display', serif",
+          fontWeight: 700,
+          fontSize: "1.8rem",
+          marginBottom: "18px",
+        }}
+      >
+        <span style={{ color: "#178B4C" }}>Capacity & </span>
+        <span style={{ color: "#A0780E" }}>Configuration</span>
+      </h3>
+
+      <p
+        style={{
+          fontFamily: "'DM Sans', sans-serif",
+          fontSize: "0.95rem",
+          color: "#5A6B5C",
+          lineHeight: 1.9,
+        }}
+      >
+        Available in multiple throughput ranges. Motor rating and internal
+        components are configured based on hourly waste generation and
+        operational requirements. Higher capacities and customized
+        configurations are available following site assessment.
+      </p>
+    </div>
+
+  </div>
+</div>
+{/* ================= KEY SPECIFICATIONS ================= */}
+
+<div className="mt-20 w-full">
+  <h3
+    className="mb-8"
+    style={{
+      fontFamily: "'Playfair Display', serif",
+      fontWeight: 700,
+      fontSize: "2rem",
+    }}
+  >
+    <span style={{ color: "#178B4C" }}>Key </span>
+    <span style={{ color: "#A0780E" }}>Specifications</span>
+  </h3>
+
+  <div className="grid md:grid-cols-2 gap-x-12 gap-y-4">
+    {[
+      "Designed to efficiently reduce food waste volume before composting or further processing.",
+      "Operates on a two-stage processing system.",
+      "Stage 1: High-efficiency food waste shredding.",
+      "Stage 2: Centrifugal dewatering mechanism.",
+      "Top inlet for easy waste feeding.",
+      "Inbuilt water sprinkling system for smooth operation.",
+      "Outlet provided for processed waste collection.",
+      "Designed with enhanced safety features.",
+      "User-friendly and intuitive control panel.",
+      "Heavy-duty, rock-solid locking feet for stability.",
+      "Working capacity: 350 kg per hour.",
+      "Customizable capacity from 100 kg/hr to 500 kg/hr.",
+      "Compact, standalone design suitable for limited spaces.",
+      "Robust shredding teeth for reliable performance.",
+      "Improves efficiency of downstream processing.",
+      "Excess moisture discharged to STP or drainage line.",
+      "Achieves 60–70% volume reduction.",
+      "Ideal for facilities where waste handling cost is based on volume or weight.",
+    ].map((item, index) => (
+      <div key={index} className="flex items-start gap-3">
+        <CheckCircle2
+          className="w-5 h-5 mt-1 flex-shrink-0"
+          style={{ color: "#178B4C" }}
+        />
+        <span
+          style={{
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: "0.95rem",
+            color: "#5A6B5C",
+            lineHeight: 1.8,
+          }}
+        >
+          {item}
+        </span>
+      </div>
+    ))}
+  </div>
+</div>
+
+</>
   );
 }
-
+  
 function BioFilterTab() {
   return (
-    <div className="grid lg:grid-cols-2 gap-12 items-start">
+    <>
+      <div className="grid lg:grid-cols-2 gap-12 items-start">
       <div>
         <div className="text-[10px] tracking-[0.18em] uppercase mb-2" style={{ fontFamily: "'DM Mono', monospace", color: "#A0780E" }}>Biological Filtration · Odour Free</div>
-        <h3 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "clamp(1.4rem, 2.5vw, 2rem)", color: "#053114", marginBottom: "16px" }}>
-          Bio-Filter Systems
-        </h3>
+        
+
+  <h3
+  className="mb-8"
+  style={{
+    fontFamily: "'Playfair Display', serif",
+    fontWeight: 700,
+    fontSize: "2rem",
+  }}
+>
+  <span style={{ color: "#178B4C" }}>Bio-Filter</span>
+  <span style={{ color: "#A0780E" }}> Systems</span>
+</h3>
+        
+        <div
+  style={{
+    display: "inline-block",
+    background: "rgba(23,139,76,0.12)",
+    color: "#178B4C",
+    padding: "4px 10px",
+    borderRadius: "3px",
+    fontFamily: "'DM Sans', sans-serif",
+    fontWeight: 600,
+    fontSize: "1rem", // Increase this value
+    lineHeight: 1.5,
+    marginBottom: "14px",
+  }}
+>
+  Reddonatura Bio Filter systems are engineered to treat exhaust air generated during organic waste processing. 
+</div>
+
         <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.975rem", color: "#5A6B5C", lineHeight: 1.8, marginBottom: "20px" }}>
-          Bio-filter systems use a bed of organic media — typically wood chips, compost, or lava rock inoculated with microbial cultures — to biologically oxidise and neutralise odorous compounds (H₂S, ammonia, VOCs) from composting, dewatering, and waste processing operations. Essential for urban installations where odour management is a regulatory requirement.
-        </p>
-        {["Removes H₂S, NH₃ and VOCs biologically", "No chemical consumables — fully natural process", "Efficiency > 95% odour removal", "Media life 3–5 years", "Available in modular skid-mounted units", "Suitable for OWC exhaust, storage rooms, STP off-gas"].map((f, i) => (
+        By combining biological filtration,
+  activated carbon media, and UV treatment, the system effectively reduces
+  odour-causing compounds and delivers clean, safe air for discharge. Designed
+  for continuous operation, each unit is configured to match processing
+  capacity, ensuring reliable performance, long service life, and efficient
+  odour control as part of a complete waste management solution.        </p>
+        {[
+  "Effective odour control using biological filtration, UV lights, and activated carbon media.",
+  "Eliminates the need for additional ventilation systems.",
+  "Continuous operation suitable for daily processing environments.",
+  "Durable stainless steel construction for extended service life.",
+  "Integrated safety and filtration stages for cleaner air discharge.",
+].map((f, i) => (
           <div key={i} className="flex items-start gap-2 mb-2">
             <CheckCircle2 className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style={{ color: "#178B4C" }} />
             <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.85rem", color: "#5A6B5C" }}>{f}</span>
@@ -302,46 +940,327 @@ function BioFilterTab() {
     }}
   />
 </div>
+
+
     </div>
+    
+    {/* ================= TECHNICAL OVERVIEW ================= */}
+
+<div className="mt-20 w-full">
+  <h3
+    className="mb-8"
+    style={{
+      fontFamily: "'Playfair Display', serif",
+      fontWeight: 700,
+      fontSize: "2rem",
+    }}
+  >
+    <span style={{ color: "#178B4C" }}>Technical </span>
+    <span style={{ color: "#A0780E" }}>Overview</span>
+  </h3>
+
+  <div className="space-y-5">
+    <div
+      style={{
+        fontFamily: "'DM Sans', sans-serif",
+        fontSize: "0.95rem",
+        color: "#5A6B5C",
+      }}
+    >
+      <strong style={{ color: "#053114" }}>Power Supply:</strong>{" "}
+      Configurable as per country-specific standards (50 Hz / 60 Hz)
+    </div>
+
+    <div
+      style={{
+        fontFamily: "'DM Sans', sans-serif",
+        fontSize: "0.95rem",
+        color: "#5A6B5C",
+      }}
+    >
+      <strong style={{ color: "#053114" }}>Outer Body Material:</strong>{" "}
+      Stainless Steel (SS)
+    </div>
+
+    <div
+      style={{
+        fontFamily: "'DM Sans', sans-serif",
+        fontSize: "0.95rem",
+        color: "#5A6B5C",
+      }}
+    >
+      <strong style={{ color: "#053114" }}>Process Type:</strong>{" "}
+      Continuous
+    </div>
+
+    <div
+      style={{
+        fontFamily: "'DM Sans', sans-serif",
+        fontSize: "0.95rem",
+        color: "#5A6B5C",
+      }}
+    >
+      <strong style={{ color: "#053114" }}>Odour Control Method:</strong>{" "}
+      Biological filtration with UV treatment and activated carbon adsorption.
+    </div>
+
+    <div
+      className="md:col-span-2"
+      style={{
+        fontFamily: "'DM Sans', sans-serif",
+        fontSize: "0.95rem",
+        color: "#5A6B5C",
+      }}
+    >
+      <strong style={{ color: "#053114" }}>Ventilation:</strong>{" "}
+      Designed with inbuilt ventilation system.
+    </div>
+  </div>
+</div>
+  </>
   );
 }
 
 function ShreddersTab() {
   return (
-    <div className="grid lg:grid-cols-2 gap-12 items-start">
-      <div>
-        <div className="text-[10px] tracking-[0.18em] uppercase mb-2" style={{ fontFamily: "'DM Mono', monospace", color: "#A0780E" }}>High-Torque · Auto-Reverse · Low Noise</div>
-        <h3 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "clamp(1.4rem, 2.5vw, 2rem)", color: "#053114", marginBottom: "16px" }}>
-          Industrial Shredders
-        </h3>
-        <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.975rem", color: "#5A6B5C", lineHeight: 1.8, marginBottom: "20px" }}>
-          Our range of industrial shredders covers single shaft, dual shaft, four shaft, and wood chipper variants — each engineered for specific waste streams from pre-shredding organic waste to processing plastics, wood, and industrial residues. Auto-reverse jam protection and easy-access maintenance chambers ensure maximum uptime.
-        </p>
-        {["Single, Dual, Four Shaft & Wood Chipper variants", "High-torque low-speed mechanism", "Auto-reverse jam prevention", "Integrated output screen for size control", "Low noise — suitable for urban installations", "Heavy-duty blades with long service life"].map((f, i) => (
-          <div key={i} className="flex items-start gap-2 mb-2">
-            <CheckCircle2 className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style={{ color: "#178B4C" }} />
-            <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.85rem", color: "#5A6B5C" }}>{f}</span>
+    <>
+      {/* Top Section */}
+      <div className="grid lg:grid-cols-2 gap-12 items-start">
+        {/* Left */}
+        <div>
+          <div
+            className="text-[10px] tracking-[0.18em] uppercase mb-2"
+            style={{
+              fontFamily: "'DM Mono', monospace",
+              color: "#A0780E",
+            }}
+          >
+            High-Torque · Auto-Reverse · Low Noise
           </div>
-        ))}
-      </div>
-     <div
-  className="overflow-hidden h-[260px] lg:h-[460px]"
+
+         
+          <h3
+  className="mb-8"
   style={{
-    boxShadow: "0 20px 45px rgba(5,49,20,0.15)",
+    fontFamily: "'Playfair Display', serif",
+    fontWeight: 700,
+    fontSize: "2rem",
   }}
 >
-  <img
-    src={Shredders}
-    alt="Industrial Shredder"
-    className="w-full h-full"
-    style={{
-      objectFit: "contain",
-    }}
-  />
+  <span style={{ color: "#178B4C" }}>Industrial</span>
+  <span style={{ color: "#A0780E" }}> Shredders</span>
+</h3>
+
+
+<div
+  style={{
+    display: "inline-block",
+    background: "rgba(23,139,76,0.12)",
+    color: "#178B4C",
+    padding: "4px 10px",
+    borderRadius: "3px",
+    fontFamily: "'DM Sans', sans-serif",
+    fontWeight: 600,
+    fontSize: "1rem", // Increase this value
+    lineHeight: 1.5,
+    marginBottom: "14px",
+  }}
+>
+  Efficient shredding for food, organic & garden waste 
 </div>
-    </div>
+          <p
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 300,
+              fontSize: "0.975rem",
+              color: "#5A6B5C",
+              lineHeight: 1.8,
+              marginBottom: "20px",
+            }}
+          >
+            Reddonatura shredders are engineered for efficient size reduction of
+            food and organic waste to optimize composting efficiency and
+            accelerate biodegradation. Designed for continuous-duty operation,
+            they deliver consistent throughput and reliable performance in
+            demanding waste management environments. Each unit is configured
+            based on waste characteristics and processing capacity, providing
+            robust construction, high torque transmission, stable operation, and
+            seamless integration with downstream composting systems.
+          </p>
+
+          {[
+            "Purpose-built variants – Dedicated configurations for food waste and garden waste processing.",
+            "Configured capacity – Motor power and throughput customized based on daily waste volume and project requirements.",
+            "Robust construction – Heavy-duty structure engineered for continuous operation and extended service life.",
+            "Controlled output – Uniform size reduction to improve downstream composting efficiency.",
+            "Straightforward operation – Simple and safe control system designed for reliable daily use.",
+            "Low-maintenance design – Easy access to components for inspection, servicing, and maintenance.",
+          ].map((f, i) => (
+            <div key={i} className="flex items-start gap-2 mb-2">
+              <CheckCircle2
+                className="w-3.5 h-3.5 mt-0.5 flex-shrink-0"
+                style={{ color: "#178B4C" }}
+              />
+              <span
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: "0.85rem",
+                  color: "#5A6B5C",
+                }}
+              >
+                {f}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/* Right */}
+        <div
+          className="overflow-hidden h-[260px] lg:h-[460px]"
+          style={{
+            boxShadow: "0 20px 45px rgba(5,49,20,0.15)",
+          }}
+        >
+          <img
+            src={Shredders}
+            alt="Industrial Shredder"
+            className="w-full h-full"
+            style={{
+              objectFit: "contain",
+            }}
+          />
+        </div>
+      </div>
+
+      {/* ================= FULL WIDTH SECTION ================= */}
+
+      <div className="mt-20 w-full">
+        <h3
+  className="mb-8"
+  style={{
+    fontFamily: "'Playfair Display', serif",
+    fontWeight: 700,
+    fontSize: "2rem",
+  }}
+>
+  <span style={{ color: "#178B4C" }}>Shredder </span>
+  <span style={{ color: "#A0780E" }}>Variants</span>
+</h3>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          {/* Food Waste */}
+          <div>
+            <h4
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 700,
+                fontSize: "1.1rem",
+                color: "#178B4C",
+                marginBottom: "16px",
+                textTransform: "uppercase",
+              }}
+            >
+              Food Waste Shredder
+            </h4>
+
+            <p
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                color: "#5A6B5C",
+                lineHeight: 1.9,
+              }}
+            >
+              Single-shaft and double-shaft options.
+            </p>
+
+            <p
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                color: "#5A6B5C",
+                lineHeight: 1.9,
+              }}
+            >
+              Capacity: 100 kg/hour up to 1500 kg/day (customizable).
+            </p>
+          </div>
+
+          {/* Garden Waste */}
+          <div>
+            <h4
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 700,
+                fontSize: "1.1rem",
+                color: "#178B4C",
+                marginBottom: "16px",
+                textTransform: "uppercase",
+              }}
+            >
+              Garden Waste Shredder
+            </h4>
+
+            <p
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                color: "#5A6B5C",
+                lineHeight: 1.9,
+              }}
+            >
+              Single-shaft and double-shaft options.
+            </p>
+
+            <p
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                color: "#5A6B5C",
+                lineHeight: 1.9,
+              }}
+            >
+              Capacity: 100 kg/hour up to 3500 kg/hour (customizable).
+            </p>
+          </div>
+
+          {/* Industrial */}
+          <div>
+            <h4
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 700,
+                fontSize: "1.1rem",
+                color: "#178B4C",
+                marginBottom: "16px",
+                textTransform: "uppercase",
+              }}
+            >
+              Industrial Shredder
+            </h4>
+
+            <p
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                color: "#5A6B5C",
+                lineHeight: 1.9,
+              }}
+            >
+              Designed for large-volume waste processing.
+            </p>
+
+            <p
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                color: "#5A6B5C",
+                lineHeight: 1.9,
+              }}
+            >
+              Custom-built for higher capacities as per project requirements.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
+
 
 const tabContent: Record<string, JSX.Element> = {
   composting: <CompositingMachinesTab />,

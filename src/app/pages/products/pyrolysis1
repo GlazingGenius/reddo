@@ -1,0 +1,1063 @@
+import { useState } from "react";
+import { motion } from "motion/react";
+import { CheckCircle2, Flame, Recycle, ArrowRight, Leaf, Droplets, Wind, Zap } from "lucide-react";
+
+/* ─────────────────────────────────────────────
+   DESIGN TOKENS  (matching WetWaste page)
+───────────────────────────────────────────── */
+const C = {
+  darkGreen:  "#053114",
+  midGreen:   "#178B4C",
+  amber:      "#A0780E",
+  mutedText:  "#5A6B5C",
+  offWhite:   "#F8FAF7",
+  borderLight:"rgba(5,49,20,0.08)",
+};
+
+/* ─────────────────────────────────────────────
+   SHARED UI PRIMITIVES
+───────────────────────────────────────────── */
+function SpecTable({ rows }: { rows: string[][] }) {
+  return (
+    <div
+      className="overflow-x-auto mt-6"
+      style={{
+        border: `1px solid ${C.borderLight}`,
+        boxShadow: "0 1px 2px rgba(5,49,20,0.04), 0 16px 32px rgba(5,49,20,0.06)",
+      }}
+    >
+      <table className="w-full border-collapse text-left" style={{ minWidth: 650 }}>
+        <thead>
+          <tr style={{ backgroundColor: C.darkGreen }}>
+            {rows[0].map((h, i) => (
+              <th
+                key={i}
+                className="px-4 py-3 text-[11px] tracking-[0.1em] uppercase"
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontWeight: 600,
+                  color: "#fff",
+                  borderRight: "1px solid rgba(255,255,255,0.1)",
+                }}
+              >
+                {h}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.slice(1).map((row, i) => (
+            <tr
+              key={i}
+              className="transition-colors duration-150 hover:bg-[rgba(23,139,76,0.06)]"
+              style={{
+                backgroundColor: i % 2 === 0 ? "#fff" : "#F5F4EF",
+                borderBottom: `1px solid ${C.borderLight}`,
+              }}
+            >
+              {row.map((cell, j) => (
+                <td
+                  key={j}
+                  className="px-4 py-3"
+                  style={{
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontSize: "0.85rem",
+                    color: C.darkGreen,
+                    borderRight: `1px solid ${C.borderLight}`,
+                  }}
+                >
+                  {cell}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function FeatureCheck({ items }: { items: string[] }) {
+  return (
+    <div className="grid sm:grid-cols-2 gap-2">
+      {items.map((f, i) => (
+        <div key={i} className="flex items-start gap-2">
+          <CheckCircle2
+            className="w-3.5 h-3.5 mt-0.5 flex-shrink-0"
+            style={{ color: C.midGreen }}
+          />
+          <span
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: "0.85rem",
+              color: C.mutedText,
+            }}
+          >
+            {f}
+          </span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function SectionHeading({
+  green,
+  amber,
+}: {
+  green: string;
+  amber: string;
+}) {
+  return (
+    <h3
+      className="mb-6"
+      style={{
+        fontFamily: "'Playfair Display', serif",
+        fontWeight: 700,
+        fontSize: "2rem",
+      }}
+    >
+      <span style={{ color: C.midGreen }}>{green} </span>
+      <span style={{ color: C.amber }}>{amber}</span>
+    </h3>
+  );
+}
+
+function NotesBox({ notes }: { notes: string[] }) {
+  return (
+    <div
+      className="mt-6 rounded-lg p-5"
+      style={{ background: C.offWhite, border: `1px solid ${C.borderLight}` }}
+    >
+      <h4
+        className="mb-3"
+        style={{
+          fontFamily: "'DM Sans', sans-serif",
+          fontWeight: 600,
+          color: C.darkGreen,
+        }}
+      >
+        Notes
+      </h4>
+      <ul
+        className="space-y-2"
+        style={{
+          fontFamily: "'DM Sans', sans-serif",
+          fontSize: "0.9rem",
+          color: C.mutedText,
+          lineHeight: 1.7,
+        }}
+      >
+        {notes.map((n, i) => (
+          <li key={i}>• {n}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   PROCESS STEP CARD
+───────────────────────────────────────────── */
+function ProcessFlow({ steps }: { steps: { num: string; title: string; desc: string }[] }) {
+  return (
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-6">
+      {steps.map((s, i) => (
+        <div key={i} className="relative">
+          <div
+            className="p-4 h-full"
+            style={{
+              background: "#fff",
+              border: `1px solid ${C.borderLight}`,
+              borderTop: `3px solid ${C.midGreen}`,
+            }}
+          >
+            <div
+              className="text-[10px] tracking-[0.15em] uppercase mb-2"
+              style={{ fontFamily: "'DM Mono', monospace", color: C.amber }}
+            >
+              {s.num}
+            </div>
+            <div
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 700,
+                fontSize: "0.82rem",
+                color: C.darkGreen,
+                marginBottom: 6,
+              }}
+            >
+              {s.title}
+            </div>
+            <div
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: "0.78rem",
+                color: C.mutedText,
+                lineHeight: 1.6,
+              }}
+            >
+              {s.desc}
+            </div>
+          </div>
+          {i < steps.length - 1 && (
+            <div
+              className="hidden lg:flex absolute top-1/2 -right-2 z-10 items-center justify-center w-4"
+              style={{ transform: "translateY(-50%)" }}
+            >
+              <ArrowRight className="w-3 h-3" style={{ color: C.midGreen }} />
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   PRODUCT OUTPUT CARDS
+───────────────────────────────────────────── */
+function ProductCards({
+  products,
+}: {
+  products: { icon: React.ReactNode; name: string; yield: string; desc: string }[];
+}) {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+      {products.map((p, i) => (
+        <div
+          key={i}
+          className="p-6"
+          style={{
+            background: C.offWhite,
+            border: `1px solid ${C.borderLight}`,
+            borderRadius: 8,
+          }}
+        >
+          <div className="mb-3" style={{ color: C.midGreen }}>
+            {p.icon}
+          </div>
+          <div
+            style={{
+              fontFamily: "'DM Mono', monospace",
+              fontSize: "0.7rem",
+              color: C.amber,
+              letterSpacing: "0.12em",
+              textTransform: "uppercase",
+              marginBottom: 4,
+            }}
+          >
+            {p.yield}
+          </div>
+          <div
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontWeight: 700,
+              fontSize: "1.15rem",
+              color: C.darkGreen,
+              marginBottom: 8,
+            }}
+          >
+            {p.name}
+          </div>
+          <div
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: "0.875rem",
+              color: C.mutedText,
+              lineHeight: 1.7,
+            }}
+          >
+            {p.desc}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   ARCHITECTURE DIAGRAM BANNER
+───────────────────────────────────────────── */
+function ArchitectureBanner({ title }: { title: string }) {
+  return (
+    <div className="mt-16 w-full">
+      <SectionHeading green="System" amber="Architecture" />
+      <div
+        className="w-full overflow-hidden"
+        style={{
+          borderRadius: 8,
+          border: `1px solid ${C.borderLight}`,
+          boxShadow: "0 20px 45px rgba(5,49,20,0.12)",
+        }}
+      >
+        <img
+          src="https://images.unsplash.com/photo-1736820712641-56badd26f83b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwcHlyb2x5c2lzJTIwcGxhbnQlMjBmbG93JTIwZGlhZ3JhbXxlbnwxfHx8fDE3ODQyMDM2NzB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+          alt={`${title} Architecture`}
+          className="w-full"
+          style={{ height: "420px", objectFit: "cover", display: "block" }}
+        />
+        <div
+          className="px-6 py-4"
+          style={{
+            background: C.darkGreen,
+            fontFamily: "'DM Mono', monospace",
+            fontSize: "0.72rem",
+            letterSpacing: "0.12em",
+            color: "rgba(255,255,255,0.6)",
+            textTransform: "uppercase",
+          }}
+        >
+          {title} — Continuous Pyrolysis System Architecture
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   BIOMASS TAB
+───────────────────────────────────────────── */
+function BiomassTab() {
+  return (
+    <div>
+      {/* Hero Section */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <div
+            className="text-[10px] tracking-[0.18em] uppercase mb-2"
+            style={{ fontFamily: "'DM Mono', monospace", color: C.amber }}
+          >
+            Continuous Operation · Zero Landfill
+          </div>
+          <h3
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontWeight: 700,
+              fontSize: "clamp(1.4rem, 2.5vw, 2rem)",
+              marginBottom: 16,
+            }}
+          >
+            <span style={{ color: C.midGreen }}>Continuous Biomass </span>
+            <span style={{ color: C.amber }}>Pyrolysis Plant</span>
+          </h3>
+          <p
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 300,
+              fontSize: "0.975rem",
+              color: C.mutedText,
+              lineHeight: 1.8,
+              marginBottom: 20,
+            }}
+          >
+            Our continuous biomass pyrolysis plant thermally decomposes agricultural
+            residues, wood chips, rice husks, coconut shells, and other organic feedstocks
+            in an oxygen-free environment. Operating at 400–600 °C, the reactor converts
+            raw biomass into three high-value outputs — bio-oil, biochar, and syngas —
+            with no interruption to throughput. The fully sealed, closed-loop design
+            eliminates emissions and maximises energy recovery, making it the ideal
+            solution for industries aiming to achieve zero-waste targets while generating
+            usable fuel and soil-amendment products.
+          </p>
+          <FeatureCheck
+            items={[
+              "Continuous 24/7 operation with no batch interruption",
+              "Processes agricultural residues, wood chips & rice husk",
+              "Closed-loop design — zero harmful gas emissions",
+              "Auto-feeding & auto-discharge for minimal manual intervention",
+              "PLC-controlled temperature management system",
+              "High thermal efficiency with heat recycling from syngas",
+              "Biochar output suitable as soil conditioner and carbon sink",
+              "Modular capacity — scalable from 500 kg/day to 20 T/day",
+            ]}
+          />
+        </div>
+        <div
+          className="overflow-hidden h-[260px] lg:h-[460px]"
+          style={{ boxShadow: "0 20px 45px rgba(5,49,20,0.15)" }}
+        >
+          <img
+            src="https://images.unsplash.com/photo-1746512473500-96b78e516711?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=800"
+            alt="Biomass Pyrolysis Plant"
+            className="w-full h-full"
+            style={{ objectFit: "cover" }}
+          />
+        </div>
+      </div>
+
+      {/* Process Flow */}
+      <div className="mt-16">
+        <SectionHeading green="Process" amber="Flow" />
+        <ProcessFlow
+          steps={[
+            {
+              num: "01",
+              title: "Feedstock Preparation",
+              desc: "Biomass dried to <15% moisture and sized to 20–50 mm particles.",
+            },
+            {
+              num: "02",
+              title: "Auto-Feeding",
+              desc: "Sealed screw conveyor feeds material into the pyrolysis reactor.",
+            },
+            {
+              num: "03",
+              title: "Pyrolysis Reactor",
+              desc: "Thermal decomposition at 400–600 °C in oxygen-free environment.",
+            },
+            {
+              num: "04",
+              title: "Char Separation",
+              desc: "Biochar discharged continuously via sealed screw conveyor.",
+            },
+            {
+              num: "05",
+              title: "Oil Condensation",
+              desc: "Pyrolysis vapours condensed into bio-oil via multi-stage system.",
+            },
+            {
+              num: "06",
+              title: "Syngas Utilisation",
+              desc: "Non-condensable gas recycled as fuel to sustain reactor heat.",
+            },
+          ]}
+        />
+      </div>
+
+      {/* Product Outputs */}
+      <div className="mt-16">
+        <SectionHeading green="Product" amber="Outputs" />
+        <ProductCards
+          products={[
+            {
+              icon: <Droplets className="w-7 h-7" />,
+              name: "Bio-Oil",
+              yield: "Yield: 30–45%",
+              desc: "Dark liquid fuel suitable for industrial burners and boilers. Can be upgraded to transport fuel-grade quality.",
+            },
+            {
+              icon: <Leaf className="w-7 h-7" />,
+              name: "Biochar",
+              yield: "Yield: 25–35%",
+              desc: "Carbon-rich solid used as a soil amendment to enhance fertility, water retention, and carbon sequestration.",
+            },
+            {
+              icon: <Wind className="w-7 h-7" />,
+              name: "Syngas",
+              yield: "Yield: 20–30%",
+              desc: "Combustible non-condensable gas recycled internally to sustain reactor temperature, reducing external fuel costs.",
+            },
+          ]}
+        />
+      </div>
+
+      {/* Architecture Diagram */}
+      <ArchitectureBanner title="Biomass Pyrolysis" />
+
+      {/* Technical Specifications */}
+      <div className="mt-16">
+        <SectionHeading green="Technical" amber="Specifications" />
+        <SpecTable
+          rows={[
+            ["Model", "Capacity", "Reactor Temp.", "Bio-Oil Yield", "Power (kW)", "Footprint (m²)"],
+            ["RN-BP 500",  "500 kg/day",  "400–500 °C", "~35%", "18",  "30"],
+            ["RN-BP 1T",   "1 T/day",     "400–550 °C", "~38%", "30",  "45"],
+            ["RN-BP 2T",   "2 T/day",     "450–550 °C", "~40%", "55",  "70"],
+            ["RN-BP 5T",   "5 T/day",     "450–600 °C", "~42%", "110", "120"],
+            ["RN-BP 10T",  "10 T/day",    "450–600 °C", "~43%", "200", "200"],
+            ["RN-BP 20T",  "20 T/day",    "500–600 °C", "~45%", "380", "350"],
+          ]}
+        />
+        <NotesBox
+          notes={[
+            "Feedstock moisture content should not exceed 15% for optimal bio-oil yield.",
+            "Actual yields vary based on feedstock composition and operating temperature.",
+            "Power supply configurable per country-specific standards (50 Hz / 60 Hz).",
+            "Dimensions and connected load are indicative. Confirm with manufacturer prior to ordering.",
+          ]}
+        />
+      </div>
+
+      {/* Suitable Feedstocks */}
+      <div className="mt-16">
+        <div className="grid lg:grid-cols-2 gap-10">
+          <div
+            style={{
+              background: C.offWhite,
+              border: `1px solid ${C.borderLight}`,
+              borderRadius: 12,
+              padding: 32,
+            }}
+          >
+            <SectionHeading green="Suitable" amber="Feedstocks" />
+            {[
+              "Agricultural residues — rice husk, wheat straw, corn cobs",
+              "Wood chips, sawdust, bamboo, and timber offcuts",
+              "Coconut shells and palm kernel shells",
+              "Sugarcane bagasse and press mud",
+              "Municipal green waste and garden trimmings",
+              "Paper mill and cardboard processing waste",
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-2 mb-3">
+                <CheckCircle2 className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style={{ color: C.midGreen }} />
+                <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.9rem", color: C.mutedText }}>
+                  {item}
+                </span>
+              </div>
+            ))}
+          </div>
+          <div
+            style={{
+              background: C.offWhite,
+              border: `1px solid ${C.borderLight}`,
+              borderRadius: 12,
+              padding: 32,
+            }}
+          >
+            <SectionHeading green="Key" amber="Applications" />
+            {[
+              "Agro-industrial waste-to-energy projects",
+              "Rural biomass energy centres",
+              "Carbon credit generation programmes",
+              "Soil biochar production for agriculture",
+              "Industrial heat and power generation from bio-oil",
+              "Municipal solid waste treatment facilities",
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-2 mb-3">
+                <CheckCircle2 className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style={{ color: C.midGreen }} />
+                <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.9rem", color: C.mutedText }}>
+                  {item}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   PLASTIC TAB
+───────────────────────────────────────────── */
+function PlasticTab() {
+  return (
+    <div>
+      {/* Hero Section */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <div
+            className="text-[10px] tracking-[0.18em] uppercase mb-2"
+            style={{ fontFamily: "'DM Mono', monospace", color: C.amber }}
+          >
+            Waste Plastic to Fuel · Circular Economy
+          </div>
+          <h3
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontWeight: 700,
+              fontSize: "clamp(1.4rem, 2.5vw, 2rem)",
+              marginBottom: 16,
+            }}
+          >
+            <span style={{ color: C.midGreen }}>Continuous Plastic </span>
+            <span style={{ color: C.amber }}>Pyrolysis Plant</span>
+          </h3>
+          <p
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 300,
+              fontSize: "0.975rem",
+              color: C.mutedText,
+              lineHeight: 1.8,
+              marginBottom: 20,
+            }}
+          >
+            Our continuous plastic pyrolysis plant converts non-recyclable waste
+            plastics — PP, PE, PS, ABS — into valuable fuel oil, carbon black, and
+            combustible gas through controlled thermal decomposition at 350–450 °C.
+            The continuous-feed design eliminates downtime between batches, significantly
+            improving throughput and economic returns. The integrated condensation and
+            gas-scrubbing system ensures clean operation, while the recovered pyrolysis
+            oil serves as a direct substitute for diesel or heavy fuel oil in industrial
+            applications. Each plant is configured to meet site-specific plastic waste
+            volumes and operational requirements.
+          </p>
+          <FeatureCheck
+            items={[
+              "Continuous feeding — no reactor shutdown between cycles",
+              "Processes PP, PE, PS, ABS and mixed plastic waste",
+              "Fully sealed reactor — no gas leakage or open burning",
+              "High-efficiency condensation for maximum oil recovery",
+              "Carbon black recovery for rubber and coating industries",
+              "PLC-automated temperature and pressure monitoring",
+              "Gas scrubbing and tail-gas treatment for clean emissions",
+              "Modular design scalable from 1 T/day to 30 T/day",
+            ]}
+          />
+        </div>
+        <div
+          className="overflow-hidden h-[260px] lg:h-[460px]"
+          style={{ boxShadow: "0 20px 45px rgba(5,49,20,0.15)" }}
+        >
+          <img
+            src="https://images.unsplash.com/photo-1639980306447-c70a501f56b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=800"
+            alt="Plastic Pyrolysis Plant"
+            className="w-full h-full"
+            style={{ objectFit: "cover" }}
+          />
+        </div>
+      </div>
+
+      {/* Process Flow */}
+      <div className="mt-16">
+        <SectionHeading green="Process" amber="Flow" />
+        <ProcessFlow
+          steps={[
+            {
+              num: "01",
+              title: "Plastic Sorting",
+              desc: "Non-recyclable plastics sorted, metals and PVC removed.",
+            },
+            {
+              num: "02",
+              title: "Shredding & Drying",
+              desc: "Plastic shredded to 30–50 mm size and moisture reduced.",
+            },
+            {
+              num: "03",
+              title: "Pyrolysis Reactor",
+              desc: "Thermal cracking at 350–450 °C in oxygen-free environment.",
+            },
+            {
+              num: "04",
+              title: "Condensation",
+              desc: "Vapours pass through multi-stage condensers to recover oil.",
+            },
+            {
+              num: "05",
+              title: "Carbon Black",
+              desc: "Residual solid (carbon black) discharged and packaged for sale.",
+            },
+            {
+              num: "06",
+              title: "Gas Treatment",
+              desc: "Non-condensable gas cleaned and recycled as heating fuel.",
+            },
+          ]}
+        />
+      </div>
+
+      {/* Product Outputs */}
+      <div className="mt-16">
+        <SectionHeading green="Product" amber="Outputs" />
+        <ProductCards
+          products={[
+            {
+              icon: <Flame className="w-7 h-7" />,
+              name: "Pyrolysis Oil",
+              yield: "Yield: 40–60%",
+              desc: "High-calorific fuel oil used as a direct substitute for diesel or heavy fuel oil in industrial boilers and generators.",
+            },
+            {
+              icon: <Recycle className="w-7 h-7" />,
+              name: "Carbon Black",
+              yield: "Yield: 20–35%",
+              desc: "Recovered carbon black used as a reinforcing agent in rubber products, coatings, and pigment manufacturing.",
+            },
+            {
+              icon: <Zap className="w-7 h-7" />,
+              name: "Combustible Gas",
+              yield: "Yield: 10–15%",
+              desc: "Non-condensable hydrocarbon gas recycled internally to sustain reactor heating, reducing external fuel costs by up to 60%.",
+            },
+          ]}
+        />
+      </div>
+
+      {/* Architecture Diagram */}
+      <ArchitectureBanner title="Plastic Pyrolysis" />
+
+      {/* Technical Specifications */}
+      <div className="mt-16">
+        <SectionHeading green="Technical" amber="Specifications" />
+        <SpecTable
+          rows={[
+            ["Model", "Capacity", "Reactor Temp.", "Oil Yield", "Power (kW)", "Footprint (m²)"],
+            ["RN-PP 1T",   "1 T/day",    "350–420 °C", "~45%", "35",  "50"],
+            ["RN-PP 2T",   "2 T/day",    "370–430 °C", "~48%", "60",  "80"],
+            ["RN-PP 5T",   "5 T/day",    "380–440 °C", "~50%", "120", "140"],
+            ["RN-PP 10T",  "10 T/day",   "390–450 °C", "~55%", "220", "220"],
+            ["RN-PP 20T",  "20 T/day",   "400–450 °C", "~58%", "400", "380"],
+            ["RN-PP 30T",  "30 T/day",   "400–450 °C", "~60%", "580", "520"],
+          ]}
+        />
+        <NotesBox
+          notes={[
+            "PVC content must not exceed 3% of feed to prevent chlorine-related corrosion.",
+            "Actual oil yield depends on plastic type, contamination level, and operating temperature.",
+            "Power supply configurable per country-specific standards (50 Hz / 60 Hz).",
+            "Plant dimensions and specifications are indicative. Confirm with manufacturer prior to ordering.",
+          ]}
+        />
+      </div>
+
+      {/* Suitable Plastics + Applications */}
+      <div className="mt-16">
+        <div className="grid lg:grid-cols-2 gap-10">
+          <div
+            style={{
+              background: C.offWhite,
+              border: `1px solid ${C.borderLight}`,
+              borderRadius: 12,
+              padding: 32,
+            }}
+          >
+            <SectionHeading green="Accepted" amber="Plastic Types" />
+            {[
+              "Polypropylene (PP) — packaging, containers, straws",
+              "Polyethylene (PE) — HDPE, LDPE bags and films",
+              "Polystyrene (PS) — foam packaging and disposables",
+              "ABS — automotive parts and appliance casings",
+              "Mixed unsorted plastic waste (non-PVC)",
+              "Contaminated or non-recyclable multi-layer films",
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-2 mb-3">
+                <CheckCircle2 className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style={{ color: C.midGreen }} />
+                <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.9rem", color: C.mutedText }}>
+                  {item}
+                </span>
+              </div>
+            ))}
+          </div>
+          <div
+            style={{
+              background: C.offWhite,
+              border: `1px solid ${C.borderLight}`,
+              borderRadius: 12,
+              padding: 32,
+            }}
+          >
+            <SectionHeading green="Key" amber="Applications" />
+            {[
+              "Industrial fuel oil production from waste plastic",
+              "Carbon black supply for rubber and tyre industries",
+              "Plastic waste management for municipalities",
+              "Cement plant co-processing fuel supply",
+              "Extended Producer Responsibility (EPR) compliance",
+              "Waste-to-energy projects with carbon credit generation",
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-2 mb-3">
+                <CheckCircle2 className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style={{ color: C.midGreen }} />
+                <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.9rem", color: C.mutedText }}>
+                  {item}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   MAIN TABS CONFIG
+───────────────────────────────────────────── */
+const mainTabs = [
+  { id: "biomass", label: "Biomass Pyrolysis" },
+  { id: "plastic", label: "Plastic Pyrolysis" },
+];
+
+const tabContent: Record<string, React.ReactElement> = {
+  biomass: <BiomassTab />,
+  plastic: <PlasticTab />,
+};
+
+/* ─────────────────────────────────────────────
+   PAGE LAYOUT SHELL
+   (matches WetWasteManagementPage exactly)
+───────────────────────────────────────────── */
+function PageHeader({
+  breadcrumb,
+  title,
+  subtitle,
+}: {
+  breadcrumb: string;
+  title: string;
+  subtitle: string;
+}) {
+  return (
+    <div
+      className="w-full pt-24 pb-16 px-6"
+      style={{ background: C.darkGreen }}
+    >
+      <div className="max-w-7xl mx-auto">
+        <div
+          className="text-[10px] tracking-[0.2em] uppercase mb-4"
+          style={{ fontFamily: "'DM Mono', monospace", color: "rgba(255,255,255,0.45)" }}
+        >
+          Home / {breadcrumb}
+        </div>
+        <h1
+          style={{
+            fontFamily: "'Playfair Display', serif",
+            fontWeight: 700,
+            fontSize: "clamp(2rem, 4vw, 3.5rem)",
+            color: "#fff",
+            marginBottom: 16,
+            lineHeight: 1.15,
+          }}
+        >
+          {title}
+        </h1>
+        <p
+          style={{
+            fontFamily: "'DM Sans', sans-serif",
+            fontWeight: 300,
+            fontSize: "1.05rem",
+            color: "rgba(255,255,255,0.65)",
+            maxWidth: 580,
+            lineHeight: 1.75,
+          }}
+        >
+          {subtitle}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function TestimonialsSection() {
+  const items = [
+    {
+      quote:
+        "The continuous biomass pyrolysis plant has transformed our rice husk waste into a consistent source of bio-oil and biochar. Exceptional build quality and reliable support.",
+      name: "Director of Operations",
+      org: "Agro-Industrial Park, Tamil Nadu",
+    },
+    {
+      quote:
+        "Processing our facility's plastic waste on-site and converting it to fuel has dramatically cut our disposal costs and given us a carbon credit revenue stream.",
+      name: "Head of Sustainability",
+      org: "Packaging Manufacturer, Gujarat",
+    },
+    {
+      quote:
+        "Continuous operation with PLC control means we run three shifts without manual intervention. The system has exceeded our throughput targets from day one.",
+      name: "Plant Manager",
+      org: "Municipal Waste Authority, Maharashtra",
+    },
+  ];
+  return (
+    <div style={{ background: C.offWhite, borderTop: `1px solid ${C.borderLight}` }}>
+      <div className="max-w-7xl mx-auto px-6 py-20">
+        <div className="text-center mb-12">
+          <div
+            className="text-[10px] tracking-[0.2em] uppercase mb-3"
+            style={{ fontFamily: "'DM Mono', monospace", color: C.amber }}
+          >
+            Client Testimonials
+          </div>
+          <h2
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontWeight: 700,
+              fontSize: "clamp(1.6rem, 3vw, 2.4rem)",
+            }}
+          >
+            <span style={{ color: C.midGreen }}>Trusted by </span>
+            <span style={{ color: C.darkGreen }}>Industry Leaders</span>
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {items.map((t, i) => (
+            <div
+              key={i}
+              className="p-8"
+              style={{
+                background: "#fff",
+                border: `1px solid ${C.borderLight}`,
+                borderRadius: 8,
+                borderTop: `3px solid ${C.midGreen}`,
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontWeight: 300,
+                  fontSize: "0.95rem",
+                  color: C.mutedText,
+                  lineHeight: 1.85,
+                  marginBottom: 20,
+                  fontStyle: "italic",
+                }}
+              >
+                "{t.quote}"
+              </p>
+              <div
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontWeight: 700,
+                  fontSize: "0.875rem",
+                  color: C.darkGreen,
+                }}
+              >
+                {t.name}
+              </div>
+              <div
+                style={{
+                  fontFamily: "'DM Mono', monospace",
+                  fontSize: "0.72rem",
+                  color: C.amber,
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  marginTop: 2,
+                }}
+              >
+                {t.org}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function CTASection() {
+  return (
+    <div style={{ background: C.darkGreen }}>
+      <div className="max-w-7xl mx-auto px-6 py-20 text-center">
+        <div
+          className="text-[10px] tracking-[0.2em] uppercase mb-4"
+          style={{ fontFamily: "'DM Mono', monospace", color: "rgba(255,255,255,0.4)" }}
+        >
+          Get in Touch
+        </div>
+        <h2
+          className="mb-5"
+          style={{
+            fontFamily: "'Playfair Display', serif",
+            fontWeight: 700,
+            fontSize: "clamp(1.6rem, 3vw, 2.4rem)",
+            color: "#fff",
+          }}
+        >
+          Ready to turn waste into{" "}
+          <span style={{ color: C.amber }}>valuable resources?</span>
+        </h2>
+        <p
+          className="mb-8"
+          style={{
+            fontFamily: "'DM Sans', sans-serif",
+            fontWeight: 300,
+            color: "rgba(255,255,255,0.65)",
+            fontSize: "1rem",
+            maxWidth: 500,
+            margin: "0 auto 32px",
+            lineHeight: 1.75,
+          }}
+        >
+          Our engineers will assess your waste stream volume, feedstock composition,
+          and site conditions to recommend the optimal pyrolysis configuration.
+        </p>
+        <button
+          className="inline-flex items-center gap-2 px-8 py-4 transition-all duration-300 hover:opacity-90"
+          style={{
+            background: C.midGreen,
+            color: "#fff",
+            fontFamily: "'DM Sans', sans-serif",
+            fontWeight: 700,
+            fontSize: "0.875rem",
+            letterSpacing: "0.06em",
+            textTransform: "uppercase",
+            border: "none",
+            borderRadius: 2,
+            cursor: "pointer",
+          }}
+        >
+          Request a Technical Proposal
+          <ArrowRight className="w-4 h-4" />
+        </button>
+      </div>
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   PYROLYSIS PAGE
+───────────────────────────────────────────── */
+export function PyrolysisPage() {
+  const [activeTab, setActiveTab] = useState("biomass");
+
+  return (
+    <div style={{ background: "#fff", minHeight: "100vh" }}>
+      {/* Page Header */}
+      <PageHeader
+        breadcrumb="Pyrolysis"
+        title="Pyrolysis Solutions"
+        subtitle="Continuous biomass and plastic pyrolysis systems engineered for uninterrupted throughput, maximum resource recovery, and zero harmful emissions."
+      />
+
+      {/* Sticky Tab Bar */}
+      <div
+        className="sticky top-0 z-40"
+        style={{ backgroundColor: C.darkGreen }}
+      >
+        <div className="max-w-7xl mx-auto px-6 py-2">
+          <div className="flex gap-3 overflow-x-auto scrollbar-hide">
+            {mainTabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className="flex-shrink-0 px-5 py-3 transition-all duration-300"
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontWeight: 600,
+                  fontSize: "11px",
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  color: activeTab === tab.id ? "#FFFFFF" : "rgba(255,255,255,0.75)",
+                  background:
+                    activeTab === tab.id
+                      ? "rgba(255,255,255,0.08)"
+                      : "transparent",
+                  border:
+                    activeTab === tab.id
+                      ? "1px solid #A0780E"
+                      : "1px solid rgba(255,255,255,0.12)",
+                  borderRadius: "2px",
+                  cursor: "pointer",
+                }}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Tab Content */}
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <motion.div
+          key={activeTab}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.35 }}
+        >
+          {tabContent[activeTab]}
+        </motion.div>
+      </div>
+
+      {/* Testimonials */}
+      <TestimonialsSection />
+
+      {/* CTA */}
+      <CTASection />
+    </div>
+  );
+}
+
+export default PyrolysisPage;

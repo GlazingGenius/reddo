@@ -4,6 +4,7 @@ import { PageLayout, Section, SectionLabel, FeatureCard, SpecsTable, FAQAccordio
 import { Zap, Settings, Leaf, BarChart3, CheckCircle2, Play } from "lucide-react";
 import Biogasproces from "../../../imports/biogasprocesimg.png";
 import Biogas from "../../../imports/image-2.png";
+
 import Testimonials from "../../components/Testimonials";
 
 /* ── Biogas type tabs ─────────────────────────────── */
@@ -14,8 +15,15 @@ const biogasTypes = [
     title: "Containerized Biogas Plant",
     tag: "Modular · Plug & Play · Fast Deployment",
     desc: "Fully pre-fabricated and pre-assembled inside a standard shipping container, our containerized biogas plant can be deployed in days rather than months. Ideal for hotels, hospitals, food processing plants, and municipalities that need a compact, relocatable solution with minimal civil construction.",
-    features: ["Delivered fully assembled and tested", "No civil construction required", "Relocatable as operational needs change", "Available from 300 kg to 5 ton/day", "All components factory-integrated", "Plug-and-play gas supply"],
-    image: "https://cdsentec.com/wp-content/uploads/2023/08/biogas-container-lazy-2919235-1024x546.jpg",
+   features: [
+  "Renewable energy generation from segregated organic waste",
+  "Configured system capacity based on daily waste input",
+  "Clean biogas production for cooking or electricity generation",
+  "Nutrient-rich slurry output for agricultural or landscaping use",
+  "Closed-loop process with water reuse for feed preparation",
+  "Continuous digestion process with controlled operating conditions",
+  "Upgradation to CBG"
+],    image: Biogas,
   },
   {
     id: "fixeddome",
@@ -211,7 +219,11 @@ export function BiogasPage() {
           <motion.div initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div className="text-center"><SectionLabel label="Biogas Solutions" /></div>
             <p className="mb-5" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.975rem", color: "#5A6B5C", lineHeight: 1.8 }}>
-              Biogas is a fully renewable and environmentally friendly fuel that can help to reduce life cycle greenhouse gas emissions by up to <strong style={{ color: "#053114", fontWeight: 600 }}>90%</strong> compared with fossil fuel use. Our systems convert a wide range of organic waste materials into high-quality biogas for heating, electricity generation, and as a cleaner alternative to fossil fuels.
+              Designed for renewable energy generation from organic waste
+Reddonatura biogas plants are designed to convert segregated organic waste into clean, renewable energy through controlled anaerobic digestion. By processing food and organic waste in oxygen-free conditions, the system generates methane-rich biogas that can be used for cooking, heating, or electricity generation.
+In addition to energy output, the process produces nutrient-rich slurry that can be reused as organic liquid fertilizer. This enables both energy recovery and material recycling within a single, integrated system.
+Each biogas plant is configured based on daily waste input, site conditions, and intended energy usage. System capacity, digester volume, and auxiliary components are selected to ensure stable operation and predictable performance over extended service life. 
+
             </p>
             <div className="grid grid-cols-2 gap-4 mt-6">
               {[{ v: "90%", l: "GHG Reduction" }, { v: "60%", l: "Methane Content" }, { v: "4 types", l: "Plant Configurations" }, { v: "24/7", l: "Energy Output" }].map(s => (
@@ -359,11 +371,34 @@ export function BiogasPage() {
         </div>
       </Section>*/}
 
+      <Section>
+        <div className="max-w-3xl mx-auto text-center">
+          <SectionLabel label="SYSTEM INTEGRATION" />
+          <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "1.05rem", color: "#5A6B5C", lineHeight: 1.85 }}>
+         The biogas plant operates as part of Reddonatura’s integrated waste management ecosystem. Organic waste is first pre-treated and converted into slurry before entering the digester system.
+Biogas generated during digestion is purified through moisture traps and scrubbers, then stored and transferred for end use. The remaining slurry can be processed into organic fertilizer, while recovered water can be reused in subsequent feed cycles.
+This allows the system to support both energy recovery and waste reduction within a single operational workflow. 
+          </p>
+        </div>
+      </Section>
+
+<Section>
+        <div className="max-w-3xl mx-auto text-center">
+          <SectionLabel label="CAPACITY & CONFIGURATION" />
+          <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "1.05rem", color: "#5A6B5C", lineHeight: 1.85 }}>
+           The Biogas plants can be customized starting from containerized plant 150kg per day processing up to 400 tons per day processing configured based on daily organic waste generation, available space, and intended energy output.
+System sizing, digester volume, and auxiliary equipment are determined during site assessment to ensure stable biological performance and long-term operational reliability. Higher-capacity and customised installations are available for large-scale waste and energy requirements.
+          </p>
+        </div>
+      </Section>
+
       {/* Specs */}
       <Section bg="#F5F4EF">
         <div className="text-center mb-2"><SectionLabel label="Technical Data" /></div>
         <div className="mt-4"><SpecsTable headers={specs.headers} rows={specs.rows} /></div>
       </Section>
+
+
 
       {/* FAQ */}
       <Section>

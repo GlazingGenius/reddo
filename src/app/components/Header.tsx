@@ -76,7 +76,7 @@ const productGroups = [
 const navLinks = [
   { label: "About Us",          href: "/about",    children: null },
   { label: "Products",          href: null,        children: productGroups },
-  { label: "Service",           href: "/service",  children: null },
+  { label: "Services",           href: "/service",  children: null },
   { label: "Clients & Partners",href: "/clients",  children: null },
   { label: "FAQs",               href: "/faqs",     children: null },
   { label: "Contact Us",        href: "/contact",  children: null },

@@ -100,7 +100,7 @@ export default function Testimonials() {
       lineHeight: 1,
     }}
   >
-   Organizations
+    Organizations
   </span>
 
           
@@ -121,13 +121,17 @@ export default function Testimonials() {
 
         <div className="relative px-12 overflow-hidden">
 
-          <button className="testimonial-prev absolute left-0 top-1/2 -translate-y-1/2 z-50 w-12 h-12 rounded-full bg-white border border-gray-200 shadow-xl flex items-center justify-center hover:bg-[#178B4C] hover:text-white transition-all">
-            <ChevronLeft size={24}/>
-          </button>
+          <button
+  className="testimonial-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white border border-gray-200 shadow-xl flex items-center justify-center hover:bg-[#178B4C] hover:text-white transition-all duration-300"
+>
+  <ChevronLeft size={24} />
+</button>
 
-          <button className="testimonial-next absolute right-0 top-1/2 -translate-y-1/2 z-50 w-12 h-12 rounded-full bg-white border border-gray-200 shadow-xl flex items-center justify-center hover:bg-[#178B4C] hover:text-white transition-all">
-            <ChevronRight size={24}/>
-          </button>
+<button
+  className="testimonial-next absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white border border-gray-200 shadow-xl flex items-center justify-center hover:bg-[#178B4C] hover:text-white transition-all duration-300"
+>
+  <ChevronRight size={24} />
+</button>
 <Swiper
   modules={[Navigation, Pagination, Autoplay]}
   navigation={{
