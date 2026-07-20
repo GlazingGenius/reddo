@@ -160,10 +160,8 @@ export default function App() {
   element={<BiominingPage />}
 />
 
-<Route
-  path="/products/pyrolysis"
-  element={<PyrolysisPage />}
-/>
+<Route path="/pyrolysis" element={<PyrolysisPage />} />
+<Route path="/pyrolysis/:tab" element={<PyrolysisPage />} />
 
           <Route
             path="/products/organic-waste-digester"

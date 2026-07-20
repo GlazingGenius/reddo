@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { motion } from "motion/react";
 import { CheckCircle2, Flame, Zap, Recycle, BarChart3, Leaf, Droplets, Wind, Settings2, ArrowRight } from "lucide-react";
 import Biomass from "../../../imports/biomas-pyrolysis.png";
@@ -668,7 +669,18 @@ const tabContent: Record<string, React.ReactElement> = {
    PYROLYSIS PAGE
 ═════════════════════════════════════════════════════════════════════════════ */
 export function PyrolysisPage() {
-  const [activeTab, setActiveTab] = useState("biomass");
+  const navigate = useNavigate();
+const { tab } = useParams();
+
+const [activeTab, setActiveTab] = useState(
+  tab === "plastic" ? "plastic" : "biomass"
+);
+
+useEffect(() => {
+  if (tab === "plastic" || tab === "biomass") {
+    setActiveTab(tab);
+  }
+}, [tab]);
 
   return (
     <PageLayout
@@ -684,7 +696,10 @@ export function PyrolysisPage() {
             {mainTabs.map((tab) => (
               <button
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
+               onClick={() => {
+  setActiveTab(tab.id);
+  navigate(`/pyrolysis/${tab.id}`);
+}}
                 className="flex-shrink-0 px-5 py-3 transition-all duration-300"
                 style={{
                   fontFamily: "'DM Sans', sans-serif",

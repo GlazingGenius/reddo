@@ -89,7 +89,7 @@ export function PageLayout({ title, subtitle, breadcrumb, children }: PageLayout
   return (
    <div
   style={{ backgroundColor: "#ffffff" }}
-  className="pt-[110px] lg:pt-[112px]"
+ className="pt-[80px] lg:pt-[90px]"
 >
       <div className="relative overflow-hidden" style={{ backgroundColor: "#053114", minHeight: "220px" }}>
         <div className="absolute inset-0 opacity-5"

@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { X, ArrowRight, ArrowLeft, CheckCircle2 } from "lucide-react";
 import { motion } from "motion/react";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
+
 
 interface Props {
   open: boolean;
@@ -75,45 +78,47 @@ const Q4_SOLUTION = {
 const QUESTIONS = [Q1_FACILITY, Q2_WASTE_VOLUME, Q3_WASTE_TYPE, Q4_SOLUTION];
 const TOTAL_STEPS = QUESTIONS.length + 1; // 5 questions + personal details
 
-const countryCodes = [
-  { code: "+91",  country: "India" },
-  { code: "+971", country: "UAE" },
-  { code: "+966", country: "Saudi Arabia" },
-  { code: "+974", country: "Qatar" },
-  { code: "+965", country: "Kuwait" },
-  { code: "+968", country: "Oman" },
-  { code: "+973", country: "Bahrain" },
-  { code: "+1",   country: "USA / Canada" },
-  { code: "+44",  country: "UK" },
-  { code: "+61",  country: "Australia" },
-  { code: "+65",  country: "Singapore" },
-  { code: "+60",  country: "Malaysia" },
-  { code: "+62",  country: "Indonesia" },
-  { code: "+66",  country: "Thailand" },
-  { code: "+81",  country: "Japan" },
-  { code: "+82",  country: "South Korea" },
-  { code: "+49",  country: "Germany" },
-  { code: "+33",  country: "France" },
-  { code: "+27",  country: "South Africa" },
-  { code: "+234", country: "Nigeria" },
-  { code: "+other", country: "Other" },
+const countries = [
+  "India",
+  "UAE",
+  "Saudi Arabia",
+  "Qatar",
+  "Kuwait",
+  "Oman",
+  "Bahrain",
+  "USA",
+  "Canada",
+  "UK",
+  "Australia",
+  "Singapore",
+  "Malaysia",
+  "Indonesia",
+  "Thailand",
+  "Japan",
+  "South Korea",
+  "Germany",
+  "France",
+  "South Africa",
+  "Nigeria",
+  "Kenya",
+  "Tanzania",
+  "Ethiopia",
+  "Other",
 ];
 
-const countries = [
-  "India","UAE","Saudi Arabia","Qatar","Kuwait","Oman","Bahrain",
-  "USA","Canada","UK","Australia","Singapore","Malaysia","Indonesia",
-  "Thailand","Japan","South Korea","Germany","France","South Africa",
-  "Nigeria","Kenya","Tanzania","Ethiopia","Other",
-];
 
 export function LeadFormModal({ open, onClose }: Props) {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<string[]>(Array(QUESTIONS.length).fill(""));
   const [submitted, setSubmitted] = useState(false);
+  
   const [form, setForm] = useState({
-    name: "", company: "", country: "", email: "", dialCode: "+91", phone: "",
-  });
-
+  name: "",
+  company: "",
+  country: "",
+  email: "",
+  phone: "",
+});
   if (!open) return null;
 
   const currentAnswer = step < QUESTIONS.length ? answers[step] : "";
@@ -140,7 +145,7 @@ export function LeadFormModal({ open, onClose }: Props) {
     `*Name:* ${form.name}`,
     `*Company:* ${form.company || "—"}`,
     `*Email:* ${form.email}`,
-    `*Phone:* ${form.dialCode} ${form.phone}`,
+    `*Phone:* ${form.phone}`,
     `*Country:* ${form.country}`,
   ];
 
@@ -155,9 +160,11 @@ export function LeadFormModal({ open, onClose }: Props) {
     name: form.name,
     company: form.company,
     email: form.email,
-    phone: `${form.dialCode} ${form.phone}`,
+    phone: form.phone,
     country: form.country,
   };
+
+
 
   try {
     await fetch(
@@ -186,7 +193,13 @@ export function LeadFormModal({ open, onClose }: Props) {
     setStep(0);
     setAnswers(Array(QUESTIONS.length).fill(""));
     setSubmitted(false);
-    setForm({ name: "", company: "", country: "", email: "", dialCode: "+91", phone: "" });
+    setForm({
+  name: "",
+  company: "",
+  country: "",
+  email: "",
+  phone: "",
+});
     onClose();
   };
 
@@ -432,26 +445,32 @@ export function LeadFormModal({ open, onClose }: Props) {
                       placeholder="jane@company.com"
                       className={inputClass} style={inputStyle} />
                   </div>
-                  <div>
-                    <label className="block text-[10px] tracking-[0.14em] uppercase mb-1.5"
-                      style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 500, color: "#5A6B5C" }}>
-                      Phone Number *
-                    </label>
-                    <div className="flex gap-2">
-                      <select value={form.dialCode}
-                        onChange={e => setForm(f => ({ ...f, dialCode: e.target.value }))}
-                        className="px-2 py-2.5 outline-none focus:ring-1 focus:ring-[#0D8239] flex-shrink-0"
-                        style={{ ...inputStyle, width: "135px" }}>
-                        {countryCodes.map(c => (
-                          <option key={c.code} value={c.code}>{c.code} {c.country}</option>
-                        ))}
-                      </select>
-                      <input required type="tel" value={form.phone}
-                        onChange={e => setForm(f => ({ ...f, phone: e.target.value }))}
-                        placeholder="98765 43210"
-                        className={`flex-1 ${inputClass}`} style={inputStyle} />
-                    </div>
-                  </div>
+                 <div>
+  <label
+    className="block text-[10px] tracking-[0.14em] uppercase mb-1.5"
+    style={{
+      fontFamily: "'DM Sans', sans-serif",
+      fontWeight: 500,
+      color: "#5A6B5C",
+    }}
+  >
+    Phone Number *
+  </label>
+
+  <PhoneInput
+    international
+    defaultCountry="IN"
+    countryCallingCodeEditable={false}
+    value={form.phone}
+    onChange={(value) =>
+      setForm((f) => ({
+        ...f,
+        phone: value || "",
+      }))
+    }
+    className="phone-input"
+  />
+</div>
                   <div>
                     <label className="block text-[10px] tracking-[0.14em] uppercase mb-1.5"
                       style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 500, color: "#5A6B5C" }}>

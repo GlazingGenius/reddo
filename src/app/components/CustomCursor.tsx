@@ -56,24 +56,36 @@ export default function CustomCursor() {
         e.clientY
       ) as HTMLElement | null;
 
-      while (el) {
-        const bg = getComputedStyle(el).backgroundColor;
+     while (el) {
+  const bg = getComputedStyle(el).backgroundColor;
 
-        if (bg !== "rgba(0, 0, 0, 0)") {
-          if (
-            bg === "rgb(5, 49, 20)" ||
-            bg === "rgb(11, 31, 16)" ||
-            bg === "rgb(23, 139, 76)"
-          ) {
-            setCursorColor("#ffffff");
-          } else {
-            setCursorColor("#178B4C");
-          }
-          break;
-        }
+  if (bg !== "rgba(0, 0, 0, 0)") {
+    const rgb = bg.match(/\d+/g);
 
-        el = el.parentElement;
+    if (rgb) {
+      const [r, g, b] = rgb.map(Number);
+
+      // Check if cursor is over the header/navbar
+      const isHeader =
+        el.closest("header") ||
+        el.closest("nav") ||
+        el.closest(".header") ||
+        el.closest(".navbar");
+
+      if (isHeader) {
+        setCursorColor("#178B4C");
+      } else if (g > r && g > b) {
+        setCursorColor("#ffffff");
+      } else {
+        setCursorColor("#178B4C");
       }
+    }
+
+    break;
+  }
+
+  el = el.parentElement;
+}
     };
 
     window.addEventListener("mousemove", move);
@@ -96,8 +108,8 @@ export default function CustomCursor() {
           borderColor: cursorColor,
         }}
         animate={{
-          scale: hover ? 1.8 : 1,
-        }}
+  scale: hover ? 1.2 : 1,
+}}
         transition={{
           type: "spring",
           stiffness: 350,
