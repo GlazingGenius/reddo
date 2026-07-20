@@ -698,7 +698,7 @@ useEffect(() => {
                 key={tab.id}
                onClick={() => {
   setActiveTab(tab.id);
-  navigate(`/pyrolysis/${tab.id}`);
+  navigate(`/products/pyrolysis/${tab.id}`);
 }}
                 className="flex-shrink-0 px-5 py-3 transition-all duration-300"
                 style={{

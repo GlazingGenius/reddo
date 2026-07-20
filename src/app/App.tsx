@@ -161,7 +161,10 @@ export default function App() {
 />
 
 <Route path="/pyrolysis" element={<PyrolysisPage />} />
-<Route path="/pyrolysis/:tab" element={<PyrolysisPage />} />
+<Route
+  path="/products/pyrolysis/:tab?"
+  element={<PyrolysisPage />}
+/>
 
           <Route
             path="/products/organic-waste-digester"
