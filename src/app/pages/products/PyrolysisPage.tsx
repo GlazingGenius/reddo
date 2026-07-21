@@ -285,7 +285,7 @@ function ProductOutputs({ outputs }: {
 const biomassProcess = [
   { step: "01", title: "Feedstock Preparation", desc: "Biomass dried to <15% moisture and particle-sized to 20–50 mm for optimal reactor performance." },
   { step: "02", title: "Auto-Feeding", desc: "Sealed screw conveyor feeds biomass into the reactor continuously, preventing gas leakage." },
-  { step: "03", title: "Pyrolysis Reactor", desc: "Thermal decomposition at 400–600 °C in an oxygen-free environment breaks biomass into vapour fractions." },
+  { step: "03", title: "Pyrolysis Reactor", desc: "Thermal decomposition at 300–700 °C in an oxygen-free environment breaks biomass into vapour fractions." },
   { step: "04", title: "Char Discharge", desc: "Biochar continuously discharged via sealed screw conveyor and cooled for packaging." },
   { step: "05", title: "Oil Condensation", desc: "Pyrolysis vapours pass through multi-stage condensers to recover high-calorific bio-oil." },
 ];
@@ -305,10 +305,10 @@ const biomassOutputs = [
 
 const biomassSpecs: SpecBlock = {
   title: "Biomass Pyrolysis",
-  subtitle: "Continuous rotary kiln, 400–600 °C",
+  subtitle: "Continuous rotary kiln, 300–700 °C",
   rows: [
     { label: "Capacity Range",      value: "500 kg – 20 T/day" },
-    { label: "Reactor Temperature", value: "400 – 600 °C" },
+    { label: "Reactor Temperature", value: "300 – 700 °C" },
     { label: "Bio-Oil Yield",       value: "30 – 45%" },
     { label: "Operation Mode",      value: "Continuous / 24×7" },
   ],
@@ -335,7 +335,7 @@ const biomassSpecs: SpecBlock = {
 const plasticProcess = [
   { step: "01", title: "Sorting & Shredding", desc: "Non-recyclable plastics sorted; metals and PVC removed. Shredded to 30–50 mm for consistent reactor feed." },
   { step: "02", title: "Continuous Feeding", desc: "Sealed screw conveyor delivers shredded plastic into the reactor without gas leakage or pressure loss." },
-  { step: "03", title: "Thermal Cracking", desc: "Plastic heated at 350–450 °C in oxygen-free environment; long-chain polymers crack into hydrocarbon vapours." },
+  { step: "03", title: "Thermal Cracking", desc: "Plastic heated at 300–700 °C in oxygen-free environment; long-chain polymers crack into hydrocarbon vapours." },
   { step: "04", title: "Condensation", desc: "Vapours pass through multi-stage condensers, converting hydrocarbon gases into pyrolysis oil." },
   { step: "05", title: "Carbon Black & Gas", desc: "Residual carbon black discharged and packaged; non-condensable gas recycled to heat the reactor." },
 ];
@@ -405,7 +405,7 @@ function BiomassTab() {
             color: C.mutedText, lineHeight: 1.8, marginBottom: 16 }}>
             Our continuous biomass pyrolysis plant thermally decomposes agricultural residues,
             wood chips, rice husks, coconut shells, and other organic feedstocks in a fully sealed,
-            oxygen-free environment operating at 400–600 °C. The rotary reactor runs uninterrupted
+            oxygen-free environment operating at 300–700 °C. The rotary reactor runs uninterrupted
             around the clock, converting raw biomass into bio-oil, biochar, and syngas with zero
             harmful emissions — turning agricultural waste liabilities into commercially valuable resources.
           </p>
@@ -440,7 +440,7 @@ function BiomassTab() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
         {[
           { v: "30–45%", l: "Bio-oil yield" },
-          { v: "400–600 °C", l: "Reactor temperature" },
+          { v: "300–700 °C", l: "Reactor temperature" },
           { v: "0", l: "Harmful emissions" },
           { v: "24/7", l: "Continuous operation" },
         ].map((s, i) => (
