@@ -8,9 +8,9 @@ import { Link } from "react-router-dom";
 
 
 const credentials = [
-  "CE Certified machinery across all product lines",
-  "Operations spanning 20+ countries worldwide",
-  "Trusted by 7,000+ clients across 10 industries",
+  "CE Certified machinery for OWC",
+  "Operations spanning 24+ countries worldwide",
+  "Trusted by 1,500+ clients across 10 industries",
   "Full lifecycle waste-to-resource solutions",
 ];
 

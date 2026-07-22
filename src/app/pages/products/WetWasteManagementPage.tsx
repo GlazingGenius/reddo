@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { PageLayout, Section, PageCTA,  } from "../PageLayout";
-import { CheckCircle2 } from "lucide-react";
+import { Building2, CheckCircle2, UserCog } from "lucide-react";
 import img1 from "../../../imports/image-1.png";
 import img3 from "../../../imports/image-3.png";
 import img5 from "../../../imports/image-5.png";
@@ -13,6 +13,40 @@ import Testimonials from "../../components/Testimonials";
 import EnquiryModal from "../../components/EnquiryModal";
 import binfilter from "../../../imports/bin lifter  (1).png";
 import pretreatment from "../../../imports/pretreatment.png";
+import {
+  Gauge,
+  ChartColumnIncreasing,
+  ShieldCheck,
+  Maximize2,
+  Sprout,
+  PackageCheck,
+} from "lucide-react";
+
+import {
+  Hand,
+  Cog,
+  CircleDollarSign,
+  SlidersHorizontal,
+  
+ // UserCog,
+} from "lucide-react";
+import {
+  Leaf,
+  Wind,
+  Recycle,
+  Trees,
+  Flower2,
+  BatteryCharging,
+} from "lucide-react";
+
+import {
+  ArrowUpFromLine,
+  Weight,
+  Settings2,
+  Hammer,
+  HandMetal,
+  
+} from "lucide-react";
 
 /* ── Composting Machine types ─────────────────────────── */
 const composingSubTabs = [
@@ -24,42 +58,45 @@ const composingSubTabs = [
     desc: (
   <>
     <p className="mb-4">
-      The Food Waste Composting Machine is designed to efficiently process food
-      and organic waste into compostable material within <strong>24–36 hours</strong>.
-      Through a controlled biological process, specialized microorganisms break
-      down organic waste into a nutrient-rich, soil-like output suitable for
-      reuse as a soil amendment.
+      The automatic organic waste composting/converter machine efficiently converts food and organic waste into a pre-compostable matter, nutrient-rich, soil-like compostable output within 24–36 hours. Using high-performance microorganisms and a controlled biological process, it achieves 80–90% volume reduction and handles various organic waste types
     </p>
 
-    <p className="mb-4">
-      This fully automatic and compact system converts all types of organic
-      waste using high-performance microbial cultures. These microorganisms
-      thrive in high-temperature environments and remain effective even in
-      high-acidity or high-salinity waste conditions.
-    </p>
+    
 
-    <p className="mb-4">
-      The process achieves an <strong>80–90% volume reduction</strong>, making
-      waste handling significantly more efficient, hygienic, and sustainable.
-      Its compact design allows easy installation while ensuring reliable
-      day-to-day operation.
-    </p>
-
-    <p>
-      Designed for long-term deployment, the system emphasizes reliability,
-      consistent performance, and minimal operational intervention, making it
-      ideal for continuous daily use across commercial, industrial, and
-      institutional facilities.
-    </p>
+    
   </>
 ),
-    features: [
-  "Predictable processing – Consistent decomposition cycles with stable output quality",
-  "Scalable capacity – Available in standard and customized configurations based on waste volume",
-  "Durable construction – Built for continuous operation with minimal maintenance",
-  "Space-conscious design – Compact footprint suitable for restricted installation areas",
-  "Usable output – Final product suitable for soil conditioning and compost applications",
-  "Automatic output removal – Ensures smooth and automatic output removal, reducing manual handling"
+ features: [
+  {
+    icon: Gauge,
+    title: "Reliable processing",
+    desc: "Consistent decomposition cycles with stable output quality.",
+  },
+  {
+    icon: ChartColumnIncreasing,
+    title: "Scalable Capacity",
+    desc: "Available in standard and customized configurations based on waste volume.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Durable Construction",
+    desc: "Built for continuous operation with minimal maintenance.",
+  },
+  {
+    icon: Maximize2,
+    title: "Space-Conscious Design",
+    desc: "Compact footprint suitable for restricted installation areas.",
+  },
+  {
+    icon: Sprout,
+    title: "Final product ",
+    desc: "suitable for landscaping, gardening, and agricultural applications.",
+  },
+  {
+    icon: PackageCheck,
+    title: "Automatic Output Removal",
+    desc: "Automatic discharge minimizes manual handling.",
+  },
 ],
    specs: [
   ["Capacity", "Length (mm)", "Width (mm)", "Height (mm)", "Connected Load (kW)"],
@@ -83,8 +120,38 @@ const composingSubTabs = [
     title: "Semi-Automatic Composters",
     subtitle: "Operator-Assisted · Cost Effective",
     desc: "Semi-automatic composting machines combine the efficiency of mechanised processing with operator-guided loading and unloading. Ideal for facilities that prefer greater control over the process while still benefiting from automated aeration, mixing, and temperature management.",
-    features: ["Manual waste loading with automatic processing", "Automated mixing & aeration cycles", "Lower initial investment", "Flexible capacity adjustment", "Suitable for hotels, resorts & hospitals", "Easy operator training"],
-    specs: [
+  features: [
+  {
+    icon: Hand,
+    title: "Manual Loading",
+    desc: "Operator-assisted waste loading with automated composting process.",
+  },
+  {
+    icon: Cog,
+    title: "Automated Processing",
+    desc: "Automatic mixing, aeration, and temperature management.",
+  },
+  {
+    icon: CircleDollarSign,
+    title: "Cost Effective",
+    desc: "Lower initial investment while maintaining reliable performance.",
+  },
+  {
+    icon: SlidersHorizontal,
+    title: "Flexible Capacity",
+    desc: "Available in multiple capacities to match daily waste generation.",
+  },
+  {
+    icon: Building2,
+    title: "Ideal Applications",
+    desc: "Suitable for hotels, resorts, hospitals, and commercial kitchens.",
+  },
+  {
+    icon: UserCog,
+    title: "Easy Operation",
+    desc: "Simple controls with minimal operator training required.",
+  },
+], specs: [
       ["Model", "Capacity", "Operation", "Power"],
       ["RN-SA 50",  "50 kg/day",  "Semi-Auto", "2.2 kW, 3Ph"],
       ["RN-SA 150", "150 kg/day", "Semi-Auto", "6.5 kW, 3Ph"],
@@ -98,8 +165,38 @@ const composingSubTabs = [
     title: "Non-Heating Cold Composters",
     subtitle: "Natural Aerobic · Energy Efficient",
     desc: "Non-heating composters rely on natural aerobic microbial activity to decompose organic waste without any external heat source. These systems are the most energy-efficient option, suited for facilities with lower waste volumes and longer processing windows. Ideal for gardens, parks, small communities.",
-    features: ["No external heat source required", "Lowest energy consumption", "Natural microbial decomposition", "Minimal maintenance", "Ideal for green waste & garden trimmings", "Compact and portable options available"],
-    specs: [
+  features: [
+  {
+    icon: Leaf,
+    title: "No External Heating",
+    desc: "Natural aerobic composting without any external heat source.",
+  },
+  {
+    icon: BatteryCharging,
+    title: "Energy Efficient",
+    desc: "Consumes minimal power, reducing operating costs.",
+  },
+  {
+    icon: Recycle,
+    title: "Natural Process",
+    desc: "Relies on microbial activity for effective decomposition.",
+  },
+  {
+    icon: Wind,
+    title: "Low Maintenance",
+    desc: "Simple construction with minimal servicing requirements.",
+  },
+  {
+    icon: Trees,
+    title: "Green Waste Ready",
+    desc: "Suitable for garden waste, leaves, and organic waste streams.",
+  },
+  {
+    icon: Flower2,
+    title: "Compact Design",
+    desc: "Portable design suitable for parks, gardens, and small communities.",
+  },
+],   specs: [
       ["Model", "Capacity", "Process Time", "Power"],
       ["RN-NH 25",  "25 kg/day",  "48–72 hrs", "0.5 kW"],
       ["RN-NH 75",  "75 kg/day",  "48–72 hrs", "1.1 kW"],
@@ -270,8 +367,27 @@ const [selectedCapacity, setSelectedCapacity] = useState("");
       <motion.div key={sub} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
-            <div className="text-[10px] tracking-[0.18em] uppercase mb-2" style={{ fontFamily: "'DM Mono', monospace", color: "#A0780E" }}>{current.subtitle}</div>
-            <h3
+            <div
+  style={{
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "8px",
+    padding: "8px 16px",
+    marginBottom: "16px",
+    borderRadius: "999px",
+    background: "linear-gradient(90deg, rgba(23,139,76,0.12), rgba(160,120,14,0.12))",
+    border: "1px solid rgba(23,139,76,0.2)",
+    fontFamily: "'DM Sans', sans-serif",
+    fontSize: "0.85rem",
+    fontWeight: 700,
+    color: "#053114",
+    letterSpacing: "0.03em",
+  }}
+>
+  <span style={{ color: "#178B4C" }}>✓ CE Certified</span>
+  <span style={{ color: "#A0780E" }}></span>
+  <span></span>
+</div>           <h3
   style={{
     fontFamily: "'Playfair Display', serif",
     fontWeight: 700,
@@ -311,16 +427,49 @@ const [selectedCapacity, setSelectedCapacity] = useState("");
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.975rem", color: "#5A6B5C", lineHeight: 1.8, marginBottom: "20px" }}>
               {current.desc}
             </p>
-            <div className="grid sm:grid-cols-2 gap-2">
-              {current.features.map((f, i) => (
-                <div key={i} className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style={{ color: "#178B4C" }} />
-                  <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.85rem", color: "#5A6B5C" }}>{f}</span>
-                </div>
-              ))}
-            </div>
-            
-          </div>
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+  {current.features.map((item, i) => {
+    const Icon = item.icon;
+
+    return (
+      <div key={i} className="flex items-start gap-4">
+        <Icon
+          size={28}
+          strokeWidth={2}
+          style={{ color: "#178B4C", flexShrink: 0 }}
+        />
+
+        <div>
+          <h4
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 700,
+              fontSize: "15px",
+              color: "#053114",
+              marginBottom: "6px",
+              textTransform: "uppercase",
+            }}
+          >
+            {item.title}
+          </h4>
+
+          <p
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: "14px",
+              color: "#5A6B5C",
+              lineHeight: 1.6,
+            }}
+          >
+            {item.desc}
+          </p>
+        </div>
+      </div>
+    );
+  })}
+</div>
+           </div> 
+          
           <div
  className="w-full h-full"
 style={{
@@ -412,15 +561,16 @@ function BinFilterTab() {
       <div className="grid lg:grid-cols-2 gap-12 items-start">
         {/* Left Content */}
         <div>
-          <div
-            className="text-[10px] tracking-[0.18em] uppercase mb-2"
-            style={{
-              fontFamily: "'DM Mono', monospace",
-              color: "#A0780E",
-            }}
-          >
-            Bin Handling · Safe & Efficient
-          </div>
+         <div
+  className="text-[10px] tracking-[0.18em] uppercase mb-2"
+  style={{
+    fontFamily: "'DM Mono', monospace",
+    fontWeight: 700,
+    color: "#A0780E",
+  }}
+>
+  Bin Handling · Safe & Efficient
+</div>
 
           <h3
   style={{
@@ -473,34 +623,62 @@ function BinFilterTab() {
             system.
           </p>
 
-          <div className="grid sm:grid-cols-2 gap-3">
-            {[
-              "Safe bin handling with controlled lifting and tipping",
-              "Available for machines having processing capacities of 125 kg per day and above",
-              "Configured lifting capacity to suit machine size requirements",
-              "Robust construction for repeated lifting cycles",
-              "Manual push-button operation for controlled movement",
-              "Integrated safety systems including limit switches",
-            ].map((f, i) => (
-              <div key={i} className="flex items-start gap-2">
-                <CheckCircle2
-                  className="w-3.5 h-3.5 mt-0.5 flex-shrink-0"
-                  style={{ color: "#178B4C" }}
-                />
-                <span
-                  style={{
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: "0.85rem",
-                    color: "#5A6B5C",
-                  }}
-                >
-                  {f}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
+        <div className="grid sm:grid-cols-2 gap-6 mt-8">
+  {[
+    {
+      icon: ArrowUpFromLine,
+      text: "Safe bin handling with controlled lifting and tipping",
+    },
+    {
+      icon: Weight,
+      text: "Available for machines having processing capacities of 125 kg per day and above",
+    },
+    {
+      icon: Settings2,
+      text: "Configured lifting capacity to suit machine size requirements",
+    },
+    {
+      icon: Hammer,
+      text: "Robust construction for repeated lifting cycles",
+    },
+    {
+      icon: HandMetal,
+      text: "Manual push-button operation for controlled movement",
+    },
+    {
+      icon: ShieldCheck,
+      text: "Integrated safety systems including limit switches",
+    },
+  ].map((item, i) => {
+    const Icon = item.icon;
 
+    return (
+      <div key={i} className="flex items-start gap-3">
+       <Icon
+  size={28}
+  strokeWidth={2}
+  style={{
+    color: "#178B4C",
+    flexShrink: 0,
+  }}
+/>
+
+<span
+  style={{
+    fontFamily: "'DM Sans', sans-serif",
+    fontSize: "0.95rem",
+    fontWeight: 400,
+    color: "#5A6B5C",
+    lineHeight: 1.8,
+  }}
+>
+  {item.text}
+</span>
+      </div>
+    );
+  })}
+</div>
+ </div> 
         {/* Right Image */}
         <div
           className="overflow-hidden h-[260px] lg:h-[460px]"
@@ -510,7 +688,7 @@ function BinFilterTab() {
         >
           <img
             src={binfilter}
-            alt="Bin Lifter"
+           // alt="Bin Lifter"
             className="w-full h-full"
             style={{
               objectFit: "cover",

@@ -33,7 +33,7 @@ export function AboutPage() {
               A decentralised approach towards the treatment of organic waste is the need of the hour. A staunch environmentalist, <strong style={{ color: "#053114", fontWeight: 600 }}>Abhishek Gupta</strong> founded Reddonatura in 2013, to enable the <em style={{ color: "#178B4C" }}>Garbage to Green</em> movement.
             </p>
             <p className="mb-5" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "1rem", color: "#5A6B5C", lineHeight: 1.8 }}>
-              Primarily the producers of rNature, Reddonatura is one of the foremost players in Integrated Waste Management. With a marquee list of clients and partners, and over 300 installations of OWCs across India, we have successfully rendered the journey of Garbage to Green seamlessly.
+              Primarily the producers of rNature, Reddonatura is one of the foremost players in Integrated Waste Management. With a marquee list of clients and partners, and over 1,500+ installations of OWCs across India, we have successfully rendered the journey of Garbage to Green seamlessly.
             </p>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "1rem", color: "#5A6B5C", lineHeight: 1.8 }}>
               Our success is driven by our commitment to green renewable sustainable solutions for everyday living — beginning with an environmentally sound approach that transforms waste into something genuinely useful.
@@ -63,7 +63,7 @@ export function AboutPage() {
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            {[{ num: "7,000+", label: "Clients Worldwide" }, { num: "20+", label: "Countries" }, { num: "300+", label: "Installations" }, { num: "10+", label: "Industries" }].map(s => (
+            {[{ num: "1,500+", label: "Clients Worldwide" }, { num: "24+", label: "Countries" }, { num: "150+", label: "cities" }, { num: "10+", label: "Industries" }].map(s => (
               <div key={s.label} className="rn-card-shadow p-6 text-center hover:-translate-y-1" style={{ backgroundColor: "#ffffff", border: "1px solid rgba(23,139,76,0.15)" }}>
                 <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "2.2rem", color: "#178B4C", lineHeight: 1 }}><AnimatedNumber value={s.num} /></div>
                 <div className="mt-2" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.8rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "#5A6B5C" }}>{s.label}</div>

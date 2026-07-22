@@ -132,13 +132,33 @@ export function Section({ children, bg = "#ffffff", className = "" }: { children
 
 export function SectionLabel({ label }: { label: string }) {
   const parts = label.split(" ");
+
   return (
-    <div className="inline-flex items-end gap-3 mb-6">
-      <span style={{ fontFamily: "'Playfair Display', Georgia, serif", fontStyle: "normal", fontWeight: 400, fontSize: "clamp(1.6rem, 3vw, 2.2rem)", color: "#178B4C", lineHeight: 1 }}>
+    <div className="inline-flex items-center gap-2 mb-6">
+      <span
+        style={{
+          fontFamily: "'Inter', sans-serif",
+          fontWeight: 700,
+          fontSize: "clamp(1.8rem, 3vw, 2.4rem)",
+          letterSpacing: "-0.02em",
+          color: "#178B4C",
+          lineHeight: 1.1,
+        }}
+      >
         {parts[0]}
       </span>
+
       {parts.length > 1 && (
-        <span style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: "13px", letterSpacing: "0.2em", textTransform: "uppercase", color: "#A0780E", paddingBottom: "4px" }}>
+        <span
+          style={{
+            fontFamily: "'Inter', sans-serif",
+            fontWeight: 700,
+            fontSize: "clamp(1.8rem, 3vw, 2.4rem)",
+            letterSpacing: "-0.02em",
+            color: "#A0780E",
+            lineHeight: 1.1,
+          }}
+        >
           {parts.slice(1).join(" ")}
         </span>
       )}
@@ -170,7 +190,7 @@ export function SpecsTable({ headers, rows }: { headers: string[]; rows: (string
           <tr style={{ backgroundColor: "#053114" }}>
             {headers.map((h, i) => (
               <th key={i} className="px-4 py-3.5 text-[11px] tracking-[0.1em] uppercase"
-                style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 600, color: "#ffffff", borderRight: "1px solid rgba(255,255,255,0.1)" }}>
+                style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, color: "#ffffff", borderRight: "1px solid rgba(255,255,255,0.1)" }}>
                 {h}
               </th>
             ))}

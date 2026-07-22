@@ -1,8 +1,7 @@
 @import './fonts.css';
 @import './tailwind.css';
 @import './theme.css';
-
-
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap');
 button:focus,
 button:focus-visible {
   outline: none !important;

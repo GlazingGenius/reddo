@@ -218,7 +218,7 @@ export function BiogasPage() {
         <div className="grid lg:grid-cols-2 gap-14 items-center">
           <motion.div initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div className="text-center"><SectionLabel label="Biogas Solutions" /></div>
-            <p className="mb-5" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.975rem", color: "#5A6B5C", lineHeight: 1.8 }}>
+            <p className="mb-5" style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 300, fontSize: "0.975rem", color: "#5A6B5C", lineHeight: 1.8 }}>
               Designed for renewable energy generation from organic waste
 Reddonatura biogas plants are designed to convert segregated organic waste into clean, renewable energy through controlled anaerobic digestion. By processing food and organic waste in oxygen-free conditions, the system generates methane-rich biogas that can be used for cooking, heating, or electricity generation.
 In addition to energy output, the process produces nutrient-rich slurry that can be reused as organic liquid fertilizer. This enables both energy recovery and material recycling within a single, integrated system.
@@ -228,7 +228,7 @@ Each biogas plant is configured based on daily waste input, site conditions, and
             <div className="grid grid-cols-2 gap-4 mt-6">
               {[{ v: "90%", l: "GHG Reduction" }, { v: "60%", l: "Methane Content" }, { v: "4 types", l: "Plant Configurations" }, { v: "24/7", l: "Energy Output" }].map(s => (
                 <div key={s.l} className="rn-card-shadow p-4 text-center hover:-translate-y-1" style={{ backgroundColor: "rgba(23,139,76,0.07)", border: "1px solid rgba(23,139,76,0.2)" }}>
-                  <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "1.6rem", color: "#178B4C" }}><AnimatedNumber value={s.v} /></div>
+                  <div style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 700, fontSize: "1.6rem", color: "#178B4C" }}><AnimatedNumber value={s.v} /></div>
                   <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.78rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "#5A6B5C", marginTop: "4px" }}>{s.l}</div>
                 </div>
               ))}
@@ -273,7 +273,11 @@ Each biogas plant is configured based on daily waste input, site conditions, and
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               <div>
                 <div className="text-[10px] tracking-[0.18em] uppercase mb-2" style={{ fontFamily: "'DM Mono', monospace", color: "#A0780E" }}>{current.tag}</div>
-                <h3 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "clamp(1.4rem, 2.5vw, 2rem)", color: "#053114", marginBottom: "16px" }}>
+               <h3
+  style={{
+    fontFamily: "'Inter', sans-serif",
+    fontWeight: 700,
+    letterSpacing: "-0.02em",  fontSize: "clamp(1.4rem, 2.5vw, 2rem)", color: "#053114", marginBottom: "16px" }}>
                   {current.title}
                 </h3>
                 <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.975rem", color: "#5A6B5C", lineHeight: 1.8, marginBottom: "20px" }}>
