@@ -202,11 +202,14 @@ const composingSubTabs = [
     title: "Compact Design",
     desc: "Portable design suitable for parks, gardens, and small communities.",
   },
-],   specs: [
-      ["Model", "Capacity", "Process Time", "Power"],
-      ["RN-NH 25",  "25 kg/day",  "48–72 hrs", "0.5 kW"],
-      ["RN-NH 75",  "75 kg/day",  "48–72 hrs", "1.1 kW"],
-    ],
+],  specs: [
+  ["Capacity", "Power", "Height (mm)", "Width (mm)", "Length (mm)"],
+  ["200 KGS", "2.5 kW", "2000", "1700", "4300"],
+  ["500 KGS", "3.5 kW", "2100", "1800", "5000"],
+  ["750 KGS", "5.5 kW", "2600", "2200", "6025"],
+  ["1000 KGS", "5.5 kW", "2700", "2190", "6025"],
+  ["2000 KGS", "10.5 kW", "2746", "2340", "8100"],
+],
     image:  [heroVideo, Nonheating, img3]
   },
 ];
