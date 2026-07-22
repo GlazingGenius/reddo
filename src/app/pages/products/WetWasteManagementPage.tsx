@@ -16,9 +16,8 @@ import pretreatment from "../../../imports/pretreatment.png";
 import Owcfull from "../../../imports/owc1.jpg";
 import Owcfull2 from "../../../imports/owcf2.jpg";
 import Binlifter1 from "../../../imports/binlifter1.jpg";
-import Binlifter2 from "../../../imports/biolifter2.jpg";
-import Binlifter3 from "../../../imports/biolifter3.jpg";
-
+import Binlifter2 from "../../../imports/Biolifter2.jpg";
+import Binlifter3 from "../../../imports/Biolifter3.jpg";
 
 import {
   Gauge,
