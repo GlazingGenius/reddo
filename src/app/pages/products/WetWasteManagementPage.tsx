@@ -13,6 +13,13 @@ import Testimonials from "../../components/Testimonials";
 import EnquiryModal from "../../components/EnquiryModal";
 import binfilter from "../../../imports/bin lifter  (1).png";
 import pretreatment from "../../../imports/pretreatment.png";
+import Owcfull from "../../../imports/owc1.jpg";
+import Owcfull2 from "../../../imports/owcf2.jpg";
+import Binlifter1 from "../../../imports/binlifter1.jpg";
+import Binlifter2 from "../../../imports/biolifter2.jpg";
+import Binlifter3 from "../../../imports/biolifter3.jpg";
+
+
 import {
   Gauge,
   ChartColumnIncreasing,
@@ -46,6 +53,14 @@ import {
   Hammer,
   HandMetal,
   
+} from "lucide-react";
+
+import {
+ 
+  Trash2,
+  Package,
+  Construction,
+   Factory,
 } from "lucide-react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -118,7 +133,7 @@ const composingSubTabs = [
   ["1500 KG", "4600", "2100", "2347", "30"],
   ["2000 KG", "4100", "2011", "2500", "58"],
 ],
-    image: [img1, img3, img3],
+    image: [img1,  Owcfull, Owcfull2],
   },
   {
     id: "semiauto",
@@ -579,20 +594,34 @@ function BinFilterTab() {
   return (
     <div>
       {/* Top Section */}
-      <div className="grid lg:grid-cols-2 gap-12 items-start">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12">
         {/* Left Content */}
         <div>
-         <div
-  className="text-[10px] tracking-[0.18em] uppercase mb-2"
+        <div
   style={{
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "10px",
+    marginBottom: "12px",
+
     fontFamily: "'DM Mono', monospace",
-    fontWeight: 700,
+    fontSize: "11px",
+    fontWeight: 600,
+    letterSpacing: "0.18em",
+    textTransform: "uppercase",
     color: "#A0780E",
   }}
 >
-  Bin Handling · Safe & Efficient
+  <span
+    style={{
+      width: "3px",
+      height: "16px",
+      background: "#A0780E",
+      borderRadius: "999px",
+    }}
+  />
+  Automatic waste loading  · Safe & Efficient
 </div>
-
           <h3
   style={{
     fontFamily: "'Playfair Display', serif",
@@ -620,7 +649,7 @@ function BinFilterTab() {
     marginBottom: "14px",
   }}
 >
-  Reddonatura Bin Lifters are engineered to ensure safe, efficient and hygienic handling of organic waste during feeding operations. 
+ Bin Lifters are engineered to ensure safe, efficient and hygienic handling of organic waste during feeding operations. 
 </div>
 
           <p
@@ -634,53 +663,90 @@ function BinFilterTab() {
             }}
           >
             
-            Designed to eliminate manual lifting, they enable precise and
-            controlled transfer of waste into the composting system,
-            significantly improving operational efficiency and operator safety.
-            The bin lifter is compatible with composting machines having
-            processing capacities of 125 kg per day and above. Each unit is
-            custom-configured based on the machine model, bin size, and required
-            lifting capacity, ensuring seamless integration with the composting
-            system.
+            Designed to eliminate manual lifting & reduce human intervention, they enable precise and controlled transfer of waste into the machines, significantly improving operational efficiency and operator safety. The bin lifter is compatible with composting machines having processing capacities of 125 kg per day and above. Each unit is custom-configured based on the machine model, bin size, and required lifting capacity, ensuring seamless integration with the composting system.
           </p>
 
-        <div className="grid sm:grid-cols-2 gap-6 mt-8">
+<div className="block lg:hidden my-5">
+
+  <Swiper
+    modules={[Autoplay, Pagination]}
+    autoplay={{
+      delay: 2500,
+      disableOnInteraction: false,
+    }}
+    speed={700}
+    pagination={{ clickable: true }}
+    loop
+    className="w-full rounded-xl"
+  >
+    {[Binlifter1, Binlifter2, Binlifter3].map((img, i) => (
+      <SwiperSlide
+  key={i}
+  className="flex justify-center items-center"
+>
+  <div
+    className="flex justify-center items-center w-full"
+    style={{
+      height: "360px",
+    }}
+  >
+    <img
+      src={img}
+      alt=""
+      style={{
+        maxWidth: "100%",
+        maxHeight: "100%",
+        objectFit: "contain",
+        margin: "0 auto",
+        display: "block",
+      }}
+    />
+  </div>
+</SwiperSlide>
+    ))}
+  </Swiper>
+</div>
+    
+
+
+      <div className="grid sm:grid-cols-2 gap-4 mt-5">
   {[
-    {
-      icon: ArrowUpFromLine,
-      text: "Safe bin handling with controlled lifting and tipping",
-    },
-    {
-      icon: Weight,
-      text: "Available for machines having processing capacities of 125 kg per day and above",
-    },
-    {
-      icon: Settings2,
-      text: "Configured lifting capacity to suit machine size requirements",
-    },
-    {
-      icon: Hammer,
-      text: "Robust construction for repeated lifting cycles",
-    },
-    {
-      icon: HandMetal,
-      text: "Manual push-button operation for controlled movement",
-    },
-    {
-      icon: ShieldCheck,
-      text: "Integrated safety systems including limit switches",
-    },
-  ].map((item, i) => {
+  {
+    icon: ArrowUpFromLine,
+    text: "Safe bin handling with controlled lifting and tipping",
+  },
+  {
+    icon: Factory,
+    text: "Available for machines having processing capacities of 125 kg per day and above",
+  },
+  {
+    icon: Package,
+    text: "Configured lifting capacity to suit machine size requirements",
+  },
+  {
+    icon: Construction,
+    text: "Robust construction for repeated lifting cycles",
+  },
+  {
+    icon: Hand,
+    text: "Manual push-button operation for controlled movement",
+  },
+  {
+    icon: ShieldCheck,
+    text: "Integrated safety systems including limit switches",
+  },
+].map((item, i) => {
     const Icon = item.icon;
 
     return (
       <div key={i} className="flex items-start gap-3">
        <Icon
-  size={28}
-  strokeWidth={2}
+  size={24}
+  strokeWidth={2.2}
   style={{
-    color: "#178B4C",
+    color: "#4BAA63",
     flexShrink: 0,
+    marginTop: "2px",
   }}
 />
 
@@ -701,21 +767,33 @@ function BinFilterTab() {
 </div>
  </div> 
         {/* Right Image */}
-        <div
-          className="overflow-hidden h-[260px] lg:h-[460px]"
+      <div className="hidden lg:block w-full">
+  <Swiper
+    modules={[Autoplay, Pagination]}
+    autoplay={{
+      delay: 3000,
+      disableOnInteraction: false,
+    }}
+    pagination={{ clickable: true }}
+    loop
+    slidesPerView={1}
+    className="rounded-lg"
+  >
+    {[Binlifter1, Binlifter2, Binlifter3].map((img, index) => (
+      <SwiperSlide key={index}>
+        <img
+          src={img}
+          alt={`Bin Lifter ${index + 1}`}
+          className="w-full"
           style={{
-            boxShadow: "0 20px 45px rgba(6, 92, 35, 0.15)",
+            height: "460px",
+            objectFit: "contain",
           }}
-        >
-          <img
-            src={binfilter}
-           // alt="Bin Lifter"
-            className="w-full h-full"
-            style={{
-              objectFit: "cover",
-            }}
-          />
-        </div>
+        />
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</div>
       </div>
 
       {/* System Integration */}
@@ -750,45 +828,7 @@ function BinFilterTab() {
 
       {/* Applications + Technical Overview */}
       <div className="mt-16 grid lg:grid-cols-2 gap-16">
-        {/* Applications */}
-        <div>
-          <h3
-  className="mb-4"
-  style={{
-    fontFamily: "'Playfair Display', serif",
-    fontWeight: 700,
-    fontSize: "2rem",
-  }}
->
-  <span style={{ color: "#178B4C" }}>Typical </span>
-  <span style={{ color: "#A0780E" }}>Applications</span>
-</h3>
-
-          {[
-            "Labour camps",
-            "Hotels, resorts and hospitality properties",
-            "Commercial kitchens and food courts",
-            "Universities and institutional facilities",
-            "Municipal corporations",
-            "Poultry farms and animal slaughter house",
-          ].map((item, i) => (
-            <div key={i} className="flex items-start gap-2 mb-3">
-              <CheckCircle2
-                className="w-3.5 h-3.5 mt-0.5 flex-shrink-0"
-                style={{ color: "#178B4C" }}
-              />
-              <span
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: "0.9rem",
-                  color: "#5A6B5C",
-                }}
-              >
-                {item}
-              </span>
-            </div>
-          ))}
-        </div>
+        
 
         {/* Technical Overview */}
         <div>
@@ -805,8 +845,8 @@ function BinFilterTab() {
 </h3>
 
           {[
-            "Applicable for composting machines: 125 kg capacity and above",
-            "Lifting capacity: Up to 240 kg per cycle",
+            "Applicable for composting machines: 125kg capacity and above",
+            "Lifting capacity: 60L, 120L, & 240L as per cycle",
             "Power supply: Customizable based on country-specific electrical standards (50 Hz / 60 Hz)",
             "Operation: Manual control for precise and safe handling",
             "Safety: Equipped with limit switches and an overload relay for enhanced operational safety",
