@@ -31,11 +31,9 @@ export function ServicePage() {
           <motion.div initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <SectionLabel label="Highly Trained Teams" />
             <p className="mb-5" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "1rem", color: "#5A6B5C", lineHeight: 1.8 }}>
-              Our team comprises highly trained and skilled engineers and electricians who are available on request to assist you with any queries or issues you may encounter. With years of experience in the industry, our experts are passionate about delivering top-notch solutions and professional service.
-            </p>
+             Our team consists of experienced engineers and skilled technicians who are always ready to assist with installation, maintenance, and any service requirements. With extensive industry knowledge and a customer-first approach, we are committed to providing dependable support and practical solutions whenever you need them.    </p>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "1rem", color: "#5A6B5C", lineHeight: 1.8 }}>
-              At Reddonatura, our commitment to excellence is reflected in every aspect of our services — from comprehensive maintenance packages to rapid response teams always ready to serve.
-            </p>
+             At Reddonatura, we are dedicated to delivering reliable after-sales service through responsive support, preventive maintenance, and timely assistance. Our goal is to build long-term relationships by ensuring your equipment operates efficiently, safely, and consistently throughout its service life.         </p>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}>
             <div style={{ border: "2px solid #178B4C", overflow: "hidden" }}>
@@ -50,7 +48,7 @@ export function ServicePage() {
         <div className="text-center mb-12">
           <SectionLabel label="Service Features" />
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "1rem", color: "#5A6B5C", maxWidth: "520px", margin: "0 auto" }}>
-            Everything included in our comprehensive after-sales support ecosystem.
+            Professional service and support tailored to meet your operational needs.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
