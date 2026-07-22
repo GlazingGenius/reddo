@@ -48,6 +48,12 @@ import {
   
 } from "lucide-react";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+
 /* ── Composting Machine types ─────────────────────────── */
 const composingSubTabs = [
   {
@@ -112,7 +118,7 @@ const composingSubTabs = [
   ["1500 KG", "4600", "2100", "2347", "30"],
   ["2000 KG", "4100", "2011", "2500", "58"],
 ],
-    image: img1,
+    image: [img1, img3, img3],
   },
   {
     id: "semiauto",
@@ -157,7 +163,7 @@ const composingSubTabs = [
       ["RN-SA 150", "150 kg/day", "Semi-Auto", "6.5 kW, 3Ph"],
       ["RN-SA 300", "300 kg/day", "Semi-Auto", "12 kW, 3Ph"],
     ],
-    image: Nonheating,
+    image: [Nonheating, img3, img3]
   },
   {
     id: "nonheating",
@@ -201,7 +207,7 @@ const composingSubTabs = [
       ["RN-NH 25",  "25 kg/day",  "48–72 hrs", "0.5 kW"],
       ["RN-NH 75",  "75 kg/day",  "48–72 hrs", "1.1 kW"],
     ],
-    image:  heroVideo,
+    image:  [heroVideo, Nonheating, img3]
   },
 ];
 
@@ -470,20 +476,32 @@ const [selectedCapacity, setSelectedCapacity] = useState("");
 </div>
            </div> 
           
-          <div
- className="w-full h-full"
-style={{
-  objectFit: "cover",
-}}
->
-  <img
-    src={current.image}
-    alt={current.title}
-    className="w-full h-full"
-    style={{
-      objectFit: "contain",
+         <div className="w-full">
+  <Swiper
+    modules={[Autoplay, Pagination]}
+    autoplay={{
+      delay: 3000,
+      disableOnInteraction: false,
     }}
-  />
+    loop={true}
+    pagination={{ clickable: true }}
+    slidesPerView={1}
+    className="rounded-lg"
+  >
+    {current.image.map((img, index) => (
+      <SwiperSlide key={index}>
+        <img
+          src={img}
+          alt={`${current.title} ${index + 1}`}
+          className="w-full"
+          style={{
+            height: "500px",
+            objectFit: "contain",
+          }}
+        />
+      </SwiperSlide>
+    ))}
+  </Swiper>
 </div>
 
 </div>
