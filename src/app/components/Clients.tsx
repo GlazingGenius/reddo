@@ -262,7 +262,7 @@ export function Clients() {
           color: "rgba(249, 248, 246, 0.7)",
           textTransform: "uppercase",
         }}>
-          Among 7,000+ clients worldwide · 20 countries · CE Certified
+          Among 1,500+ clients worldwide · 24+ countries · CE Certified
         </span>
         <div className="flex-1 h-px hidden sm:block"
           style={{ backgroundColor: "rgba(245,240,232,0.1)" }} />

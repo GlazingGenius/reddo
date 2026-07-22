@@ -44,8 +44,8 @@ export function AboutPage() {
               <img src={aboutImg} alt="Reddonatura G2G facility" className="w-full" style={{ maxHeight: "420px", objectFit: "cover" }} />
             </div>
             <div className="absolute -bottom-5 -right-5 px-6 py-5" style={{ backgroundColor: "#A0780E", boxShadow: "0 16px 32px rgba(160,120,14,0.35)" }}>
-              <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "2rem", color: "#fff", lineHeight: 1 }}><AnimatedNumber value="300+" /></div>
-              <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.75rem", color: "rgba(255,255,255,0.85)", marginTop: "4px" }}>Installations Across India</div>
+              <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "2rem", color: "#fff", lineHeight: 1 }}><AnimatedNumber value="1,500+" /></div>
+              <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.75rem", color: "rgba(255,255,255,0.85)", marginTop: "4px" }}>Installations Across world</div>
             </div>
           </motion.div>
         </div>
