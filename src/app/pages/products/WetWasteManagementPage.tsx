@@ -110,7 +110,7 @@ const composingSubTabs = [
   {
     icon: Sprout,
     title: "Final product ",
-    desc: "suitable for landscaping, gardening, and agricultural applications.",
+    desc: "Suitable for landscaping, gardening, and agricultural applications.",
   },
   {
     icon: PackageCheck,
@@ -1250,7 +1250,7 @@ function BioFilterTab() {
   }}
 >
   <span style={{ color: "#178B4C" }}>Bio-Filter With</span>
-  <span style={{ color: "#A0780E" }}> UV Treatment</span>
+  <span style={{ color: "#A0780E" }}> UV For Odour control</span>
 </h3>
         
         <div
@@ -1267,16 +1267,11 @@ function BioFilterTab() {
     marginBottom: "14px",
   }}
 >
-  Reddonatura Bio Filter systems are engineered to treat exhaust air generated during organic waste processing. 
+ Bio Filter systems are engineered to treat exhaust air generated during organic waste processing. 
 </div>
 
         <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.975rem", color: "#5A6B5C", lineHeight: 1.8, marginBottom: "20px" }}>
-        By combining biological filtration,
-  activated carbon media, and UV treatment, the system effectively reduces
-  odour-causing compounds and delivers clean, safe air for discharge. Designed
-  for continuous operation, each unit is configured to match processing
-  capacity, ensuring reliable performance, long service life, and efficient
-  odour control as part of a complete waste management solution.        </p>
+       By combining biological filtration, activated carbon media, and UV treatment, the system effectively reduces odour-causing compounds and provides clean, safe air for discharge. Designed for continuous operation, each unit is configured to match processing capacity, ensuring reliable performance, long service life, and efficient odour control as part of a complete waste management solution.       </p>
         {[
   "Effective odour control using biological filtration, UV lights, and activated carbon media.",
   "Eliminates the need for additional ventilation systems.",
@@ -1368,7 +1363,9 @@ function BioFilterTab() {
       }}
     >
       <strong style={{ color: "#053114" }}>Odour Control Method:</strong>{" "}
-      Biological filtration with UV treatment and activated carbon adsorption.
+      Biological filtration with UV treatment and activated carbon
+adsorption
+
     </div>
 
     <div
@@ -1384,8 +1381,48 @@ function BioFilterTab() {
     </div>
   </div>
 </div>
+<div/>
+ {/* System Integration */}
+    <div
+     className="mt-8 lg:mt-10"
+      style={{
+        background: "#F8FAF7",
+        border: "1px solid rgba(5,49,20,0.08)",
+        borderRadius: "12px",
+        padding: "32px",
+      }}
+    >
+      <h3
+        style={{
+          fontFamily: "'Playfair Display', serif",
+          fontWeight: 700,
+          fontSize: "1.8rem",
+          marginBottom: "18px",
+        }}
+      >
+        <span style={{ color: "#178B4C" }}>System </span>
+        <span style={{ color: "#A0780E" }}>Integration</span>
+      </h3>
+
+      <p
+        style={{
+          fontFamily: "'DM Sans', sans-serif",
+          fontSize: "0.95rem",
+          color: "#5A6B5C",
+          lineHeight: 1.9,
+        }}
+      >
+        The pre-treatment machine can operate as a standalone unit or as part
+        of an integrated waste management system. Separated grey water can be
+        discharged to a sewage treatment plant or drainage line, while the
+        reduced solid fraction can be directly fed into composting systems or
+        stored and transported efficiently.
+      </p>
+    </div>
   </>
+  
   );
+  
 }
 
 function ShreddersTab() {
