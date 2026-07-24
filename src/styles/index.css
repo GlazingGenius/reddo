@@ -181,3 +181,110 @@ body,
 .phone-input .PhoneInputCountry {
   margin-right: 10px;
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000 !important;
+  width: 24px !important;
+  height: 24px !important;
+  top: 50% !important;
+  transform: translateY(-50%);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 14px !important;
+  font-weight: 900 !important;
+}
+
+.swiper-button-prev {
+  left: 8px !important;
+}
+
+.swiper-button-next {
+  right: 8px !important;
+}
+
+/* Hide arrows on mobile */
+@media (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}
+
+/* Show arrows only on desktop */
+@media (min-width: 769px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #000;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 16px;
+    font-weight: 900;
+  }
+}
+
+.pretreatment-swiper {
+  width: 100%;
+}
+
+.pretreatment-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+}
+
+.pretreatment-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .pretreatment-slide {
+    height: 280px;
+  }
+}
+
+.pretreatment-swiper {
+  width: 100%;
+}
+
+.pretreatment-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+}
+
+.pretreatment-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .pretreatment-slide {
+    height: 280px;
+  }
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-family: inherit !important;
+  font-size: 32px !important;
+  font-weight: 900 !important;
+  color: #178B4C !important;
+}
+
+.swiper-button-prev::after {
+  content: "❮" !important;
+}
+
+.swiper-button-next::after {
+  content: "❯" !important;
+}

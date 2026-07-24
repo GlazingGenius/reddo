@@ -1,7 +1,10 @@
+import { createRoot } from "react-dom/client";
+import App from "./app/App.tsx";
 
-  import { createRoot } from "react-dom/client";
-  import App from "./app/App.tsx";
-  import "./styles/index.css";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
-  createRoot(document.getElementById("root")!).render(<App />);
-  
+import "./styles/index.css";
+
+createRoot(document.getElementById("root")!).render(<App />);

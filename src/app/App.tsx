@@ -16,6 +16,9 @@ import { LeadFormModal } from "./components/LeadFormModal";
 import { FloatingActions } from "./components/FloatingActions";
 import Testimonials from "./components/Testimonials";
 
+import WasteCalculator from "./components/WasteCalculator";
+
+
 import CustomCursor from "./components/CustomCursor";
 
 // Route-level code splitting: only the homepage bundle loads on first paint,
@@ -138,6 +141,7 @@ export default function App() {
 
           <Route path="/about" element={<AboutPage />} />
           <Route path="/service" element={<ServicePage />} />
+          <Route path="/waste-calculator" element={<WasteCalculator />} />
           <Route path="/clients" element={<ClientsPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/faqs" element={<FAQPage />} />

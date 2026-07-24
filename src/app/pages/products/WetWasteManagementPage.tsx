@@ -7,7 +7,9 @@ import img3 from "../../../imports/image-3.png";
 import img5 from "../../../imports/image-5.png";
 import heroVideo from "../../../imports/Wetwastemanagement.webp";
 import Nonheating from "../../../imports/non-heating .png";
-import Biofilter from "../../../imports/biofilter.webp";
+import Biofilter1 from "../../../imports/biofilter.webp";
+import Biofilter2 from "../../../imports/Biofilter2.jpg";
+import Biofilter3 from "../../../imports/Biofilter3.jpg";
 import Shredders from "../../../imports/shredders.png";
 import Testimonials from "../../components/Testimonials";
 import EnquiryModal from "../../components/EnquiryModal";
@@ -18,6 +20,18 @@ import Owcfull2 from "../../../imports/owcf2.jpg";
 import Binlifter1 from "../../../imports/binlifter1.jpg";
 import Binlifter2 from "../../../imports/Biolifter2.jpg";
 import Binlifter3 from "../../../imports/Biolifter3.jpg";
+import { BadgeCheck } from "lucide-react";
+
+import pretreatment2 from "../../../imports/pretreatment2.jpg";
+import pretreatment3 from "../../../imports/pretreatment3.jpg";
+import Shredders1 from "../../../imports/shredder1.jpg";
+import Shredders2 from "../../../imports/shredder2.jpg";
+import Shredders3 from "../../../imports/shredder3.jpg";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 import {
   Gauge,
@@ -63,10 +77,16 @@ import {
 } from "lucide-react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
 
-import "swiper/css";
-import "swiper/css/pagination";
+
+
+
+import {
+  Droplets,
+  
+  Minimize2,
+  Wrench,
+} from "lucide-react";
 
 /* ── Composting Machine types ─────────────────────────── */
 const composingSubTabs = [
@@ -388,7 +408,7 @@ const [selectedCapacity, setSelectedCapacity] = useState("");
 </div>
 
       <motion.div key={sub} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start">
           <div>
             <div
   style={{
@@ -450,7 +470,7 @@ const [selectedCapacity, setSelectedCapacity] = useState("");
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.975rem", color: "#5A6B5C", lineHeight: 1.8, marginBottom: "20px" }}>
               {current.desc}
             </p>
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <div className="grid md:grid-cols-2 gap-6 mb-2 md:mb-8">
   {current.features.map((item, i) => {
     const Icon = item.icon;
 
@@ -493,14 +513,83 @@ const [selectedCapacity, setSelectedCapacity] = useState("");
 </div>
            </div> 
           
-         <div className="w-full">
+<div className="w-full relative">
+  {/* CE Certification Card */}
+  <div
+    className="absolute z-20 -top-4 -left-4 md:-top-5 md:-left-5"
+  style={{
+  backgroundColor: "#0D8239",
+  width: "130px",
+  padding: "14px",
+  borderRadius: "4px",
+  border: "2px solid #D4AF37", // Gold border
+  boxShadow:
+    "0 20px 45px rgba(5,49,20,0.18), 0 0 0 1px rgba(255,215,0,0.35)",
+  textAlign: "center",
+}}
+  >
+    {/* Gold Badge */}
+    <div
+      style={{
+        width: "58px",
+        height: "58px",
+        margin: "0 auto",
+        borderRadius: "50%",
+        background:
+          "linear-gradient(135deg, #FFF4B0 0%, #FFD95A 35%, #D4A017 70%, #A97800 100%)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        boxShadow:
+          "0 6px 18px rgba(212,160,23,0.45), inset 0 2px 4px rgba(255,255,255,0.55)",
+        border: "2px solid rgba(255,255,255,0.45)",
+      }}
+    >
+      <BadgeCheck
+        size={34}
+        color="#ffffff"
+        strokeWidth={2.5}
+      />
+    </div>
+
+    {/* Title */}
+    <div
+      style={{
+        marginTop: "10px",
+        fontFamily: "'DM Sans', sans-serif",
+        fontWeight: 700,
+        fontSize: "0.82rem",
+        color: "#fff",
+        letterSpacing: "0.08em",
+        textTransform: "uppercase",
+        lineHeight: 1.3,
+      }}
+    >
+      CE Certified
+    </div>
+
+    {/* Subtitle */}
+    <div
+      style={{
+        marginTop: "4px",
+        fontFamily: "'DM Sans', sans-serif",
+        fontWeight: 400,
+        fontSize: "0.72rem",
+        color: "rgba(255,255,255,0.85)",
+        lineHeight: 1.4,
+      }}
+    >
+      European Standard
+    </div>
+  </div>
+
   <Swiper
     modules={[Autoplay, Pagination]}
     autoplay={{
       delay: 3000,
       disableOnInteraction: false,
     }}
-    loop={true}
+    loop
     pagination={{ clickable: true }}
     slidesPerView={1}
     className="rounded-lg"
@@ -510,16 +599,14 @@ const [selectedCapacity, setSelectedCapacity] = useState("");
         <img
           src={img}
           alt={`${current.title} ${index + 1}`}
-          className="w-full"
-          style={{
-            height: "500px",
-            objectFit: "contain",
-          }}
+          className="w-full h-[260px] sm:h-[320px] md:h-[420px] lg:h-[500px] object-contain"
         />
       </SwiperSlide>
     ))}
   </Swiper>
 </div>
+
+
 
 </div>
 
@@ -596,30 +683,16 @@ function BinFilterTab() {
       <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12">
         {/* Left Content */}
         <div>
-        <div
+     <div
+  className="inline-flex items-center px-4 py-2 mb-4 rounded-full text-xs font-semibold tracking-[0.12em] uppercase"
   style={{
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "10px",
-    marginBottom: "12px",
-
     fontFamily: "'DM Mono', monospace",
-    fontSize: "11px",
-    fontWeight: 600,
-    letterSpacing: "0.18em",
-    textTransform: "uppercase",
-    color: "#A0780E",
+    color: "#0D8239",
+    backgroundColor: "#EAF7EF",
+    border: "1px solid #0D8239",
   }}
 >
-  <span
-    style={{
-      width: "3px",
-      height: "16px",
-      background: "#A0780E",
-      borderRadius: "999px",
-    }}
-  />
-  Automatic waste loading  · Safe & Efficient
+  Automatic Waste Loading · Safe & Efficient
 </div>
           <h3
   style={{
@@ -874,10 +947,19 @@ function BinFilterTab() {
 function DewateringTab() {
   return (
     <>
-      <div className="grid lg:grid-cols-2 gap-12 items-start">
+     <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-start">
       <div>
-        <div className="text-[10px] tracking-[0.18em] uppercase mb-2" style={{ fontFamily: "'DM Mono', monospace", color: "#A0780E" }}>60–70% Volume Reduction · Plug & Play</div>
-       <h3
+       <div
+  className="inline-flex items-center px-4 py-2 mb-4 rounded-full text-xs font-semibold tracking-[0.12em] uppercase shadow-sm"
+  style={{
+    fontFamily: "'DM Mono', monospace",
+    color: "#8A6700",
+    backgroundColor: "#FFF4D6",
+    border: "1px solid #E5C76B",
+  }}
+>
+  60–70% Volume Reduction · Plug & Play
+</div>    <h3
   style={{
     fontFamily: "'Playfair Display', serif",
     fontWeight: 700,
@@ -918,12 +1000,7 @@ function DewateringTab() {
       marginBottom: "14px",
     }}
   >
-    Reddonatura pre-treatment machines operate on a two-stage processing
-    system. In the first stage, food waste is shredded into smaller particle
-    sizes. In the second stage, excess moisture is removed through a
-    centrifugal dewatering mechanism. This process achieves a volume reduction
-    of approximately 60–70%, making the waste highly suitable for further
-    composting, storage, or transportation.
+    Pre-treatment machines combine shredding and dewatering in a two-stage process, reducing food waste volume by approximately 60–70%. By removing excess moisture and reducing particle size, the system improves handling efficiency and prepares waste for effective composting, storage, or transportation.
   </p>
 
   <p
@@ -936,84 +1013,109 @@ function DewateringTab() {
       marginBottom: "14px",
     }}
   >
-    By significantly reducing moisture content, the system improves handling
-    efficiency and enhances the performance of downstream composting processes.
+    Each machine is configured to match site-specific waste volumes and operating requirements, delivering reliable performance, durability, and long service life.
   </p>
 
-  <p
-    style={{
-      fontFamily: "'DM Sans', sans-serif",
-      fontWeight: 300,
-      fontSize: "0.975rem",
-      color: "#5A6B5C",
-      lineHeight: 1.9,
-      marginBottom: "14px",
-    }}
-  >
-    Each machine is configured based on the quantity of food waste generated
-    per hour. Motor rating, throughput capacity, and internal components are
-    selected to match site-specific conditions and duty cycles, ensuring stable
-    and reliable performance in high-volume operating environments.
-  </p>
+  
 
-  <p
-    style={{
-      fontFamily: "'DM Sans', sans-serif",
-      fontWeight: 300,
-      fontSize: "0.975rem",
-      color: "#5A6B5C",
-      lineHeight: 1.9,
-    }}
-  >
-    Design priorities focus on durability, operational simplicity, and long
-    service life—delivering dependable performance without unnecessary
-    complexity.
-  </p>
+ 
+
+
+
 </div>
-       {[
-  "Effective dewatering for substantial reduction in food waste volume.",
-  "Throughput capacity configured based on hourly waste generation.",
-  "Motor rating matched to processing load and operating conditions.",
-  "Robust cutting and dewatering components for continuous operation.",
-  "Compact, standalone design suitable for confined service areas.",
-  "Low-maintenance construction with easy access to components.",
-].map((f, i) => (
-  <div key={i} className="flex items-start gap-2 mb-2">
-    <CheckCircle2
-      className="w-3.5 h-3.5 mt-0.5 flex-shrink-0"
-      style={{ color: "#178B4C" }}
-    />
-    <span
-      style={{
-        fontFamily: "'DM Sans', sans-serif",
-        fontSize: "0.85rem",
-        color: "#5A6B5C",
-        lineHeight: 1.8,
-      }}
-    >
-      {f}
-    </span>
-  </div>
-))}
+      <div className="grid md:grid-cols-2 gap-x-10 gap-y-5 mt-6">
+  {[
+    {
+      icon: Droplets,
+      text: "Effective dewatering for substantial reduction in food waste volume.",
+    },
+    {
+      icon: Gauge,
+      text: "Processing capacity configured based on hourly waste generation.",
+    },
+    {
+      icon: Cog,
+      text: "Motor rating matched to processing load and operating conditions.",
+    },
+    {
+      icon: ShieldCheck,
+      text: "Robust shredding and dewatering components for continuous operation.",
+    },
+    {
+      icon: Minimize2,
+      text: "Compact, standalone design suitable for confined service areas.",
+    },
+    {
+      icon: Wrench,
+      text: "Low-maintenance construction with easy access to components.",
+    },
+  ].map((item, i) => {
+    const Icon = item.icon;
+
+    return (
+      <div key={i} className="flex items-start gap-4">
+        <Icon
+          size={28}
+          strokeWidth={2.2}
+          style={{
+            color: "#178B4C",
+            flexShrink: 0,
+            marginTop: "2px",
+          }}
+        />
+
+        <span
+          style={{
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: "1rem",
+            fontWeight: 400,
+            color: "#5A6B5C",
+            lineHeight: 1.8,
+          }}
+        >
+          {item.text}
+        </span>
+      </div>
+    );
+  })}
+</div>
+      
         
       </div>
-      <div
-  className="flex justify-center items-start"
-  style={{
-    minHeight: "620px", // increase from 460px
-    paddingTop: "40px", // move image down slightly
+   <div className="w-full">
+  <div className="sticky top-32">
+    <Swiper
+  modules={[Autoplay, Pagination, Navigation]}
+  autoplay={{
+    delay: 2500,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: false,
   }}
+  loop
+  navigation
+  pagination={{ clickable: true }}
+  slidesPerView={1}
+  speed={700}
+  className="rounded-lg"
 >
-  <img
-    src={pretreatment}
-    alt="Pre-Treatment Machine"
-    style={{
-      width: "100%",
-      maxWidth: "520px",
-      height: "auto",
-      objectFit: "contain",
-    }}
-  />
+      {[pretreatment, pretreatment2, pretreatment3].map((img, index) => (
+        <SwiperSlide key={index}>
+          <img
+            src={img}
+            alt={`Pre-Treatment ${index + 1}`}
+            className="w-full"
+            style={{
+              height: "500px",
+              objectFit: "contain",
+            }}
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+
+
+
 </div>
     </div>
 
@@ -1042,7 +1144,7 @@ function DewateringTab() {
     {[
       [
         "Working Capacity",
-        "Customizable based on waste availability, from 100 kg/hr to 500 kg/hr",
+        "available starting from 100 kg per hour up to 500kg per hour",
       ],
       [
         "Power Supply",
@@ -1054,7 +1156,15 @@ function DewateringTab() {
       ],
       [
         "Outer Body Material",
-        "Stainless Steel (SS)",
+        "SS / MS",
+      ],
+        [
+        "Dewatering filter",
+        "Honeycomb type",
+      ],
+      [
+        "Cutter materialt",
+        "Abrasive-resistant steel",
       ],
     ].map(([title, value], i) => (
       <div
@@ -1092,142 +1202,40 @@ function DewateringTab() {
   </div>
 </div>
 
-
 {/* ================= SYSTEM INFORMATION ================= */}
 
 <div className="mt-20 w-full">
-  <div className="grid lg:grid-cols-2 gap-10">
-
-    {/* System Integration */}
-    <div
-      style={{
-        background: "#F8FAF7",
-        border: "1px solid rgba(5,49,20,0.08)",
-        borderRadius: "12px",
-        padding: "32px",
-      }}
-    >
-      <h3
-        style={{
-          fontFamily: "'Playfair Display', serif",
-          fontWeight: 700,
-          fontSize: "1.8rem",
-          marginBottom: "18px",
-        }}
-      >
-        <span style={{ color: "#178B4C" }}>System </span>
-        <span style={{ color: "#A0780E" }}>Integration</span>
-      </h3>
-
-      <p
-        style={{
-          fontFamily: "'DM Sans', sans-serif",
-          fontSize: "0.95rem",
-          color: "#5A6B5C",
-          lineHeight: 1.9,
-        }}
-      >
-        The pre-treatment machine can operate as a standalone unit or as part
-        of an integrated waste management system. Separated grey water can be
-        discharged to a sewage treatment plant or drainage line, while the
-        reduced solid fraction can be directly fed into composting systems or
-        stored and transported efficiently.
-      </p>
-    </div>
-
-    {/* Capacity & Configuration */}
-    <div
-      style={{
-        background: "#F8FAF7",
-        border: "1px solid rgba(5,49,20,0.08)",
-        borderRadius: "12px",
-        padding: "32px",
-      }}
-    >
-      <h3
-        style={{
-          fontFamily: "'Playfair Display', serif",
-          fontWeight: 700,
-          fontSize: "1.8rem",
-          marginBottom: "18px",
-        }}
-      >
-        <span style={{ color: "#178B4C" }}>Capacity & </span>
-        <span style={{ color: "#A0780E" }}>Configuration</span>
-      </h3>
-
-      <p
-        style={{
-          fontFamily: "'DM Sans', sans-serif",
-          fontSize: "0.95rem",
-          color: "#5A6B5C",
-          lineHeight: 1.9,
-        }}
-      >
-        Available in multiple throughput ranges. Motor rating and internal
-        components are configured based on hourly waste generation and
-        operational requirements. Higher capacities and customized
-        configurations are available following site assessment.
-      </p>
-    </div>
-
-  </div>
-</div>
-{/* ================= KEY SPECIFICATIONS ================= */}
-
-<div className="mt-20 w-full">
   <h3
-    className="mb-8"
     style={{
       fontFamily: "'Playfair Display', serif",
       fontWeight: 700,
       fontSize: "2rem",
+      marginBottom: "20px",
     }}
   >
-    <span style={{ color: "#178B4C" }}>Key </span>
-    <span style={{ color: "#A0780E" }}>Specifications</span>
+    <span style={{ color: "#178B4C" }}>System </span>
+    <span style={{ color: "#A0780E" }}>Integration</span>
   </h3>
 
-  <div className="grid md:grid-cols-2 gap-x-12 gap-y-4">
-    {[
-      "Designed to efficiently reduce food waste volume before composting or further processing.",
-      "Operates on a two-stage processing system.",
-      "Stage 1: High-efficiency food waste shredding.",
-      "Stage 2: Centrifugal dewatering mechanism.",
-      "Top inlet for easy waste feeding.",
-      "Inbuilt water sprinkling system for smooth operation.",
-      "Outlet provided for processed waste collection.",
-      "Designed with enhanced safety features.",
-      "User-friendly and intuitive control panel.",
-      "Heavy-duty, rock-solid locking feet for stability.",
-      "Working capacity: 350 kg per hour.",
-      "Customizable capacity from 100 kg/hr to 500 kg/hr.",
-      "Compact, standalone design suitable for limited spaces.",
-      "Robust shredding teeth for reliable performance.",
-      "Improves efficiency of downstream processing.",
-      "Excess moisture discharged to STP or drainage line.",
-      "Achieves 60–70% volume reduction.",
-      "Ideal for facilities where waste handling cost is based on volume or weight.",
-    ].map((item, index) => (
-      <div key={index} className="flex items-start gap-3">
-        <CheckCircle2
-          className="w-5 h-5 mt-1 flex-shrink-0"
-          style={{ color: "#178B4C" }}
-        />
-        <span
-          style={{
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: "0.95rem",
-            color: "#5A6B5C",
-            lineHeight: 1.8,
-          }}
-        >
-          {item}
-        </span>
-      </div>
-    ))}
-  </div>
+  <p
+    style={{
+      fontFamily: "'DM Sans', sans-serif",
+      fontSize: "0.95rem",
+      color: "#5A6B5C",
+      lineHeight: 1.9,
+    }}
+  >
+    The pre-treatment machine can operate as a standalone unit or as part of an
+    integrated waste management system. Separated grey water can be discharged
+    to a sewage treatment plant or drainage line, while the reduced solid
+    fraction can be directly fed into composting systems or stored and
+    transported efficiently.
+  </p>
 </div>
+
+
+{/* ================= KEY SPECIFICATIONS ================= */}
+
 
 </>
   );
@@ -1236,10 +1244,19 @@ function DewateringTab() {
 function BioFilterTab() {
   return (
     <>
-      <div className="grid lg:grid-cols-2 gap-12 items-start">
+     <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-start">
       <div>
-        <div className="text-[10px] tracking-[0.18em] uppercase mb-2" style={{ fontFamily: "'DM Mono', monospace", color: "#A0780E" }}>Biological Filtration · Odour Free</div>
-        
+       <div
+  className="inline-flex items-center px-4 py-2 mb-4 rounded-full text-xs font-semibold tracking-[0.12em] uppercase"
+  style={{
+    fontFamily: "'DM Mono', monospace",
+    color: "#0D8239",
+    backgroundColor: "#EAF7EF",
+    border: "1px solid #0D8239",
+  }}
+>
+  Biological Filtration · Odour Free
+</div> 
 
   <h3
   className="mb-8"
@@ -1285,27 +1302,37 @@ function BioFilterTab() {
           </div>
         ))}
       </div>
-      <div
-  className="overflow-hidden h-[260px] lg:h-[460px]"
-  style={{
-    boxShadow: "0 20px 45px rgba(5,49,20,0.15)",
-  }}
->
-  <img
-    src={Biofilter}
-    alt="Bio-Filter System"
-    className="w-full h-full"
-    alt="Bio-Filter"
-    className="w-full h-full"
-    style={{
-      objectFit: "contain",
-    }}
-  />
+
+      
+      <div className="w-full">
+  <div className="lg:sticky lg:top-32">
+    <Swiper
+      modules={[Autoplay, Pagination, Navigation]}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: false,
+      }}
+      loop
+      navigation
+      pagination={{ clickable: true }}
+      slidesPerView={1}
+      speed={700}
+      className="rounded-lg"
+    >
+      {[Biofilter1, Biofilter2, Biofilter3].map((img, index) => (
+        <SwiperSlide key={index}>
+          <img
+            src={img}
+            alt={`Bio-Filter ${index + 1}`}
+            className="w-full h-[260px] sm:h-[320px] lg:h-[460px] object-contain"
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
 </div>
-
-
     </div>
-    
     {/* ================= TECHNICAL OVERVIEW ================= */}
 
 <div className="mt-20 w-full">
@@ -1429,18 +1456,20 @@ function ShreddersTab() {
   return (
     <>
       {/* Top Section */}
-      <div className="grid lg:grid-cols-2 gap-12 items-start">
+       <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-start">
         {/* Left */}
         <div>
-          <div
-            className="text-[10px] tracking-[0.18em] uppercase mb-2"
-            style={{
-              fontFamily: "'DM Mono', monospace",
-              color: "#A0780E",
-            }}
-          >
-            High-Torque · Auto-Reverse · Low Noise
-          </div>
+         <div
+  className="inline-flex items-center px-4 py-2 mb-4 rounded-full text-xs font-semibold tracking-[0.12em] uppercase"
+  style={{
+    fontFamily: "'DM Mono', monospace",
+    color: "#A0780E",
+    backgroundColor: "rgba(13, 130, 57, 0.08)", // Light transparent green
+    border: "1px solid rgba(13, 130, 57, 0.2)",
+  }}
+>
+  High-Torque · Auto-Reverse · Low Noise
+</div>
 
          
           <h3
@@ -1470,7 +1499,7 @@ function ShreddersTab() {
     marginBottom: "14px",
   }}
 >
-  Reddonatura shredders are engineered for efficient size reduction of
+  shredders are engineered for efficient size reduction of
             food and organic waste to optimize composting efficiency and
             accelerate biodegradation.
 </div>
@@ -1484,57 +1513,116 @@ function ShreddersTab() {
               marginBottom: "20px",
             }}
           >
-           Designed for continuous-duty operation,
-            they deliver consistent throughput and reliable performance in
-            demanding waste management environments. Each unit is configured
-            based on waste characteristics and processing capacity, providing
-            robust construction, high torque transmission, stable operation, and
-            seamless integration with downstream composting systems.
+          Designed for continuous-duty operation, they provide reliable performance in demanding waste management environments. Each unit is configured to suit specific waste characteristics and processing capacities, featuring robust construction, high-torque transmission, stable operation, and seamless integration with downstream composting systems.
           </p>
 
-          {[
-            "Purpose-built variants – Dedicated configurations for food waste and garden waste processing.",
-            "Configured capacity – Motor power and throughput customized based on daily waste volume and project requirements.",
-            "Robust construction – Heavy-duty structure engineered for continuous operation and extended service life.",
-            "Controlled output – Uniform size reduction to improve downstream composting efficiency.",
-            "Straightforward operation – Simple and safe control system designed for reliable daily use.",
-            "Low-maintenance design – Easy access to components for inspection, servicing, and maintenance.",
-          ].map((f, i) => (
-            <div key={i} className="flex items-start gap-2 mb-2">
-              <CheckCircle2
-                className="w-3.5 h-3.5 mt-0.5 flex-shrink-0"
-                style={{ color: "#178B4C" }}
-              />
-              <span
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: "0.85rem",
-                  color: "#5A6B5C",
-                }}
-              >
-                {f}
-              </span>
-            </div>
-          ))}
-        </div>
+      <div className="grid md:grid-cols-2 gap-x-10 gap-y-5 mt-6">
+         
+  {[
+    {
+      icon: PackageCheck,
+      title: "Purpose-Built Variants",
+      desc: "Dedicated configurations for efficient food waste and garden waste processing.",
+    },
+    {
+      icon: Gauge,
+      title: "Configured Capacity",
+      desc: "Motor power and throughput customized based on daily waste volume and project requirements.",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Robust Construction",
+      desc: "Heavy-duty structure engineered for continuous operation and extended service life.",
+    },
+    {
+      icon: Cog,
+      title: "Controlled Output",
+      desc: "Uniform size reduction to improve downstream composting efficiency.",
+    },
+    {
+      icon: Settings2,
+      title: "Straight forward Operation",
+      desc: "Simple and safe control system designed for reliable daily use.",
+    },
+    {
+      icon: Wrench,
+      title: "Low-Maintenance Design",
+      desc: "Easy access to components for inspection, servicing, and maintenance.",
+    },
+  ].map((item, i) => {
+    const Icon = item.icon;
 
-        {/* Right */}
-        <div
-          className="overflow-hidden h-[260px] lg:h-[460px]"
-          style={{
-            boxShadow: "0 20px 45px rgba(5,49,20,0.15)",
-          }}
-        >
-          <img
-            src={Shredders}
-            alt="Industrial Shredder"
-            className="w-full h-full"
+    return (
+      <div key={i} className="flex items-start gap-4">
+       <Icon
+  className="w-6 h-6 md:w-7 md:h-7"
+  strokeWidth={2.2}
+  style={{ color: "#178B4C", flexShrink: 0 }}
+/>
+
+        <div>
+          <h4
             style={{
-              objectFit: "contain",
+              fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 700,
+              fontSize: "15px",
+              color: "#053114",
+              marginBottom: "6px",
+              textTransform: "uppercase",
             }}
-          />
+          >
+            {item.title}
+          </h4>
+
+          <p
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: "14px",
+              color: "#5A6B5C",
+              lineHeight: 1.6,
+            }}
+          >
+            {item.desc}
+          </p>
         </div>
       </div>
+    );
+  })}
+</div>
+        </div>
+        
+
+        {/* Right */}
+    {/* Right */}
+<div className="w-full">
+  <div className="sticky top-32">
+    <Swiper
+      modules={[Autoplay, Pagination, Navigation]}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: false,
+      }}
+      loop
+      navigation
+      pagination={{ clickable: true }}
+      slidesPerView={1}
+      speed={700}
+       className="rounded-lg h-[260px] sm:h-[320px] lg:h-[500px]"
+    >
+      {[Shredders1, Shredders2, Shredders3].map((img, index) => (
+        <SwiperSlide key={index}>
+         <img
+  src={img}
+  alt={`Shredder ${index + 1}`}
+  className="w-full h-full object-contain"
+/>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+</div>
+</div>
 
       {/* ================= FULL WIDTH SECTION ================= */}
 
