@@ -22,8 +22,8 @@ import Binlifter2 from "../../../imports/Biolifter2.jpg";
 import Binlifter3 from "../../../imports/Biolifter3.jpg";
 import { BadgeCheck } from "lucide-react";
 
-import pretreatment2 from "../../../imports/pretreatment2.jpg";
-import pretreatment3 from "../../../imports/pretreatment3.jpg";
+import pretreatment2 from "../../../imports/Pretreatment2.jpg";
+import pretreatment3 from "../../../imports/Pretreatment3.jpg";
 import Shredders1 from "../../../imports/shredder1.jpg";
 import Shredders2 from "../../../imports/shredder2.jpg";
 import Shredders3 from "../../../imports/shredder3.jpg";
