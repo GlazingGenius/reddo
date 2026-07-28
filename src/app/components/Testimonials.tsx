@@ -357,22 +357,17 @@ export default function Testimonials() {
             <div style={{ height: "1px", width: "40px", background: "rgba(255,255,255,0.25)" }} />
           </div>
 
-          <h2 className="mb-5 leading-none">
-            <span
-              style={{
-                fontFamily: "'Playfair Display', Georgia, serif",
-                fontSize: "clamp(2.4rem, 4.5vw, 4rem)",
-                fontWeight: 400,
-                color: "#ffffff",
-                display: "block",
-                lineHeight: 1.1,
-              }}
-            >
-              Trusted by{" "}
-              <em style={{ color: "#22c55e", fontStyle: "italic" }}>Industry Leaders</em>
-            </span>
+         <h2
+            style={{
+              fontFamily: "'Playfair Display', Georgia, serif",
+              fontWeight: 700,
+              fontSize: "clamp(2rem,4vw,3.2rem)",
+              color: "#F5F0E8",
+              lineHeight: 1.15,
+            }}
+          >
+            Trusted by Industry Leaders
           </h2>
-
           <p
             className="max-w-2xl mx-auto leading-8"
             style={{ fontFamily: "Inter, sans-serif", fontSize: "17px", color: "rgba(255,255,255,0.6)", fontWeight: 400 }}
