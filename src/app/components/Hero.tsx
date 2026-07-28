@@ -32,11 +32,10 @@ function CountUp({
   }, [end, inView, duration]);
   return <>{count.toLocaleString()}</>;
 }
-
 const heroStats = [
-  { value: 1500, suffix: "+", label: "projects" },
+  { value: 1500, suffix: "+", label: "intallations" },
   { value: 150, suffix: "+", label: "Cities" },
-  { value: 24, suffix: "+", label: "Countries" },
+  { value: 24, suffix: "+", label: " International countries" },
 ];
 
 export function Hero({ onOpenForm }: { onOpenForm: () => void }) {
@@ -114,7 +113,7 @@ export function Hero({ onOpenForm }: { onOpenForm: () => void }) {
              color: "rgba(255,255,255,0.88)",
             }}
           >
-            A globally recognised leader in food waste management,
+            A globally recognised leader in waste management,
             championing green, renewable solutions that transform waste
             into something the planet can use.
           </motion.p>

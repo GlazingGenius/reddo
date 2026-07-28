@@ -22,7 +22,7 @@ const categories = [
 
   },
   {
-    title: "Windrow Composting",
+    title: "Solarized Controlled Windrow Composting",
     desc: "Solarised, automated windrow composting systems for large-scale municipal and cluster-based organic waste processing into high-grade compost.",
      image: Windrow,
     href: "/products/windrow-compost",

@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { PageLayout, Section, SectionLabel, FeatureCard, PageCTA,  } from "../PageLayout";
 import { CheckCircle2, Sun, Wind, Layers, Recycle } from "lucide-react";
-import Windrow from "../../../imports/windrow3.png";
+import Windrow from "../../../imports/windrowimg1.png";
 //import Shredders from "../../../imports/shredders.png";
 import WindrowBanner from "../../../imports/biomingsectionimg.png";
 import Testimonials from "../../components/Testimonials";
@@ -27,7 +27,7 @@ export function WindrowCompostPage() {
   
   return (
     <PageLayout
-      title="Windrow Composting"
+      title="Solarized Controlled Windrow Composting"
       subtitle="Cluster-based, solarised windrow composting systems for large-scale municipal and institutional organic waste processing into high-grade compost."
       breadcrumb="Windrow Compost"
     >
@@ -63,7 +63,7 @@ export function WindrowCompostPage() {
       </Section>
 
       {/* Process */}
-      <Section bg="#F5F4EF">
+      {/* <Section bg="#F5F4EF">
         <div className="text-center mb-12">
           <SectionLabel label="The Process" />
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "1rem", color: "#5A6B5C", maxWidth: "520px", margin: "0 auto" }}>
@@ -80,7 +80,7 @@ export function WindrowCompostPage() {
             </motion.div>
           ))}
         </div>
-      </Section>
+      </Section> */}
 
 <section className="w-full">
   <motion.div

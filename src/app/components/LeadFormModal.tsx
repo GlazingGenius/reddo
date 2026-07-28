@@ -15,7 +15,7 @@ const Q1_FACILITY = {
   question: "What type of facility do you operate?",
   hint: "Select the option that best describes your organisation.",
   options: [
-    { label: "Household / Home",             sub: "" },
+   // { label: "Household / Home",             sub: "" },
     { label: "Apartment / Residential",      sub: "" },
     { label: "Restaurant / Food Chain",      sub: "" },
     { label: "Hotel / Resort",               sub: "" },
@@ -33,8 +33,8 @@ const Q2_WASTE_VOLUME = {
   question: "How much organic waste does your facility generate daily?",
   hint: "Select the closest estimate — even a rough figure helps.",
   options: [
-    { label: "Less than 10 kg",  sub: "" },
-    { label: "10 – 50 kg",       sub: "" },
+    //{ label: "Less than 10 kg",  sub: "" },
+    { label: "25 – 50 kg",       sub: "" },
     { label: "50 – 200 kg",      sub: "" },
     { label: "200 – 500 kg",     sub: "" },
     { label: "500 kg – 1 ton",   sub: "" },
@@ -143,7 +143,7 @@ export function LeadFormModal({ open, onClose }: Props) {
     ...answers.map((a, i) => `*${labels[i]}:* ${a}`),
     "",
     `*Name:* ${form.name}`,
-    `*Company:* ${form.company || "—"}`,
+    `*Company:* ${form.company }`,
     `*Email:* ${form.email}`,
     `*Phone:* ${form.phone}`,
     `*Country:* ${form.country}`,
@@ -427,12 +427,16 @@ export function LeadFormModal({ open, onClose }: Props) {
                     <div>
                       <label className="block text-[10px] tracking-[0.14em] uppercase mb-1.5"
                         style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 500, color: "#5A6B5C" }}>
-                        Company / Organisation
+                        Company / Organisation*
                       </label>
-                      <input value={form.company}
-                        onChange={e => setForm(f => ({ ...f, company: e.target.value }))}
-                        placeholder="Your Organisation"
-                        className={inputClass} style={inputStyle} />
+                     <input
+  required
+  value={form.company}
+  onChange={e => setForm(f => ({ ...f, company: e.target.value }))}
+  placeholder="Your Organisation"
+  className={inputClass}
+  style={inputStyle}
+/>
                     </div>
                   </div>
                   <div>

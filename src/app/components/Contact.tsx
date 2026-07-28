@@ -10,8 +10,6 @@ export function Contact({ onOpenForm }: { onOpenForm: () => void }) {
   return (
     <>
       {/* ── World Presence Map ───────────────────────── */}
-      
-
       {/* ── CTA Section ──────────────────────────────── */}
       <section
   ref={ref}
@@ -103,79 +101,112 @@ export function Contact({ onOpenForm }: { onOpenForm: () => void }) {
 
               {/* Contact details row */}
               <div className="flex flex-wrap gap-6 mb-10">
-                <a
-                  href="tel:+917760987934"
-                  className="group flex items-center gap-3"
-                >
-                  <div
-                    className="w-10 h-10 flex items-center justify-center flex-shrink-0"
-                    style={{ backgroundColor: "rgba(13,130,57,0.1)" }}
-                  >
-                    <Phone className="w-4 h-4" style={{ color: "#0D8239" }} />
-                  </div>
-                  <div>
-                    <div
-                      style={{
-                        fontFamily: "'DM Sans', sans-serif",
-                        fontSize: "10px",
-                        letterSpacing: "0.14em",
-                        textTransform: "uppercase",
-                        color: "#8A9E8B",
-                        fontWeight: 500,
-                      }}
-                    >
-                      Call Us
-                    </div>
-                    <div
-                      className="group-hover:text-[#0D8239] transition-colors"
-                      style={{
-                        fontFamily: "'DM Sans', sans-serif",
-                        fontSize: "0.95rem",
-                        fontWeight: 500,
-                        color: "#0C1A0D",
-                      }}
-                    >
-                      +91 7760987934
-                    </div>
-                  </div>
-                </a>
+       <div className="group flex items-center gap-3">
+  <div
+    className="w-10 h-10 flex items-center justify-center flex-shrink-0"
+    style={{ backgroundColor: "rgba(13,130,57,0.1)" }}
+  >
+    <Phone className="w-4 h-4" style={{ color: "#0D8239" }} />
+  </div>
 
-                <a
-                  href="mailto:info@reddonatura.com"
-                  className="group flex items-center gap-3"
-                >
-                  <div
-                    className="w-10 h-10 flex items-center justify-center flex-shrink-0"
-                    style={{ backgroundColor: "rgba(13,130,57,0.1)" }}
-                  >
-                    <Mail className="w-4 h-4" style={{ color: "#0D8239" }} />
-                  </div>
-                  <div>
-                    <div
-                      style={{
-                        fontFamily: "'DM Sans', sans-serif",
-                        fontSize: "10px",
-                        letterSpacing: "0.14em",
-                        textTransform: "uppercase",
-                        color: "#8A9E8B",
-                        fontWeight: 500,
-                      }}
-                    >
-                      Email Us
-                    </div>
-                    <div
-                      className="group-hover:text-[#0D8239] transition-colors"
-                      style={{
-                        fontFamily: "'DM Sans', sans-serif",
-                        fontSize: "0.95rem",
-                        fontWeight: 500,
-                        color: "#0C1A0D",
-                      }}
-                    >
-                      info@reddonatura.com
-                    </div>
-                  </div>
-                </a>
+  <div>
+    <div
+      style={{
+        fontFamily: "'DM Sans', sans-serif",
+        fontSize: "10px",
+        letterSpacing: "0.14em",
+        textTransform: "uppercase",
+        color: "#8A9E8B",
+        fontWeight: 500,
+      }}
+    >
+      Call Us
+    </div>
+
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "4px",
+        marginTop: "2px",
+        fontFamily: "'DM Sans', sans-serif",
+        fontSize: "0.95rem",
+        fontWeight: 500,
+      }}
+    >
+      <a
+        href="tel:+917760987934"
+        className="group-hover:text-[#0D8239] transition-colors"
+        style={{ color: "#0C1A0D", textDecoration: "none" }}
+      >
+        +91 7760987934
+      </a>
+
+      <a
+        href="tel:+919876543210"
+        className="group-hover:text-[#0D8239] transition-colors"
+        style={{ color: "#0C1A0D", textDecoration: "none" }}
+      >
+        +91  7338462806
+      </a>
+    </div>
+  </div>
+</div>
+
+               <a
+  href="mailto:info@reddonatura.com"
+  className="group flex items-center gap-3"
+>
+  <div
+    className="w-10 h-10 flex items-center justify-center flex-shrink-0"
+    style={{ backgroundColor: "rgba(13,130,57,0.1)" }}
+  >
+    <Mail className="w-4 h-4" style={{ color: "#0D8239" }} />
+  </div>
+
+  <div>
+    <div
+      style={{
+        fontFamily: "'DM Sans', sans-serif",
+        fontSize: "10px",
+        letterSpacing: "0.14em",
+        textTransform: "uppercase",
+        color: "#8A9E8B",
+        fontWeight: 500,
+      }}
+    >
+      Email Us
+    </div>
+
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "4px",
+        marginTop: "2px",
+        fontFamily: "'DM Sans', sans-serif",
+        fontSize: "0.95rem",
+        fontWeight: 500,
+      }}
+    >
+      <a
+        href="mailto:naziya@reddonatura.com"
+        className="group-hover:text-[#0D8239] transition-colors"
+        style={{ color: "#0C1A0D", textDecoration: "none" }}
+      >
+        naziya@reddonatura.com
+      </a>
+
+      <a
+        href="mailto:geetha@reddonatura.com"
+        className="group-hover:text-[#0D8239] transition-colors"
+        style={{ color: "#0C1A0D", textDecoration: "none" }}
+      >
+        geetha@reddonatura.com
+      </a>
+    </div>
+  </div>
+</a>
 
                 <div className="flex items-center gap-3">
                   <div
@@ -249,11 +280,14 @@ export function Contact({ onOpenForm }: { onOpenForm: () => void }) {
   initial={{ opacity: 0, x: 24 }}
   animate={inView ? { opacity: 1, x: 0 } : {}}
   transition={{ duration: 0.7, delay: 0.25 }}
-  className="hidden lg:flex flex-col justify-between p-10 w-[340px] xl:w-[380px] self-stretch rounded-sm"
+  className="flex flex-col justify-between p-8 lg:p-10 w-full max-w-[380px] mx-auto lg:mx-0 rounded-[28px] relative overflow-hidden"
   style={{
-    backgroundColor: "#0B1F10",
+    background: "linear-gradient(145deg, #071A0D 0%, #0B2A16 55%, #12351D 100%)",
     minHeight: "520px",
-    boxShadow: "0 30px 60px rgba(5,49,20,0.25)",
+    border: "1px solid rgba(160,120,14,0.18)",
+    boxShadow:
+      "0 35px 80px rgba(5,49,20,0.35), inset 0 1px 0 rgba(255,255,255,0.06)",
+    transform: "translateY(-20px)",
   }}
 >
   {/* Accent Line */}

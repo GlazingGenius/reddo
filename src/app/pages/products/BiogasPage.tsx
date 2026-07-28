@@ -55,19 +55,19 @@ const biogasTypes = [
 ];
 
 const features = [
-  { icon: <Zap className="w-5 h-5" />, title: "Advanced Digestion Technology", desc: "State-of-the-art anaerobic digestion technology to maximize biogas production from organic waste streams." },
+  { icon: <Zap className="w-5 h-5" />, title: "Advanced Digestion Technology", desc: "Transforms organic waste into clean, renewable energy using advanced anaerobic digestion for reliable and eco-friendly performance." },
   { icon: <Settings className="w-5 h-5" />, title: "Modular & Scalable", desc: "Flexible design allows for easy installation and expansion as your organic waste generation grows." },
-  { icon: <BarChart3 className="w-5 h-5" />, title: "Smart Monitoring", desc: "Real-time monitoring and optimization of the biogas production process with integrated smart technology." },
+  { icon: <BarChart3 className="w-5 h-5" />, title: "Smart Monitoring", desc: "Smart automation and real-time monitoring ensure optimal plant efficiency, improved reliability, and seamless operational management." },
   { icon: <Leaf className="w-5 h-5" />, title: "Low Maintenance", desc: "Engineered for reliability, ensuring consistent biogas output with minimal downtime across all plant types." },
 ];
 
-const processSteps = [
+{/*const processSteps = [
   { step: "01", title: "Waste Collection", desc: "Segregated organic waste is transported to the reception area where it is inspected and pre-processed." },
   { step: "02", title: "Crushing & Slurry", desc: "Waste is crushed and mixed with water to form a pumpable slurry that enters the digestion tank." },
   { step: "03", title: "Anaerobic Digestion", desc: "Microbial action at 40°C converts organic matter into methane-rich biogas through hydrolysis, acidogenesis, and methanogenesis." },
   { step: "04", title: "Gas Purification", desc: "Raw biogas passes through moisture traps and H₂S scrubbers, then is compressed for distribution or electricity generation." },
   { step: "05", title: "Digestate Recovery", desc: "The nutrient-rich liquid digestate is separated and used as an organic liquid fertilizer for agriculture." },
-];
+];*/}
 const specs = {
   headers: [
     "Model No",
@@ -93,17 +93,7 @@ const specs = {
       "2500 Kgs",
       "5000 Kgs",
     ],
-    [
-      "Electricity (kWh / day)",
-      "7",
-      "10",
-      "12",
-      "18",
-      "25",
-      "31",
-      "38",
-      "60",
-    ],
+   
     [
       "Power (Phase / Volt)",
       "3 Phase\n440V",
@@ -126,50 +116,10 @@ const specs = {
       "330–340",
       "660–680",
     ],
-    [
-      "LPG Equipment (Kgs / day)",
-      "16",
-      "30",
-      "45",
-      "60",
-      "90",
-      "120",
-      "165",
-      "330",
-    ],
-    [
-      "Generator Capacity (KVA)",
-      "10",
-      "10",
-      "10",
-      "15",
-      "15",
-      "20",
-      "20",
-      "40",
-    ],
-    [
-      "Electricity Produces (kWh / day)",
-      "30",
-      "60",
-      "90",
-      "120",
-      "180",
-      "210",
-      "300",
-      "600",
-    ],
-    [
-      "Dry Manure (Kgs / day)",
-      "20",
-      "50",
-      "75",
-      "100",
-      "150",
-      "200",
-      "250",
-      "500",
-    ],
+    
+    
+
+    
     [
       "Suitable to cater No. of Units*/ Kitchens (+5%)",
       "450",
@@ -301,7 +251,7 @@ Each biogas plant is configured based on daily waste input, site conditions, and
       </section>
 
       {/* Process */}
-      <Section>
+      {/*  <Section>
         <div className="text-center mb-12">
           <SectionLabel label="The Process" />
         </div>
@@ -315,7 +265,7 @@ Each biogas plant is configured based on daily waste input, site conditions, and
             </motion.div>
           ))}
         </div>
-      </Section>
+      </Section>*/}
 
 <section className="w-full">
   <motion.div
@@ -375,7 +325,7 @@ Each biogas plant is configured based on daily waste input, site conditions, and
         </div>
       </Section>*/}
 
-      <Section>
+      {/*<Section>
         <div className="max-w-3xl mx-auto text-center">
           <SectionLabel label="SYSTEM INTEGRATION" />
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "1.05rem", color: "#5A6B5C", lineHeight: 1.85 }}>
@@ -394,7 +344,7 @@ This allows the system to support both energy recovery and waste reduction withi
 System sizing, digester volume, and auxiliary equipment are determined during site assessment to ensure stable biological performance and long-term operational reliability. Higher-capacity and customised installations are available for large-scale waste and energy requirements.
           </p>
         </div>
-      </Section>
+      </Section>*/}
 
       {/* Specs */}
       <Section bg="#F5F4EF">

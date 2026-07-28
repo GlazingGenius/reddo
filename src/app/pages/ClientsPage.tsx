@@ -21,6 +21,13 @@ import logoPalo from "../../imports/palo_alto_networks___1_.png";
 import logoDell from "../../imports/DELL.png";
 import logoPrestige from "../../imports/PRESTIGE.png";
 
+import logoAbaCorp from "../../clientslogos/aba_corp__logo.jpeg";
+import logoAlstom from "../../clientslogos/Alstom-logo.jpg";
+import logoAmazon from "../../clientslogos/Amazon.jpg";
+import logoAmbuja from "../../clientslogos/ambuja_neotia_group_logo.jpeg";
+import logoApple from "../../clientslogos/apple logo black.png";
+import logoAzim from "../../clientslogos/Azim_Premji_University_logo.png";
+
 const logos = [
   { src: logoIbis, name: "IBIS Hotels" },
   { src: logoDubai, name: "Dubai Expo 2020" },
@@ -40,6 +47,12 @@ const logos = [
   { src: logoAdarsh, name: "Adarsh Developers" },
   { src: logoMdi, name: "MDI" },
   { src: logoPalo, name: "Palo Alto Networks" },
+    { src: logoAbaCorp, name: "ABA Corp" },
+  { src: logoAlstom, name: "Alstom" },
+  { src: logoAmazon, name: "Amazon" },
+  { src: logoAmbuja, name: "Ambuja Neotia Group" },
+  { src: logoApple, name: "Apple" },
+  { src: logoAzim, name: "Azim Premji University" },
 ];
 
 const pillars = [
@@ -88,7 +101,7 @@ export function ClientsPage() {
           ))}
         </div>
         <p className="text-center mt-8" style={{ fontFamily: "'DM Mono', monospace", fontSize: "11px", letterSpacing: "0.16em", textTransform: "uppercase", color: "#8A9E8B" }}>
-          Among 7,000+ clients worldwide across 20+ countries
+          Delivering Sustainable Solutions to Global Partners
         </p>
       </Section>
 

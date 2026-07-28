@@ -7,6 +7,8 @@ import img3 from "../../../imports/image-3.png";
 import img5 from "../../../imports/image-5.png";
 import heroVideo from "../../../imports/Wetwastemanagement.webp";
 import Nonheating from "../../../imports/non-heating .png";
+import Nonheating1 from "../../../imports/non-heating1.png";
+import Nonheating2 from "../../../imports/non-heating2.png";
 import Biofilter1 from "../../../imports/biofilter.webp";
 import Biofilter2 from "../../../imports/Biofilter2.jpg";
 import Biofilter3 from "../../../imports/Biofilter3.jpg";
@@ -18,6 +20,7 @@ import pretreatment from "../../../imports/pretreatment.png";
 import Owcfull from "../../../imports/owc1.jpg";
 import Owcfull2 from "../../../imports/owcf2.jpg";
 import Binlifter1 from "../../../imports/binlifter1.jpg";
+import Binlifter11 from "../../../imports/binlifter1.png";
 import Binlifter2 from "../../../imports/Biolifter2.jpg";
 import Binlifter3 from "../../../imports/Biolifter3.jpg";
 import { BadgeCheck } from "lucide-react";
@@ -98,7 +101,7 @@ const composingSubTabs = [
     desc: (
   <>
     <p className="mb-4">
-      The automatic organic waste composting/converter machine efficiently converts food and organic waste into a pre-compostable matter, nutrient-rich, soil-like compostable output within 24–36 hours. Using high-performance microorganisms and a controlled biological process, it achieves 80–90% volume reduction and handles various organic waste types
+      The automatic organic waste converter machine efficiently converts food and organic waste into a pre-compostable matter, nutrient-rich, soil-like compostable output within 24–36 hours. Using high-performance microorganisms and a controlled biological process, it achieves 80–90% volume reduction and handles various organic waste types
     </p>
 
     
@@ -138,19 +141,21 @@ const composingSubTabs = [
     desc: "Automatic discharge minimizes manual handling.",
   },
 ],
-  specs: [
+ specs: [
   ["Capacity", "Length (mm)", "Width (mm)", "Height (mm)", "Connected Load (kW)", "Machine Weight (Approx)"],
-  ["25 KG", "1493", "580", "1188", "1.86", "350 kg"],
-  ["50 KG", "1676", "700", "1341", "1.98", "450 kg"],
-  ["75 KG", "1860", "792", "1127", "4.25", "550 kg"],
-  ["125 KG", "2286", "944", "1432", "5.35", "700 kg"],
-  ["200 KG", "2500", "975", "1432", "6.6", "750 kg"],
-  ["250 KG", "2750", "1158", "1554", "8", "1020 kg"],
-  ["500 KG", "3000", "1432", "1860", "16.5", "1650 kg"],
-  ["750 KG", "3535", "1402", "1950", "22.5", ""],
-  ["1000 KG", "3962", "2100", "2133", "21.5", "2900 kg"],
-  ["1500 KG", "4600", "2100", "2347", "30", ""],
-  ["2000 KG", "4100", "2011", "2500", "58", "3900 kg"],
+  ["25 KG", "1493", "580", "1188", "1.93", "350 kg"],
+  ["50 KG", "1676", "700", "1341", "2.05", "450 kg"],
+  ["75 KG", "1860", "792", "1127", "4.12", "550 kg"],
+  ["100 KG", "1860", "792", "1127", "4.12", ""],
+  ["125 KG", "2286", "944", "1432", "5.22", "700 kg"],
+  ["200 KG", "2500", "975", "1432", "6.47", "750 kg"],
+  ["250 KG", "2750", "1158", "1554", "8.87", "1020 kg"],
+  ["300 KG", "2750", "1158", "1554", "8.87", ""],
+  ["500 KG", "3000", "1432", "1860", "16.37", "1650 kg"],
+  ["750 KG", "3535", "1402", "1950", "22.25", ""],
+  ["1000 KG", "3962", "2100", "2133", "27.25", "2900 kg"],
+  ["2000 KG", "4100", "2011", "2500", "57.5", "3900 kg"],
+  ["3000 KG", "4575", "2100", "2530", "76.5", ""],
 ],
     image: [img1,  Owcfull, Owcfull2],
   },
@@ -197,7 +202,7 @@ const composingSubTabs = [
       ["RN-SA 150", "150 kg/day", "Semi-Auto", "6.5 kW, 3Ph"],
       ["RN-SA 300", "300 kg/day", "Semi-Auto", "12 kW, 3Ph"],
     ],
-    image: [Nonheating, img3, img3]
+    image: [Nonheating, Nonheating, Nonheating]
   },
   {
     id: "nonheating",
@@ -244,7 +249,7 @@ const composingSubTabs = [
   ["1000 KGS", "5.5 kW", "2700", "2190", "6025"],
   ["2000 KGS", "10.5 kW", "2746", "2340", "8100"],
 ],
-    image:  [heroVideo, Nonheating, img3]
+    image:  [ Nonheating1, Nonheating, Nonheating2]
   },
 ];
 
@@ -751,7 +756,7 @@ function BinFilterTab() {
     loop
     className="w-full rounded-xl"
   >
-    {[Binlifter1, Binlifter2, Binlifter3].map((img, i) => (
+    {[Binlifter1, Binlifter11, Binlifter3].map((img, i) => (
       <SwiperSlide
   key={i}
   className="flex justify-center items-center"
@@ -839,32 +844,38 @@ function BinFilterTab() {
 </div>
  </div> 
         {/* Right Image */}
-      <div className="hidden lg:block w-full">
-  <Swiper
-    modules={[Autoplay, Pagination]}
-    autoplay={{
-      delay: 3000,
-      disableOnInteraction: false,
-    }}
-    pagination={{ clickable: true }}
-    loop
-    slidesPerView={1}
-    className="rounded-lg"
-  >
-    {[Binlifter1, Binlifter2, Binlifter3].map((img, index) => (
-      <SwiperSlide key={index}>
-        <img
-          src={img}
-          alt={`Bin Lifter ${index + 1}`}
-          className="w-full"
-          style={{
-            height: "460px",
-            objectFit: "contain",
-          }}
-        />
-      </SwiperSlide>
-    ))}
-  </Swiper>
+      {/* Right Image */}
+<div className="w-full">
+  <div className="sticky top-32">
+    <Swiper
+      modules={[Autoplay, Pagination, Navigation]}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: false,
+      }}
+      loop
+      navigation
+      pagination={{ clickable: true }}
+      slidesPerView={1}
+      speed={700}
+      className="rounded-lg"
+    >
+      {[Binlifter1, Binlifter11, Binlifter3].map((img, index) => (
+        <SwiperSlide key={index}>
+          <img
+            src={img}
+            alt={`Bin Lifter ${index + 1}`}
+            className="w-full"
+            style={{
+              height: "500px",
+              objectFit: "contain",
+            }}
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
 </div>
       </div>
 
@@ -1708,7 +1719,7 @@ function ShreddersTab() {
                 lineHeight: 1.9,
               }}
             >
-              Capacity: 100 kg/hour up to 3500 kg/hour (customizable).
+              Capacity: 100kg/hour up to 2,000kg/hour (customizable).
             </p>
           </div>
 

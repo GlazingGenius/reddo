@@ -13,7 +13,7 @@ import logoMcd from "../../imports/mc_donalds__1___1_.png";
 import logoKraheja from "../../imports/k_raheja_group___1_.png";
 import logoIkea from "../../imports/ikea.png";
 import logoKia from "../../imports/kempegowda_international_airport___1_.png";
-import logoArvind from "../../imports/ARVIND.png";
+//import logoArvind from "../../imports/ARVIND.png";
 import logoAwal from "../../imports/awal_group_refrigeration_and_air_conditioning___1_.png";
 import logoAdarsh from "../../imports/ADARSH_DEVELOPERS.png";
 import logoNovotel from "../../imports/NOVOTEL.png";
@@ -21,6 +21,17 @@ import logoMdi from "../../imports/MDI.png";
 import logoPalo from "../../imports/palo_alto_networks___1_.png";
 import logoDell from "../../imports/DELL.png";
 import logoPrestige from "../../imports/PRESTIGE.png";
+
+import logoAbaCorp from "../../clientslogos/aba_corp__logo.jpeg";
+//import logoAdarsh from "../clientslogos/ADARSH DEVELOPERS.png";
+import logoAlstom from "../../clientslogos/Alstom-logo.jpg";
+import logoAmazon from "../../clientslogos/Amazon.jpg";
+import logoAmbuja from "../../clientslogos/ambuja_neotia_group_logo.jpeg";
+import logoApple from "../../clientslogos/apple logo black.png";
+//import logoArvind from "../clientslogos/ARVIND.png";
+//import logoAwal from "../clientslogos/awal group refrigeration and air conditioning (1).png";
+import logoAzim from "../../clientslogos/Azim_Premji_University_logo.png";
+
 
 const logos = [
   { src: logoIbis,     name: "IBIS Hotels" },
@@ -33,7 +44,7 @@ const logos = [
   { src: logoKraheja,  name: "K Raheja Group" },
   { src: logoIkea,     name: "IKEA" },
   { src: logoKia,      name: "Kempegowda International Airport" },
-  { src: logoArvind,   name: "Arvind" },
+  //{ src: logoArvind,   name: "Arvind" },
   { src: logoAwal,     name: "Awal Group" },
   { src: logoAdarsh,   name: "Adarsh Developers" },
   { src: logoNovotel,  name: "Novotel" },
@@ -41,6 +52,15 @@ const logos = [
   { src: logoPalo,     name: "Palo Alto Networks" },
   { src: logoDell,     name: "Dell" },
   { src: logoPrestige, name: "Prestige" },
+    { src: logoAbaCorp, name: "ABA Corp" },
+  { src: logoAdarsh, name: "Adarsh Developers" },
+  { src: logoAlstom, name: "Alstom" },
+  { src: logoAmazon, name: "Amazon" },
+  { src: logoAmbuja, name: "Ambuja Neotia Group" },
+  { src: logoApple, name: "Apple" },
+ // { src: logoArvind, name: "Arvind" },
+  { src: logoAwal, name: "Awal Group Refrigeration & Air Conditioning" },
+  { src: logoAzim, name: "Azim Premji University" },
 ];
 
 const CARD_W   = 200; // px — logo card width

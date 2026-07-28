@@ -35,7 +35,7 @@ const machines = [
     desc: "Organic waste management solutions",
   },
   {
-    label: "Windrow Composting",
+    label: "Solarized Controlled Windrow Composting",
     href: "/products/windrow-compost",
     img: Windrow,
     desc: "Large-scale composting systems",
@@ -133,44 +133,99 @@ export function Header({ onOpenForm }: { onOpenForm?: () => void }) {
         boxShadow: scrolled ? "0 2px 16px rgba(5,49,20,0.08)" : "none",
       }}
     >
-      {/* Top strip */}
-      <div className="hidden md:block" style={{ backgroundColor: "#053114" }}>
-        <div className="max-w-7xl mx-auto px-6 py-2 flex justify-end items-center gap-6">
-          <a href="tel:+917760987934"
-            className="group flex items-center gap-2 hover:opacity-95 transition-opacity"
-            style={{ ...F, fontSize: "11px", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.8)" }}>
-            <span
-              className="flex items-center justify-center rounded-full transition-all duration-200 group-hover:scale-110"
-              style={{
-                width: "20px",
-                height: "20px",
-                background: "linear-gradient(135deg, rgba(160,120,14,0.35), rgba(23,139,76,0.25))",
-                border: "1px solid rgba(160,120,14,0.5)",
-              }}
-            >
-              <Phone className="w-2.5 h-2.5" style={{ color: "#D9B65C" }} />
-            </span>
-            +91 77609 87934
-          </a>
-          <span className="w-px h-3 bg-white/20" />
-          <a href="mailto:info@reddonatura.com"
-            className="group flex items-center gap-2 hover:opacity-95 transition-opacity"
-            style={{ ...F, fontSize: "11px", letterSpacing: "0.02em", textTransform: "lowercase", color: "rgba(255,255,255,0.8)" }}>
-            <span
-              className="flex items-center justify-center rounded-full transition-all duration-200 group-hover:scale-110"
-              style={{
-                width: "20px",
-                height: "20px",
-                background: "linear-gradient(135deg, rgba(160,120,14,0.35), rgba(23,139,76,0.25))",
-                border: "1px solid rgba(160,120,14,0.5)",
-              }}
-            >
-              <Mail className="w-2.5 h-2.5" style={{ color: "#D9B65C" }} />
-            </span>
-            info@reddonatura.com
-          </a>
-        </div>
+     {/* Top strip */}
+<div className="hidden md:block" style={{ backgroundColor: "#053114" }}>
+  <div className="max-w-7xl mx-auto px-6 py-2 flex justify-end items-center gap-6">
+
+    {/* Phone */}
+    <div
+      className="group flex items-center gap-2"
+      style={{
+        ...F,
+        fontSize: "11px",
+        letterSpacing: "0.1em",
+        textTransform: "uppercase",
+        color: "rgba(255,255,255,0.8)",
+      }}
+    >
+      <span
+        className="flex items-center justify-center rounded-full"
+        style={{
+          width: "20px",
+          height: "20px",
+          background:
+            "linear-gradient(135deg, rgba(160,120,14,0.35), rgba(23,139,76,0.25))",
+          border: "1px solid rgba(160,120,14,0.5)",
+        }}
+      >
+        <Phone className="w-2.5 h-2.5" style={{ color: "#D9B65C" }} />
+      </span>
+
+      <div className="flex flex-col leading-tight">
+        <a
+          href="tel:+917760987934"
+          className="hover:text-white transition-colors"
+          style={{ color: "rgba(255,255,255,0.8)", textDecoration: "none" }}
+        >
+          +91 77609 87934
+        </a>
+
+        <a
+          href="tel:+919876543210"
+          className="hover:text-white transition-colors"
+          style={{ color: "rgba(255,255,255,0.8)", textDecoration: "none" }}
+        >
+          +91  7338462806
+        </a>
       </div>
+    </div>
+
+    <span className="w-px h-8 bg-white/20" />
+
+    {/* Email */}
+    <div
+      className="group flex items-center gap-2"
+      style={{
+        ...F,
+        fontSize: "11px",
+        letterSpacing: "0.02em",
+        color: "rgba(255,255,255,0.8)",
+      }}
+    >
+      <span
+        className="flex items-center justify-center rounded-full"
+        style={{
+          width: "20px",
+          height: "20px",
+          background:
+            "linear-gradient(135deg, rgba(160,120,14,0.35), rgba(23,139,76,0.25))",
+          border: "1px solid rgba(160,120,14,0.5)",
+        }}
+      >
+        <Mail className="w-2.5 h-2.5" style={{ color: "#D9B65C" }} />
+      </span>
+
+      <div className="flex flex-col leading-tight">
+        <a
+          href="mailto:geetha@reddonatura.com"
+          className="hover:text-white transition-colors"
+          style={{ color: "rgba(255,255,255,0.8)", textDecoration: "none" }}
+        >
+         geetha@reddonatura.com
+        </a>
+
+        <a
+          href="mailto:naziya@reddonatura.com"
+          className="hover:text-white transition-colors"
+          style={{ color: "rgba(255,255,255,0.8)", textDecoration: "none" }}
+        >
+         naziya@reddonatura.com
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
 
       {/* Main nav */}
       <div className="max-w-7xl mx-auto px-6">
@@ -229,7 +284,7 @@ export function Header({ onOpenForm }: { onOpenForm?: () => void }) {
     desc: "Organic waste management solutions",
   },
   {
-    label: "Windrow Composting",
+    label: "Solarized Controlled Windrow Composting",
     href: "/products/windrow-compost",
     img: Windrow,
     desc: "Large-scale composting systems",

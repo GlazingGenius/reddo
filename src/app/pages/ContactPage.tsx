@@ -87,16 +87,16 @@ export function ContactPage() {
             <span style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: "13px", letterSpacing: "0.2em", textTransform: "uppercase", color: "#A0780E", paddingBottom: "4px" }}>Us Here</span>
           </div>
           <div className="overflow-hidden" style={{ border: "2px solid #178B4C", height: "420px" }}>
-            <iframe
-              title="Reddonatura Location"
-              src="https://maps.google.com/maps?q=Virgonagar+Industrial+Estate+Bidarahalli+Hobli+Bangalore+Karnataka+560049+India&output=embed&z=15"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+           <iframe
+  title="Reddonatura India Private Limited"
+  src="https://www.google.com/maps?q=Reddonatura+India+Private+Limited,+Sy.+No+41/1,+Veerenahalli+Village,+Virgonagar+Industrial+Estate,+Bidarahalli+Hobli,+Bengaluru,+Karnataka+560049&output=embed"
+  width="100%"
+  height="100%"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+/>
           </div>
           <div className="group mt-4 flex items-start gap-3">
             <div className="feature-icon w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "rgba(23,139,76,0.1)", color: "#178B4C" }}>

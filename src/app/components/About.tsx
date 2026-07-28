@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 
 const credentials = [
-  "CE Certified machinery for OWC",
+  "CE Certified",
   "Operations spanning 24+ countries worldwide",
   "Trusted by 1,500+ clients across 10 industries",
   "Full lifecycle waste-to-resource solutions",
@@ -123,7 +123,7 @@ export function About() {
                 color: "#4A5C4B",
               }}
             >
-              Reddonatura is one of the world's leading food waste solution
+              Reddonatura is one of the world's leading waste solution
               providers. Our success is driven by our commitment to green,
               renewable solutions — and it begins with an environmentally sound
               approach that transforms waste into something genuinely valuable.
