@@ -54,6 +54,7 @@ import logoNoku from "../../clientslogos/noku.png";
 import logoOberoi from "../../clientslogos/oberoi.png";
 import logoMarriotNew from "../../clientslogos/marriot.png";
 import logoTaj from "../../clientslogos/taj.png";
+import logoLodha from "../../clientslogos/lodha.png";
 
 const logos = [
   { src: logoIbis,     name: "IBIS Hotels" },
@@ -106,6 +107,7 @@ const logos = [
 { src: logoOberoi, name: "The Oberoi" },
 { src: logoMarriotNew, name: "Marriot" },
 { src: logoTaj, name: "Taj Hotels" },
+{ src: logoLodha, name: "Lodha" },
 ];
 
 const CARD_W   = 200; // px — logo card width
