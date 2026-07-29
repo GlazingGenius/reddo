@@ -5,9 +5,9 @@ import { Handshake, TrendingUp, Lightbulb, Star, Leaf } from "lucide-react";
 import logoIbis from "../../imports/IBIS.png";
 import logoGR from "../../imports/gr_constructions___1_.png";
 import logoGaurs from "../../imports/GAURS.png";
-import logoDulsco from "../../imports/DULSCO.png";
+//import logoDulsco from "../../imports/DULSCO.png";
 //import logoDubai from "../../imports/DUBAI_EXPO_2020.png";
-import logoMarriott from "../../imports/MARRIOT_BANVOY.png";
+//import logoMarriott from "../../imports/MARRIOT_BANVOY.png";
 import logoMcd from "../../imports/mc_donalds__1___1_.png";
 import logoKraheja from "../../imports/k_raheja_group___1_.png";
 import logoIkea from "../../imports/ikea.png";
@@ -58,7 +58,7 @@ import logoTrident from "../../clientslogos/trident.png";
 const logos = [
   { src: logoIbis, name: "IBIS Hotels" },
   //{ src: logoDubai, name: "Dubai Expo 2020" },
-  { src: logoMarriott, name: "Marriott Bonvoy" },
+  //{ src: logoMarriott, name: "Marriott Bonvoy" },
   { src: logoPrestige, name: "Prestige" },
   { src: logoNovotel, name: "Novotel" },
   { src: logoDell, name: "Dell" },
@@ -68,7 +68,7 @@ const logos = [
   { src: logoKia, name: "Kempegowda International Airport" },
   { src: logoGR, name: "GR Constructions" },
   { src: logoGaurs, name: "Gaurs Group" },
-  { src: logoDulsco, name: "DULSCO" },
+ // { src: logoDulsco, name: "DULSCO" },
   { src: logoKraheja, name: "K Raheja Group" },
   { src: logoAwal, name: "Awal Group" },
   { src: logoAdarsh, name: "Adarsh Developers" },
