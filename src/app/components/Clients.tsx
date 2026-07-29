@@ -32,6 +32,18 @@ import logoApple from "../../clientslogos/apple logo black.png";
 //import logoAwal from "../clientslogos/awal group refrigeration and air conditioning (1).png";
 import logoAzim from "../../clientslogos/Azim_Premji_University_logo.png";
 
+import logoBharatPetroleum from "../../clientslogos/barathpetroleum.png";
+import logoIndianCentralBank from "../../clientslogos/indiancentralbank.png";
+import logoIndianRailway from "../../clientslogos/indianrailway.png";
+import logoRBI from "../../clientslogos/rbi.png";
+import logoDharwad from "../../clientslogos/dharwad.png";
+import logoPrisons from "../../clientslogos/prisons.png";
+import logoEstateRailway from "../../clientslogos/estaterailwa.png";
+import logoBSF from "../../clientslogos/bsf.png";
+import logoGoodnessFood from "../../clientslogos/goodnessfood.png";
+import logoRioTinto from "../../clientslogos/riotinto.png";
+import logoEdama from "../../clientslogos/edama.png";
+import logoPowerGrid from "../../clientslogos/powergrid.png";
 
 const logos = [
   { src: logoIbis,     name: "IBIS Hotels" },
@@ -61,6 +73,19 @@ const logos = [
  // { src: logoArvind, name: "Arvind" },
   { src: logoAwal, name: "Awal Group Refrigeration & Air Conditioning" },
   { src: logoAzim, name: "Azim Premji University" },
+
+  { src: logoBharatPetroleum, name: "Bharat Petroleum" },
+{ src: logoIndianCentralBank, name: "Central Bank of India" },
+{ src: logoIndianRailway, name: "Indian Railways" },
+{ src: logoRBI, name: "Reserve Bank of India" },
+{ src: logoDharwad, name: "Dharwad Municipal Corporation" },
+{ src: logoPrisons, name: "Prisons Department" },
+{ src: logoEstateRailway, name: "Estate Railway" },
+{ src: logoBSF, name: "Border Security Force" },
+{ src: logoGoodnessFood, name: "Goodness Food" },
+{ src: logoRioTinto, name: "Rio Tinto" },
+{ src: logoEdama, name: "Edama" },
+{ src: logoPowerGrid, name: "Power Grid Corporation of India" },
 ];
 
 const CARD_W   = 200; // px — logo card width

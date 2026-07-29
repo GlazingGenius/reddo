@@ -6,7 +6,7 @@ import logoIbis from "../../imports/IBIS.png";
 import logoGR from "../../imports/gr_constructions___1_.png";
 import logoGaurs from "../../imports/GAURS.png";
 import logoDulsco from "../../imports/DULSCO.png";
-import logoDubai from "../../imports/DUBAI_EXPO_2020.png";
+//import logoDubai from "../../imports/DUBAI_EXPO_2020.png";
 import logoMarriott from "../../imports/MARRIOT_BANVOY.png";
 import logoMcd from "../../imports/mc_donalds__1___1_.png";
 import logoKraheja from "../../imports/k_raheja_group___1_.png";
@@ -28,9 +28,22 @@ import logoAmbuja from "../../clientslogos/ambuja_neotia_group_logo.jpeg";
 import logoApple from "../../clientslogos/apple logo black.png";
 import logoAzim from "../../clientslogos/Azim_Premji_University_logo.png";
 
+import logoBharatPetroleum from "../../clientslogos/barathpetroleum.png";
+import logoIndianCentralBank from "../../clientslogos/indiancentralbank.png";
+import logoIndianRailway from "../../clientslogos/indianrailway.png";
+import logoRBI from "../../clientslogos/rbi.png";
+import logoDharwad from "../../clientslogos/dharwad.png";
+import logoPrisons from "../../clientslogos/prisons.png";
+import logoEstateRailway from "../../clientslogos/estaterailwa.png";
+import logoBSF from "../../clientslogos/bsf.png";
+import logoGoodnessFood from "../../clientslogos/goodnessfood.png";
+import logoRioTinto from "../../clientslogos/riotinto.png";
+import logoEdama from "../../clientslogos/edama.png";
+import logoPowerGrid from "../../clientslogos/powergrid.png";
+
 const logos = [
   { src: logoIbis, name: "IBIS Hotels" },
-  { src: logoDubai, name: "Dubai Expo 2020" },
+  //{ src: logoDubai, name: "Dubai Expo 2020" },
   { src: logoMarriott, name: "Marriott Bonvoy" },
   { src: logoPrestige, name: "Prestige" },
   { src: logoNovotel, name: "Novotel" },
@@ -53,6 +66,19 @@ const logos = [
   { src: logoAmbuja, name: "Ambuja Neotia Group" },
   { src: logoApple, name: "Apple" },
   { src: logoAzim, name: "Azim Premji University" },
+
+  { src: logoBharatPetroleum, name: "Bharat Petroleum" },
+{ src: logoIndianCentralBank, name: "Central Bank of India" },
+{ src: logoIndianRailway, name: "Indian Railways" },
+{ src: logoRBI, name: "Reserve Bank of India" },
+{ src: logoDharwad, name: "Dharwad Municipal Corporation" },
+{ src: logoPrisons, name: "Prisons Department" },
+{ src: logoEstateRailway, name: "Estate Railway" },
+{ src: logoBSF, name: "Border Security Force" },
+{ src: logoGoodnessFood, name: "Goodness Food" },
+{ src: logoRioTinto, name: "Rio Tinto" },
+{ src: logoEdama, name: "Edama" },
+{ src: logoPowerGrid, name: "Power Grid Corporation of India" },
 ];
 
 const pillars = [
@@ -84,20 +110,31 @@ export function ClientsPage() {
         <div className="text-center mb-10"><SectionLabel label="Trusted By" /></div>
         <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-8 gap-3">
           {logos.map((logo, i) => (
-            <motion.div key={logo.name} initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.35, delay: 0.04 * i }}
-              className="flex items-center justify-center p-3 rounded-2xl transition-all duration-300 hover:-translate-y-1"
-              style={{  
-  backgroundColor: "#fff",
-  border: "1px solid rgba(23,139,76,0.12)",
-  boxShadow: "0 6px 18px rgba(0,0,0,.06)",
-  height: "110px",
- }}>
-<img
-  src={logo.src}
-  alt={logo.name}
-  className="w-full h-full object-contain p-2 transition-transform duration-300 hover:scale-105"
-/>
-            </motion.div>
+           <motion.div
+  key={logo.name}
+  initial={{ opacity: 0, scale: 0.95 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.35, delay: 0.04 * i }}
+  className="flex items-center justify-center rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1"
+  style={{
+    backgroundColor: "#fff",
+    border: "1px solid rgba(23,139,76,0.12)",
+    boxShadow: "0 6px 18px rgba(0,0,0,.06)",
+    height: "130px",
+    padding: "8px",
+  }}
+>
+  <img
+    src={logo.src}
+    alt={logo.name}
+    className="w-full h-full object-contain"
+    style={{
+      maxWidth: "100%",
+      maxHeight: "100%",
+    }}
+  />
+</motion.div>
           ))}
         </div>
         <p className="text-center mt-8" style={{ fontFamily: "'DM Mono', monospace", fontSize: "11px", letterSpacing: "0.16em", textTransform: "uppercase", color: "#8A9E8B" }}>

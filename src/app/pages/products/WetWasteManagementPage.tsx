@@ -249,7 +249,7 @@ const composingSubTabs = [
   ["1000 KGS", "5.5 kW", "2700", "2190", "6025"],
   ["2000 KGS", "10.5 kW", "2746", "2340", "8100"],
 ],
-    image:  [ Nonheating1, Nonheating, Nonheating2]
+    image:  [ Nonheating1, Nonheating2, Nonheating2]
   },
 ];
 
