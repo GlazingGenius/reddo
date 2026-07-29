@@ -4,11 +4,11 @@ import { useInView } from "./hooks/useInView";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import logoIbis from "../../imports/IBIS.png";
-import logoGR from "../../imports/gr_constructions___1_.png";
-import logoGaurs from "../../imports/GAURS.png";
-import logoDulsco from "../../imports/DULSCO.png";
+//import logoGR from "../../imports/gr_constructions___1_.png";
+//import logoGaurs from "../../imports/GAURS.png";
+//import logoDulsco from "../../imports/DULSCO.png";
 //import logoDubai from "../../imports/DUBAI_EXPO_2020.png";
-import logoMarriott from "../../imports/MARRIOT_BANVOY.png";
+//import logoMarriott from "../../imports/MARRIOT_BANVOY.png";
 import logoMcd from "../../imports/mc_donalds__1___1_.png";
 import logoKraheja from "../../imports/k_raheja_group___1_.png";
 import logoIkea from "../../imports/ikea.png";
@@ -44,14 +44,24 @@ import logoGoodnessFood from "../../clientslogos/goodnessfood.png";
 import logoRioTinto from "../../clientslogos/riotinto.png";
 import logoEdama from "../../clientslogos/edama.png";
 import logoPowerGrid from "../../clientslogos/powergrid.png";
+import logoSirru from "../../clientslogos/sirru.png";
+import logoVakkaru from "../../clientslogos/vakkaru.png";
+import logoReethi from "../../clientslogos/reethi.png";
+import logoWestin from "../../clientslogos/westin.png";
+import logoBaglioni from "../../clientslogos/baglioni.png";
+import logoNika from "../../clientslogos/nika.png";
+import logoNoku from "../../clientslogos/noku.png";
+import logoOberoi from "../../clientslogos/oberoi.png";
+import logoMarriotNew from "../../clientslogos/marriot.png";
+import logoTaj from "../../clientslogos/taj.png";
 
 const logos = [
   { src: logoIbis,     name: "IBIS Hotels" },
-  { src: logoGR,       name: "GR Constructions" },
-  { src: logoGaurs,    name: "Gaurs Group" },
-  { src: logoDulsco,   name: "DULSCO" },
+  //{ src: logoGR,       name: "GR Constructions" },
+  //{ src: logoGaurs,    name: "Gaurs Group" },
+  //{ src: logoDulsco,   name: "DULSCO" },
   //{ src: logoDubai,    name: "Dubai Expo 2020" },
-  { src: logoMarriott, name: "Marriott Bonvoy" },
+  //{ src: logoMarriott, name: "Marriott Bonvoy" },
   { src: logoMcd,      name: "McDonald's" },
   { src: logoKraheja,  name: "K Raheja Group" },
   { src: logoIkea,     name: "IKEA" },
@@ -86,6 +96,16 @@ const logos = [
 { src: logoRioTinto, name: "Rio Tinto" },
 { src: logoEdama, name: "Edama" },
 { src: logoPowerGrid, name: "Power Grid Corporation of India" },
+{ src: logoSirru, name: "Sirru Fen Fushi" },
+{ src: logoVakkaru, name: "Vakkaru Maldives" },
+{ src: logoReethi, name: "Reethi Faru Resort" },
+{ src: logoWestin, name: "The Westin" },
+{ src: logoBaglioni, name: "Baglioni Resort" },
+{ src: logoNika, name: "Nika Island Resort" },
+{ src: logoNoku, name: "Noku Maldives" },
+{ src: logoOberoi, name: "The Oberoi" },
+{ src: logoMarriotNew, name: "Marriot" },
+{ src: logoTaj, name: "Taj Hotels" },
 ];
 
 const CARD_W   = 200; // px — logo card width

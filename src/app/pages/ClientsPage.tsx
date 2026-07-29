@@ -40,6 +40,16 @@ import logoGoodnessFood from "../../clientslogos/goodnessfood.png";
 import logoRioTinto from "../../clientslogos/riotinto.png";
 import logoEdama from "../../clientslogos/edama.png";
 import logoPowerGrid from "../../clientslogos/powergrid.png";
+import logoSirru from "../../clientslogos/sirru.png";
+import logoVakkaru from "../../clientslogos/vakkaru.png";
+import logoReethi from "../../clientslogos/reethi.png";
+import logoWestin from "../../clientslogos/westin.png";
+import logoBaglioni from "../../clientslogos/baglioni.png";
+import logoNika from "../../clientslogos/nika.png";
+import logoNoku from "../../clientslogos/noku.png";
+import logoOberoi from "../../clientslogos/oberoi.png";
+import logoMarriotNew from "../../clientslogos/marriot.png";
+import logoTaj from "../../clientslogos/taj.png";
 
 const logos = [
   { src: logoIbis, name: "IBIS Hotels" },
@@ -79,6 +89,16 @@ const logos = [
 { src: logoRioTinto, name: "Rio Tinto" },
 { src: logoEdama, name: "Edama" },
 { src: logoPowerGrid, name: "Power Grid Corporation of India" },
+{ src: logoSirru, name: "Sirru Fen Fushi" },
+{ src: logoVakkaru, name: "Vakkaru Maldives" },
+{ src: logoReethi, name: "Reethi Faru Resort" },
+{ src: logoWestin, name: "The Westin" },
+{ src: logoBaglioni, name: "Baglioni Resort" },
+{ src: logoNika, name: "Nika Island Resort" },
+{ src: logoNoku, name: "Noku Maldives" },
+{ src: logoOberoi, name: "The Oberoi" },
+{ src: logoMarriotNew, name: "Marriot" },
+{ src: logoTaj, name: "Taj Hotels" },
 ];
 
 const pillars = [
