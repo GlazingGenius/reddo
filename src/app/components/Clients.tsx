@@ -7,7 +7,7 @@ import logoIbis from "../../imports/IBIS.png";
 import logoGR from "../../imports/gr_constructions___1_.png";
 import logoGaurs from "../../imports/GAURS.png";
 import logoDulsco from "../../imports/DULSCO.png";
-import logoDubai from "../../imports/DUBAI_EXPO_2020.png";
+//import logoDubai from "../../imports/DUBAI_EXPO_2020.png";
 import logoMarriott from "../../imports/MARRIOT_BANVOY.png";
 import logoMcd from "../../imports/mc_donalds__1___1_.png";
 import logoKraheja from "../../imports/k_raheja_group___1_.png";
@@ -50,7 +50,7 @@ const logos = [
   { src: logoGR,       name: "GR Constructions" },
   { src: logoGaurs,    name: "Gaurs Group" },
   { src: logoDulsco,   name: "DULSCO" },
-  { src: logoDubai,    name: "Dubai Expo 2020" },
+  //{ src: logoDubai,    name: "Dubai Expo 2020" },
   { src: logoMarriott, name: "Marriott Bonvoy" },
   { src: logoMcd,      name: "McDonald's" },
   { src: logoKraheja,  name: "K Raheja Group" },
