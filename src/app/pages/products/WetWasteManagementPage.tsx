@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { PageLayout, Section, PageCTA,  } from "../PageLayout";
-import { Building2, CheckCircle2, UserCog } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import img1 from "../../../imports/image-1.png";
 import img3 from "../../../imports/image-3.png";
 import img5 from "../../../imports/image-5.png";
@@ -48,10 +48,6 @@ import {
 import {
   Hand,
   Cog,
-  CircleDollarSign,
-  SlidersHorizontal,
-  
- // UserCog,
 } from "lucide-react";
 import {
   Leaf,
@@ -86,9 +82,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import {
   Droplets,
-  
+
   Minimize2,
   Wrench,
+} from "lucide-react";
+
+import {
+  ListOrdered,
+  Scissors,
+  Combine,
+  CalendarClock,
 } from "lucide-react";
 
 /* ── Composting Machine types ─────────────────────────── */
@@ -164,39 +167,57 @@ const composingSubTabs = [
     label: "Semi-Automatic",
     title: "Semi-Automatic Composters",
     subtitle: "Operator-Assisted · Cost Effective",
-    desc: "Semi-automatic composting machines combine the efficiency of mechanised processing with operator-guided loading and unloading. Ideal for facilities that prefer greater control over the process while still benefiting from automated aeration, mixing, and temperature management.",
+    desc: (
+      <>
+        <p className="mb-4">
+          The Semi-Automatic Organic Waste Composting System efficiently converts food waste into nutrient-rich compost through a simple three-stage process. Food waste is first shredded and dewatered to reduce its volume and moisture content. The processed waste is then mixed with sawdust and bacteria to create an ideal composting mixture. For higher processing capacities, a dedicated mixing machine ensures uniform blending of the composting material. The prepared mixture is then transferred into curing crates, where it naturally matures for 10–15 days to produce high-quality organic compost.
+        </p>
+        <p>
+          The finished compost can be used for landscaping, gardening, or stored for future use, helping organizations reduce landfill waste while promoting sustainable and environmentally responsible waste management.
+        </p>
+      </>
+    ),
   features: [
   {
-    icon: Hand,
-    title: "Manual Loading",
-    desc: "Operator-assisted waste loading with automated composting process.",
+    icon: ListOrdered,
+    title: "Three-Stage Process",
+    desc: "Efficient conversion of food waste into nutrient-rich organic compost.",
   },
   {
-    icon: Cog,
-    title: "Automated Processing",
-    desc: "Automatic mixing, aeration, and temperature management.",
+    icon: Scissors,
+    title: "Shredder-Dewatering Machine",
+    desc: "High-performance food waste size reduction and excess moisture removal.",
   },
   {
-    icon: CircleDollarSign,
-    title: "Cost Effective",
-    desc: "Lower initial investment while maintaining reliable performance.",
+    icon: Combine,
+    title: "Uniform Mixing System",
+    desc: "Blends waste with sawdust and beneficial bacteria for optimal composting conditions — a dedicated mixing machine is available for higher processing capacities.",
   },
   {
-    icon: SlidersHorizontal,
-    title: "Flexible Capacity",
-    desc: "Available in multiple capacities to match daily waste generation.",
+    icon: CalendarClock,
+    title: "10–15 Day Natural Curing",
+    desc: "Durable curing crates and storage racks ensure consistent, high-quality compost.",
   },
   {
-    icon: Building2,
-    title: "Ideal Applications",
-    desc: "Suitable for hotels, resorts, hospitals, and commercial kitchens.",
+    icon: Wrench,
+    title: "Low Operating & Maintenance Costs",
+    desc: "Simple, user-friendly design built for reliable daily operation.",
   },
   {
-    icon: UserCog,
-    title: "Easy Operation",
-    desc: "Simple controls with minimal operator training required.",
+    icon: Leaf,
+    title: "Environmentally Sustainable",
+    desc: "Reduces landfill waste and disposal costs while producing valuable organic compost.",
   },
-], specs: [
+], benefits: [
+    "Reduces food waste volume significantly",
+    "Diverts organic waste from landfills",
+    "Produces valuable organic compost for landscaping and gardening",
+    "Lowers waste transportation and disposal costs",
+    "Supports sustainability and green building initiatives",
+    "Helps organizations comply with environmental regulations",
+    "Reduces greenhouse gas emissions from organic waste",
+    "Ideal for decentralized on-site waste processing",
+  ], specs: [
       ["Model", "Capacity", "Operation", "Power"],
       ["RN-SA 50",  "50 kg/day",  "Semi-Auto", "2.2 kW, 3Ph"],
       ["RN-SA 150", "150 kg/day", "Semi-Auto", "6.5 kW, 3Ph"],
@@ -414,7 +435,8 @@ const [selectedCapacity, setSelectedCapacity] = useState("");
 
       <motion.div key={sub} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start">
-          <div>
+          <div className="order-2 lg:order-1">
+            {sub === "automatic" && (
             <div
   style={{
     display: "inline-flex",
@@ -435,7 +457,9 @@ const [selectedCapacity, setSelectedCapacity] = useState("");
   <span style={{ color: "#178B4C" }}>✓ CE Certified</span>
   <span style={{ color: "#A0780E" }}></span>
   <span></span>
-</div>           <h3
+</div>
+            )}
+            <h3
   style={{
     fontFamily: "'Playfair Display', serif",
     fontWeight: 700,
@@ -475,53 +499,73 @@ const [selectedCapacity, setSelectedCapacity] = useState("");
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.975rem", color: "#5A6B5C", lineHeight: 1.8, marginBottom: "20px" }}>
               {current.desc}
             </p>
-          <div className="grid md:grid-cols-2 gap-6 mb-2 md:mb-8">
-  {current.features.map((item, i) => {
-    const Icon = item.icon;
 
-    return (
-      <div key={i} className="flex items-start gap-4">
-        <Icon
-          size={28}
-          strokeWidth={2}
-          style={{ color: "#178B4C", flexShrink: 0 }}
-        />
+            {sub !== "semiauto" && (
+            <>
+            <h4
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 700,
+                fontSize: "12px",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                color: "#A0780E",
+                marginBottom: "16px",
+              }}
+            >
+              Key Features
+            </h4>
 
-        <div>
-          <h4
-            style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontWeight: 700,
-              fontSize: "15px",
-              color: "#053114",
-              marginBottom: "6px",
-              textTransform: "uppercase",
-            }}
-          >
-            {item.title}
-          </h4>
+            <div className="grid md:grid-cols-2 gap-6 mb-2 md:mb-8">
+              {current.features.map((item, i) => {
+                const Icon = item.icon;
 
-          <p
-            style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: "14px",
-              color: "#5A6B5C",
-              lineHeight: 1.6,
-            }}
-          >
-            {item.desc}
-          </p>
-        </div>
-      </div>
-    );
-  })}
-</div>
-           </div> 
-          
-<div className="w-full relative">
-  {/* CE Certification Card */}
+                return (
+                  <div key={i} className="flex items-start gap-4">
+                    <Icon
+                      size={28}
+                      strokeWidth={2}
+                      style={{ color: "#178B4C", flexShrink: 0 }}
+                    />
+
+                    <div>
+                      <h4
+                        style={{
+                          fontFamily: "'DM Sans', sans-serif",
+                          fontWeight: 700,
+                          fontSize: "15px",
+                          color: "#053114",
+                          marginBottom: "6px",
+                          textTransform: "uppercase",
+                        }}
+                      >
+                        {item.title}
+                      </h4>
+
+                      <p
+                        style={{
+                          fontFamily: "'DM Sans', sans-serif",
+                          fontSize: "14px",
+                          color: "#5A6B5C",
+                          lineHeight: 1.6,
+                        }}
+                      >
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            </>
+            )}
+           </div>
+
+<div className="order-1 lg:order-2 w-full relative">
+  {/* CE Certification Card — automatic model only */}
+  {sub === "automatic" && (
   <div
-    className="absolute z-20 -top-4 -left-4 md:-top-5 md:-left-5"
+    className="absolute z-20 -top-2 -left-2 scale-[0.62] origin-top-left sm:scale-100 sm:-top-4 sm:-left-4 md:-top-5 md:-left-5"
   style={{
   backgroundColor: "#0D8239",
   width: "130px",
@@ -587,6 +631,7 @@ const [selectedCapacity, setSelectedCapacity] = useState("");
       European Standard
     </div>
   </div>
+  )}
 
   <Swiper
     modules={[Autoplay, Pagination]}
@@ -614,6 +659,76 @@ const [selectedCapacity, setSelectedCapacity] = useState("");
 
 
 </div>
+
+{/* Key Features — full width below the image (semi-automatic only; its longer copy made the inline layout lopsided) */}
+{sub === "semiauto" && (
+<div className="mt-16">
+  <h3
+    className="mb-8"
+    style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "2rem" }}
+  >
+    <span style={{ color: "#178B4C" }}>Key </span>
+    <span style={{ color: "#A0780E" }}>Features</span>
+  </h3>
+
+  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8">
+    {current.features.map((item, i) => {
+      const Icon = item.icon;
+      return (
+        <div key={i} className="flex items-start gap-4">
+          <Icon size={28} strokeWidth={2} style={{ color: "#178B4C", flexShrink: 0 }} />
+          <div>
+            <h4
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 700,
+                fontSize: "15px",
+                color: "#053114",
+                marginBottom: "6px",
+                textTransform: "uppercase",
+              }}
+            >
+              {item.title}
+            </h4>
+            <p
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: "14px",
+                color: "#5A6B5C",
+                lineHeight: 1.6,
+              }}
+            >
+              {item.desc}
+            </p>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</div>
+)}
+
+{/* Benefits — full width, shown below the intro/image/features row (only for sub-tabs that have benefit data) */}
+{current.benefits && current.benefits.length > 0 && (
+<div className="mt-16">
+  <h3
+    className="mb-6"
+    style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "2rem" }}
+  >
+    <span style={{ color: "#178B4C" }}>Ben</span>
+    <span style={{ color: "#A0780E" }}>efits</span>
+  </h3>
+
+  <div className="grid sm:grid-cols-2 gap-x-10 gap-y-3">
+    {current.benefits.map((b, i) => (
+      <div key={i} className="flex items-start gap-2">
+        <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: "#178B4C" }} />
+        <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.9rem", color: "#5A6B5C" }}>{b}</span>
+      </div>
+    ))}
+  </div>
+</div>
+)}
 
 <div className="mt-16">
   <h3

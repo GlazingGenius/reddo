@@ -1,0 +1,439 @@
+{
+  "company": {
+    "name": "Reddonatura India Private Limited",
+    "brand": "Reddonatura",
+    "tagline": "Garbage to Green (G2G)",
+    "founded": "2013",
+    "founder": "Abhishek Gupta (Managing Director, CEO & Founder)",
+    "leadership": [
+      { "name": "Abhishek Gupta", "role": "MD, CEO & Founder" },
+      { "name": "Aayush Gupta", "role": "COO & Founder" },
+      { "name": "Md. Mubashir", "role": "Global — Project & Service Manager" },
+      { "name": "Geetha Sathya", "role": "Manager — Admin & Sales, India" },
+      { "name": "Naziya Khan", "role": "Manager — Sales, International" }
+    ],
+    "about": "Reddonatura is one of the world's leading food and organic waste management solution providers. Founded in 2013 by Abhishek Gupta, the company pioneered the 'Garbage to Green' (G2G) movement and manufactures the rNature range of CE-certified organic waste converters. Reddonatura is a foremost player in Integrated Waste Management, transforming waste into valuable resources — compost, biogas, and renewable energy — through innovative, environmentally friendly technology.",
+    "mission": "To deliver innovative environmental solutions that transform waste into valuable resources while advancing renewable energy for a cleaner and more sustainable future — including integrated waste management, bio mining, windrow composting, solar power, and pyrolysis / circular-economy technologies.",
+    "vision": "To empower municipalities and industries with innovative waste management solutions that transform waste into valuable resources while creating cleaner, healthier communities — reducing landfill dependency, recovering valuable resources, strengthening regulatory compliance, and enabling circular-economy outcomes.",
+    "values": ["Integrity & Transparency", "Innovation & Continuous Improvement", "Customer Focus", "Environmental Responsibility"],
+    "certifications": ["CE Certified (all organic waste converter machines)"],
+    "compliance": "Aligned with India's Swachh Bharat Mission and supports compliance with Solid Waste Management Rules.",
+    "stats": {
+      "clientsWorldwide": "7,000+ (also cited as 1,500+ direct installations across India)",
+      "countries": "20-24+",
+      "cities": "150+",
+      "industriesServed": "10+",
+      "yearsOfOperation": "13+ (since 2013)",
+      "owcInstallationsIndia": "1,500+"
+    },
+    "headquarters": {
+      "address": "Sy. No 41/1, Veerenahalli Village, Virgonagar Industrial Estate, Bidarahalli Hobli, Post, beside Cipla Factory, Virgonagar, J.I. Veerenahalli, Karnataka 560049, India",
+      "city": "Bengaluru, India",
+      "description": "Global Headquarters — R&D and manufacturing hub for organic waste decomposer machines."
+    },
+    "globalPresence": "Machines installed in Guinea, UAE (Dubai, Abu Dhabi, Sharjah), Oman, Thailand, Philippines, Romania, Italy, Russia, Maldives, Switzerland, United Kingdom, Mexico, USA (Baltimore), Chile, Guatemala, Saudi Arabia, Bahrain, and more — spanning 20+ countries."
+  },
+
+  "contact": {
+    "companyName": "Reddonatura India Private Limited",
+    "phones": ["+91 77609 87934", "+91 73384 62806"],
+    "salesPhone": "+91 77609 87934",
+    "whatsapp": "+91 73384 62806",
+    "emails": ["info@reddonatura.com", "geetha@reddonatura.com", "naziya@reddonatura.com"],
+    "address": "Sy. No 41/1, Veerenahalli Village, Virgonagar Industrial Estate, Bidarahalli Hobli, Post, beside Cipla Factory, Virgonagar, J.I. Veerenahalli, Karnataka 560049, India",
+    "businessHours": "Monday – Saturday, 9:00 AM – 6:00 PM IST",
+    "howToGetQuote": "Click 'Get a Quote' anywhere on the website to open the enquiry form, call +91 77609 87934, message on WhatsApp, or email info@reddonatura.com. The team assesses facility type, daily waste volume, and goals before recommending a solution.",
+    "website": "https://www.reddonatura.com",
+    "pages": {
+      "home": "/",
+      "about": "/about",
+      "products": "/products",
+      "service": "/service",
+      "clients": "/clients",
+      "contact": "/contact",
+      "faqs": "/faqs",
+      "privacyPolicy": "/privacy-policy",
+      "termsAndConditions": "/terms-and-conditions"
+    }
+  },
+
+  "productCategories": [
+    {
+      "id": "wet-waste-management",
+      "name": "Wet Waste Management",
+      "page": "/products/wet-waste",
+      "summary": "End-to-end organic waste solutions — from collection and shredding through composting, dewatering, bio-filtration, and odour control. Includes five sub-systems: Composting Machines, Bin Lifter, Pre-Treatment (Dewatering) Machine, Bio-Filter, and Shredders.",
+      "subsystems": [
+        {
+          "name": "Composting Machines — Fully Automatic OWC",
+          "description": "CE-certified, zero-manual-intervention organic waste converter (OWC). Converts food and organic waste into pre-compostable, nutrient-rich, soil-like matter within 24–36 hours using controlled microbial/biological process. Achieves 80–90% volume reduction. Automatic output discharge minimizes manual handling; compact footprint suitable for restricted spaces.",
+          "capacityRange": "25 kg/day to 3,000 kg/day (13 standard sizes)",
+          "specTable": {
+            "columns": ["Capacity", "Length (mm)", "Width (mm)", "Height (mm)", "Connected Load (kW)", "Machine Weight (approx.)"],
+            "rows": [
+              ["25 KG", "1493", "580", "1188", "1.93", "350 kg"],
+              ["50 KG", "1676", "700", "1341", "2.05", "450 kg"],
+              ["75 KG", "1860", "792", "1127", "4.12", "550 kg"],
+              ["100 KG", "1860", "792", "1127", "4.12", "-"],
+              ["125 KG", "2286", "944", "1432", "5.22", "700 kg"],
+              ["200 KG", "2500", "975", "1432", "6.47", "750 kg"],
+              ["250 KG", "2750", "1158", "1554", "8.87", "1020 kg"],
+              ["300 KG", "2750", "1158", "1554", "8.87", "-"],
+              ["500 KG", "3000", "1432", "1860", "16.37", "1650 kg"],
+              ["750 KG", "3535", "1402", "1950", "22.25", "-"],
+              ["1000 KG", "3962", "2100", "2133", "27.25", "2900 kg"],
+              ["2000 KG", "4100", "2011", "2500", "57.5", "3900 kg"],
+              ["3000 KG", "4575", "2100", "2530", "76.5", "-"]
+            ]
+          }
+        },
+        {
+          "name": "Composting Machines — Semi-Automatic",
+          "description": "Operator-assisted loading/unloading combined with automated mixing, aeration, and temperature control. Lower initial investment than fully automatic; ideal for hotels, resorts, hospitals, and commercial kitchens.",
+          "specTable": {
+            "columns": ["Model", "Capacity", "Operation", "Power"],
+            "rows": [
+              ["RN-SA 50", "50 kg/day", "Semi-Auto", "2.2 kW, 3Ph"],
+              ["RN-SA 150", "150 kg/day", "Semi-Auto", "6.5 kW, 3Ph"],
+              ["RN-SA 300", "300 kg/day", "Semi-Auto", "12 kW, 3Ph"]
+            ]
+          }
+        },
+        {
+          "name": "Composting Machines — Non-Heating (Cold Composters)",
+          "description": "Natural aerobic microbial decomposition without any external heat source — the most energy-efficient option. Suited to gardens, parks, and small communities with longer processing windows.",
+          "specTable": {
+            "columns": ["Capacity", "Power", "Height (mm)", "Width (mm)", "Length (mm)"],
+            "rows": [
+              ["200 KGS", "2.5 kW", "2000", "1700", "4300"],
+              ["500 KGS", "3.5 kW", "2100", "1800", "5000"],
+              ["750 KGS", "5.5 kW", "2600", "2200", "6025"],
+              ["1000 KGS", "5.5 kW", "2700", "2190", "6025"],
+              ["2000 KGS", "10.5 kW", "2746", "2340", "8100"]
+            ]
+          }
+        },
+        {
+          "name": "Bin Lifter",
+          "description": "Automatic bin-lifting system for safe, hygienic, efficient handling of organic waste during feeding. Eliminates manual lifting, enables precise controlled transfer into composting machines. Compatible with composting machines of 125 kg/day capacity and above; custom-configured per machine model, bin size, and lifting capacity.",
+          "keySpecs": {
+            "applicability": "Composting machines 125 kg/day and above",
+            "liftingCapacity": "60L, 120L, and 240L per cycle",
+            "power": "Customizable per country electrical standard (50/60 Hz)",
+            "operation": "Manual push-button control",
+            "safety": "Limit switches and overload relay"
+          }
+        },
+        {
+          "name": "Pre-Treatment (Dewatering) Machine",
+          "description": "Two-stage shredding + dewatering process that reduces food waste volume by approximately 60–70% before composting or further processing. Removes excess moisture and reduces particle size for better handling, storage, and transport.",
+          "keySpecs": {
+            "workingCapacity": "100 kg/hour up to 500 kg/hour (configurable)",
+            "power": "Configurable, 50/60 Hz",
+            "mobility": "Mobility arrangement available",
+            "outerBody": "SS / MS",
+            "dewateringFilter": "Honeycomb type",
+            "cutterMaterial": "Abrasive-resistant steel"
+          },
+          "integration": "Can run standalone or as part of an integrated system. Grey water can go to a sewage treatment plant or drainage; reduced solid fraction feeds directly into composting systems or is stored/transported."
+        },
+        {
+          "name": "Bio-Filter with UV Odour Control",
+          "description": "Treats exhaust air from organic waste processing using biological filtration, activated carbon media, and UV treatment to eliminate odour-causing compounds — removing the need for extra ventilation systems.",
+          "keySpecs": {
+            "power": "Configurable, 50/60 Hz",
+            "outerBody": "Stainless Steel (SS)",
+            "processType": "Continuous",
+            "odourControlMethod": "Biological filtration + UV treatment + activated carbon adsorption",
+            "ventilation": "Inbuilt ventilation system"
+          }
+        },
+        {
+          "name": "Shredders (Wet Waste page variants)",
+          "description": "Engineered for size reduction of food and organic waste to speed up composting and biodegradation. Continuous-duty, high-torque, configured to waste type and volume.",
+          "variants": [
+            { "type": "Food Waste Shredder", "config": "Single-shaft and double-shaft options", "capacity": "100 kg/hour up to 1,500 kg/day (customizable)" },
+            { "type": "Garden Waste Shredder", "config": "Single-shaft and double-shaft options", "capacity": "100 kg/hour up to 2,000 kg/hour (customizable)" },
+            { "type": "Industrial Shredder", "config": "Custom-built for higher capacities", "capacity": "Per project requirement" }
+          ]
+        }
+      ],
+      "notes": ["Power supply configurable per country standard (50 Hz / 60 Hz).", "Dimensions and connected load are tentative and may change with design upgrades — confirm with manufacturer before ordering."]
+    },
+
+    {
+      "id": "organic-waste-digester",
+      "name": "Organic Waste Digester (OWC)",
+      "page": "/products/organic-waste-digester",
+      "summary": "CE-certified, fully automatic machines transforming food, garden, and agricultural organic waste into nutrient-rich compost. Decomposition takes about 24 hours. Zero harmful discharge; enclosed design prevents flies/pests.",
+      "tags": ["CE Certified", "Fully Automatic", "24-hour cycle", "Zero harmful discharge"],
+      "features": ["Rapid Transformation Technology", "Smart Sensing & Automation", "Significant Waste Volume Reduction"],
+      "benefits": ["Processes food, garden, and agricultural waste", "Scales from residential to industrial", "Automated, low-maintenance operation", "Reduces waste disposal costs", "Supports landfill diversion and GHG reduction compliance"],
+      "specTable": {
+        "columns": ["Model", "Daily Capacity", "Dimensions (L x W x H mm)", "Net Weight", "Power"],
+        "rows": [
+          ["RN 25", "25 kg/day", "1600 x 600 x 875", "600 kg", "1.5 kW, 3Ph, 440V"],
+          ["RN 75", "75 kg/day", "1860 x 792 x 1127", "700 kg", "4.5 kW, 3Ph, 440V"],
+          ["RN 125", "125 kg/day", "2286 x 944 x 1432", "900 kg", "5.5 kW, 3Ph, 440V"],
+          ["RN 250", "250 kg/day", "2750 x 1158 x 1554", "1500 kg", "8.0 kW, 3Ph, 440V"],
+          ["RN 500", "500 kg/day", "3000 x 1432 x 1860", "1900 kg", "16.0 kW, 3Ph, 440V"],
+          ["RN 700", "700 kg/day", "3535 x 1402 x 1950", "On request", "23.0 kW, 3Ph, 440V"],
+          ["RN 1000", "1000 kg/day", "3962 x 2100 x 2133", "On request", "25.0 kW, 3Ph, 440V"],
+          ["RN 1250", "1250 kg/day", "4600 x 2100 x 2347", "On request", "27.0 kW, 3Ph, 440V"]
+        ]
+      },
+      "whatItCanProcess": "All food waste — raw ingredients, cooked food, garden waste.",
+      "whatItCannotProcess": "Plastic, glass, metal, bones, chemicals, and other inorganic matter.",
+      "byProductUse": "Soil amendment for gardens, agriculture, landscaping, and horticulture."
+    },
+
+    {
+      "id": "windrow-compost",
+      "name": "Solarized Controlled Windrow Composting",
+      "page": "/products/windrow-compost",
+      "summary": "Cluster-based, solarised windrow composting systems for large-scale municipal and institutional organic waste processing into high-grade compost. Decentralised model — multiple wards process segregated waste locally, cutting transport costs.",
+      "process": ["Waste Collection", "Manual Sorting (remove plastics/metals/glass)", "Shredding & Mixing", "Dewatering (screw press)", "Solarised Windrow Composting under solar poly-tunnel", "Automated Turning", "Finished Compost — screened, bagged"],
+      "coreEquipment": ["Waste Receiving Hopper", "Screw Press Dewatering Unit", "Organic Waste Shredder", "Solarised Windrow Turner (solar-powered, automated)"],
+      "benefits": {
+        "operational": ["Decentralised — reduces transportation cost", "Multi-ward cluster model", "Automated turning reduces labour"],
+        "environmental": ["Reduces landfill dependency", "Lowers greenhouse gas emissions", "Circular economy outcomes"],
+        "output": ["High-grade finished compost", "Sellable agricultural amendment", "Consistent quality through automation"]
+      }
+    },
+
+    {
+      "id": "biomining",
+      "name": "Bio Mining",
+      "page": "/products/biomining",
+      "summary": "Scientific excavation, segregation, and resource recovery from legacy landfill waste — remediating land while producing compost and RDF (Refuse Derived Fuel).",
+      "stats": ["Urban India generates 160,000+ tonnes of municipal solid waste per day", "3,000+ open dumpsites addressable", "Up to 95% landfill volume reduction", "3 recovered fractions: pre-compost, RDF, inert residue"],
+      "process": ["Excavation", "Shredding", "Conveying", "Screening & Segregation (trommel screens)", "Resource Recovery"],
+      "coreEquipment": ["Industrial Shredders", "Trommel Screens", "Conveyor Systems", "Material Recovery Systems"],
+      "outcomes": [
+        { "name": "Pre-Compost", "desc": "Organic-rich material for composting — soil amendment for agriculture/landscaping." },
+        { "name": "RDF Pellets", "desc": "Combustible fraction processed into Refuse Derived Fuel for cement plants." },
+        { "name": "Inert Residue", "desc": "Stones, glass, silt — the only fraction sent to landfill, at drastically reduced volume." },
+        { "name": "Restored Land", "desc": "Legacy landfill sites remediated and recovered for productive use." }
+      ]
+    },
+
+    {
+      "id": "pyrolysis",
+      "name": "Pyrolysis",
+      "page": "/products/pyrolysis",
+      "summary": "Advanced thermal decomposition (oxygen-free) converting biomass or plastic/rubber waste into fuel oil, biochar/carbon black, and syngas — zero landfill, continuous 24/7 operation.",
+      "variants": [
+        {
+          "name": "Biomass Pyrolysis",
+          "description": "Continuous rotary kiln decomposing agricultural residues, wood chips, rice husk, coconut shells, bagasse, and other organic feedstocks at 300–700°C in an oxygen-free environment. Syngas is recycled to sustain reactor heat, cutting external fuel use by up to 60%.",
+          "capacityRange": "500 kg – 20 tonnes/day",
+          "reactorTemperature": "300–700°C",
+          "outputs": [
+            { "product": "Bio-Oil", "yield": "30–45%", "use": "Industrial fuel equivalent to light diesel — boilers, kilns, generators." },
+            { "product": "Biochar", "yield": "25–35%", "use": "Soil amendment; qualifies for carbon credit programmes." },
+            { "product": "Syngas", "yield": "20–30%", "use": "Recycled internally to sustain reactor heating." }
+          ],
+          "specTable": {
+            "columns": ["Model", "Capacity", "Bio-Oil Output", "Biochar Output", "Connected Load", "Footprint"],
+            "rows": [["RN-BM 500", "500 kg/hour", "175–225 kg/hour", "125–175 kg/hour", "18 kW", "~30 m²"]]
+          },
+          "suitableFeedstocks": ["Rice husk, wheat straw, corn cobs", "Wood chips, sawdust, bamboo, timber offcuts", "Coconut and palm kernel shells", "Sugarcane bagasse and press mud", "Municipal green/garden waste", "Paper mill and cardboard waste"]
+        },
+        {
+          "name": "Plastic Pyrolysis",
+          "description": "Continuous-feed thermal cracking of non-recyclable plastics, rubber, and tyres (PP, PE, PS, ABS) at 300–700°C into pyrolysis oil, carbon black, and syngas, achieving near-zero landfill outcomes.",
+          "capacityRange": "3 – 20 tonnes/day",
+          "reactorTemperature": "350–450°C",
+          "outputs": [
+            { "product": "Pyrolysis Oil", "yield": "40–45%", "use": "Alternative fuel for boilers/kilns/generators, equivalent to light diesel." },
+            { "product": "Carbon Black", "yield": "30–35%", "use": "Reinforcing filler for rubber, pigment for inks/coatings, or solid fuel." },
+            { "product": "Steel Wire", "yield": "10–15%", "use": "Recovered from tyre pyrolysis, sold as scrap metal (tyre variant only)." },
+            { "product": "Syngas", "yield": "10–12%", "use": "Recycled internally to maintain reactor temperature." }
+          ],
+          "specTable": {
+            "columns": ["Model", "Capacity", "Oil Output", "Carbon Black", "Connected Load"],
+            "rows": [
+              ["RN-PY 3", "3 ton/day", "1.2–1.35 ton/day", "0.9–1.05 ton/day", "30 kW"],
+              ["RN-PY 5", "5 ton/day", "2.0–2.25 ton/day", "1.5–1.75 ton/day", "45 kW"],
+              ["RN-PY 10", "10 ton/day", "4.0–4.5 ton/day", "3.0–3.5 ton/day", "75 kW"],
+              ["RN-PY 20", "20 ton/day", "8.0–9.0 ton/day", "6.0–7.0 ton/day", "130 kW"]
+            ]
+          },
+          "acceptedPlastics": ["Polypropylene (PP)", "Polyethylene (PE / HDPE / LDPE)", "Polystyrene (PS)", "ABS", "Mixed unsorted plastic waste (non-PVC)", "Contaminated multi-layer films/laminates"],
+          "constraint": "PVC content must not exceed 3% of total feed to prevent chlorine-related reactor corrosion."
+        }
+      ],
+      "notes": ["All pyrolysis models are custom-engineered per feedstock type, moisture content, site conditions, and duty cycle.", "Power supply configurable per country standard (50/60 Hz)."]
+    },
+
+    {
+      "id": "biogas",
+      "name": "RN Biogas Solutions",
+      "page": "/products/biogas",
+      "summary": "Converts segregated organic waste into clean, renewable biogas via controlled anaerobic digestion — used for cooking, heating, or electricity — plus nutrient-rich digestate/slurry as organic liquid fertilizer.",
+      "stats": ["Up to 90% GHG (life-cycle) reduction vs fossil fuels", "~60% methane content in biogas", "4 plant configurations available", "24/7 continuous energy output", "1 kg food waste ≈ 0.10–0.12 nm³ biogas"],
+      "plantTypes": [
+        { "name": "Containerized", "tag": "Modular · Plug & Play · Fast Deployment", "description": "Fully pre-fabricated inside a standard shipping container, deployable in days. Ideal for hotels, hospitals, food processing plants, municipalities needing minimal civil work." },
+        { "name": "Fixed Dome", "tag": "Underground · Low Maintenance · Long Life", "description": "Underground digester with rigid dome gas holder, no moving parts, 30–50 year lifespan. Popular for municipal wards, rural communities, agricultural estates." },
+        { "name": "Geo Membrane Covered Lagoon", "tag": "Large Scale · Flexible · Municipal", "description": "HDPE cover over an earthen lagoon; lowest cost per m³ of biogas; suited to very large waste streams (agri-waste, municipal organics, food-processing effluent)." },
+        { "name": "Floating Drum", "tag": "Constant Pressure · Proven", "description": "Steel drum rises/falls with gas production for constant supply-line pressure; ideal for cooking-fuel applications in schools, hostels, community kitchens." }
+      ],
+      "specTable": {
+        "columns": ["Model", "Processing Capacity/Day", "Power", "Biogas Output (nm³/day)", "Units/Kitchens Served (approx.)", "Min. Area Required (m²)"],
+        "rows": [
+          ["RN BG 300", "300 kg", "3-Phase, 440V", "30–36", "450", "18"],
+          ["RN BG 500", "500 kg", "3-Phase, 440V", "60–64", "650", "21"],
+          ["RN BG 750", "750 kg", "3-Phase, 440V", "90–95", "900", "30"],
+          ["RN BG 1000", "1000 kg", "3-Phase, 440V", "120–130", "1200", "38"],
+          ["RN BG 1500", "1500 kg", "3-Phase, 440V", "180–190", "1700", "50"],
+          ["RN BG 2000", "2000 kg", "3-Phase, 440V", "240–260", "2400", "65"],
+          ["RN BG 2500", "2500 kg", "3-Phase, 440V", "330–340", "2800", "75"],
+          ["RN BG 5000", "5000 kg", "3-Phase, 440V", "660–680", "6500", "300"]
+        ]
+      },
+      "features": ["Advanced anaerobic digestion technology", "Modular & scalable design", "Smart automation and real-time monitoring", "Low maintenance, consistent output"]
+    },
+
+    {
+      "id": "solar",
+      "name": "RN Solar Solutions",
+      "page": "/products/solar",
+      "summary": "High-efficiency on-grid, off-grid, and hybrid solar systems for residential, commercial, and industrial facilities, with real-time monitoring.",
+      "types": [
+        { "name": "On-Grid Solar", "description": "Connected to the utility grid with net metering — sell excess power back. Best for consistent-consumption facilities." },
+        { "name": "Off-Grid Solar", "description": "Fully independent with battery storage backup. For remote locations or facilities needing energy independence." },
+        { "name": "Hybrid Solar", "description": "Grid-connected with battery backup — uninterrupted supply during outages while optimising cost." }
+      ],
+      "features": ["High-efficiency photovoltaic panels", "Smart solar integration with existing energy systems", "Durable design for extreme weather", "Scalable from residential to industrial"],
+      "installationProcess": ["Site Assessment", "System Design", "Installation", "Monitoring & Support"],
+      "benefits": ["Reduced energy bills", "Lower carbon footprint", "Energy independence", "Long-term investment / property value increase", "Real-time production monitoring"]
+    },
+
+    {
+      "id": "dewatering",
+      "name": "De-Watering Systems (rNATURE Dewaterer)",
+      "page": "/products/dewatering",
+      "summary": "Compact standalone dewatering unit that reduces food waste volume by 60–70% via grinding + centrifugal dehydration — a plug-and-play pre-processing step ahead of composting or disposal.",
+      "howItWorks": ["Loading — hopper with running soft water", "Grinding — fine particles, increased surface area", "Centrifugal Dewatering — dehydrates via centrifugal technique", "Output — grey water to drain; 60–70% reduced solid waste collected in bins"],
+      "cannotProcess": ["Shells", "Meat bones", "Paper", "Plastics", "Plates", "Cigarettes", "Glass", "Cloth", "Metals", "Chopsticks"],
+      "specTable": {
+        "model": "RN DW 100",
+        "workingCapacity": "100 kg/hr",
+        "power": "5 HP, 3-Phase",
+        "dimensions": "1800 x 550 x 1640 mm",
+        "cutterMaterial": "Abrasive-resistant steel",
+        "dewateringFilter": "Honeycomb type",
+        "shaftSpeed": "70 RPM",
+        "outerBody": "SS/MS",
+        "ratedVoltage": "3-Phase, 415V",
+        "netWeight": "450 kg"
+      },
+      "greyWaterHandling": "Can be discharged to an STP or reused for gardening — no harmful substances present."
+    },
+
+    {
+      "id": "trommel-screens",
+      "name": "Trommel Screens",
+      "page": "/products/trommel-screens",
+      "summary": "High-performance rotating-drum screens for waste sorting and recycling — used at landfill sites, MBT (mechanical-biological treatment) plants, recycling facilities, and automobile recycling plants.",
+      "features": ["Modular design with optional brushes/drum scrapers", "Load-sensing feed", "Optional cleaning systems", "Adaptable substructures (belt discharge or hopper)"],
+      "specTable": {
+        "columns": ["Model", "Power (HP)", "Drive", "Drum Diameter (mm)", "Drum Length (mm)", "Drum Speed (RPM)", "Installation"],
+        "rows": [
+          ["RN TS 1240", "10", "Electric", "1200", "4000", "18", "Static"],
+          ["RN TS 1460", "15", "Electric", "1400", "6000", "18", "Static"],
+          ["RN TS 1660", "15", "Electric", "1600", "6000", "18", "Static"],
+          ["RN TS 1880", "20", "Electric", "1800", "8000", "15", "Static"],
+          ["RN TS 2080", "20/25", "Electric", "2000", "8000", "15", "Static"]
+        ]
+      }
+    },
+
+    {
+      "id": "shredders",
+      "name": "Industrial Shredders",
+      "page": "/products/shredders",
+      "summary": "Advanced shredding solutions for efficient size reduction of waste materials to aid recycling, disposal, and composting.",
+      "models": [
+        { "name": "Single Shaft Shredder", "use": "Versatile, precision cutting" },
+        { "name": "Dual (Double) Shaft Shredder", "use": "High throughput for bulky/heterogeneous waste" },
+        { "name": "Four Shaft Shredder", "use": "Uniform output size, ideal for recycling and secure document destruction" },
+        { "name": "Wood Chippers", "use": "Reduces wood waste to chips for mulch/biomass" }
+      ],
+      "features": ["High-torque mechanism", "Easy maintenance / quick chamber access", "Auto-reverse (jam prevention)", "Integrated screen for output size control", "Low noise operation", "Durable, high-security document destruction option"]
+    }
+  ],
+
+  "industriesServed": [
+    { "name": "Restaurants & Food Chains", "description": "Tailored digesters for high-volume kitchens converting daily food waste to compost on-site." },
+    { "name": "Hotels & Resorts", "description": "End-to-end waste management — kitchen scraps to biogas energy recovery, reducing operating costs and carbon footprint." },
+    { "name": "Hospitals & Healthcare", "description": "Safe, hygienic, compliant organic waste processing for strict healthcare standards." },
+    { "name": "Municipal Corporations", "description": "Scalable trommel screens and de-watering systems for community-level organic waste streams." },
+    { "name": "Airports & Transit Hubs", "description": "High-capacity digestion systems for non-stop airport/metro/transit operations." },
+    { "name": "Food Processing & Organic Waste", "description": "Converts processing waste and by-products into compost and biogas." },
+    { "name": "Commercial Complexes", "description": "Integrated waste solutions for malls, office parks, mixed-use developments." },
+    { "name": "Tourism & Parks", "description": "Eco-friendly waste management for national parks, eco-resorts, tourist destinations." },
+    { "name": "Railway Stations", "description": "Robust processing for high-volume food/organic waste at transit corridors." },
+    { "name": "Residential Apartments", "description": "Compact, odour-free digesters turning household waste into garden compost." },
+    { "name": "Agriculture", "description": "Waste-to-resource solutions for farm and agricultural organic waste." }
+  ],
+
+  "services": {
+    "summary": "Dedicated team of engineers and technicians handling installation, maintenance, and after-sales service — regular inspection, maintenance advisory, plant optimisation, and rapid response support.",
+    "features": ["Regular inspection with mechanical/electrical reports", "Maintenance advice & tips", "Plant optimisation", "Rapid-response after-sales team", "Space-saving design guidance", "Highly trained engineers/electricians on request"],
+    "maintenancePackages": [
+      { "tier": "Basic", "includes": ["Annual inspection", "Maintenance report", "Email support", "Spare parts advisory"] },
+      { "tier": "Standard", "recommended": true, "includes": ["Bi-annual inspection", "Detailed reports", "Phone & email support", "Priority spare parts", "Remote diagnostics"] },
+      { "tier": "Premium", "includes": ["Quarterly inspection", "Real-time monitoring", "24/7 dedicated support", "Express spare parts", "Plant optimisation", "Operator training"] }
+    ],
+    "howToEnquire": "Enquire about a maintenance package via the Contact Us page or by calling +91 77609 87934."
+  },
+
+  "clients": {
+    "summary": "Trusted by 7,000+ clients across 20+ countries and 10+ industries, including government departments, defence establishments, public-sector corporations, and leading hospitality and real-estate groups.",
+    "notableClients": ["IBIS Hotels", "Novotel", "Taj Hotels", "Trident Hotels", "The Oberoi", "Six Senses", "Radisson", "Westin", "Marriott", "Dell", "Amazon", "Apple", "IKEA", "McDonald's", "Kempegowda International Airport", "Reserve Bank of India (RBI)", "Indian Railways", "Indian Navy", "Bharat Petroleum (HPCL)", "Power Grid Corporation of India", "Rio Tinto", "Prestige Group", "Lodha", "Arvind", "Azim Premji University", "Ambuja Neotia Group", "Gaurs Group", "K Raheja Group", "Vakkaru Maldives", "Reethi Faru Resort", "Six Senses", "Alstom", "Border Security Force (BSF)"]
+  },
+
+  "testimonials": [
+    { "company": "Radisson Hotels", "role": "Chief Engineer", "sector": "Hospitality", "quote": "The Organic Waste Converter has been performing exceptionally well. The machine operates reliably, while Reddonatura's responsive service team has ensured uninterrupted operations. The compost produced is effectively used in our gardens and landscaping." },
+    { "company": "Trident Hotels", "role": "Chief Engineer", "sector": "Hospitality", "quote": "The fully automatic Organic Waste Converter has significantly improved the management of our organic waste. We are highly satisfied with both the machine's performance and the after-sales support provided by Reddonatura." },
+    { "company": "Reserve Bank of India", "role": "Assistant Manager", "sector": "Government / Finance", "quote": "The design, supply, installation, testing and commissioning of the Organic Waste Composting Machines were successfully completed in accordance with our specifications, delivering satisfactory performance." },
+    { "company": "Indian Navy – INS Mandovi", "role": "Logistics Officer", "sector": "Defence", "quote": "The fully automatic Organic Waste Converter supplied by Reddonatura has been operating to our satisfaction since commissioning." },
+    { "company": "Hindustan Petroleum Corporation Ltd.", "role": "Deputy Manager–HSSE", "sector": "Public Sector / Energy", "quote": "The Organic Waste Converter installed at our facility has consistently delivered excellent performance and continues to operate to our satisfaction." },
+    { "company": "Gangtok Municipal Corporation", "role": "Municipal Commissioner", "sector": "Municipal Government", "quote": "Reddonatura has consistently provided prompt technical support whenever required, ensuring reliable operation of the waste converter." }
+  ],
+
+  "wasteCalculator": {
+    "page": "/waste-calculator",
+    "description": "An interactive Environmental Impact Calculator estimating the daily/monthly/annual organic waste diverted, CO2 avoided, land regenerated, and chemical fertiliser replaced based on meals served per day (50–5,000+), and recommends the appropriate RN/SI machine model.",
+    "impactPer50MealsPerDay": { "organicWasteKg": 22.5, "co2AvoidedKg": 20, "landRegeneratedM2": 5, "chemicalsReplacedKg": 1 },
+    "note": "Values scale linearly with meals served; projections based on operational data across Reddonatura's machine range."
+  },
+
+  "leadCapture": {
+    "quoteFormSteps": ["Facility type (e.g. Hotel/Resort, Restaurant, Hospital, Municipality, Airport, Agriculture, Apartment, etc.)", "Daily organic waste volume (25 kg to 1+ ton, or 'not sure')", "Waste type (food/organic, garden/green, mixed, liquid/sludge, agricultural, industrial, or multiple)", "Solution sought (Organic Waste Digester, Biogas, De-Watering, Solar, Shredders, Trommel Screens, multiple, or 'no idea — guide me')", "Contact details (name, company, email, phone, country)"],
+    "responseTime": "The team reviews requirements and responds within 24 hours with a tailored proposal.",
+    "quickEnquiry": "A product-specific 'Request a Quote' option is available on each product page capturing name, company, phone, email, and location."
+  },
+
+  "policies": {
+    "privacyPolicySummary": "Reddonatura collects contact and facility details (name, company, email, phone, country, facility type, waste-management requirements) to respond to quote requests, recommend solutions, and provide after-sales support. Data is not sold to third parties. Users can access, correct, or delete their data by emailing info@reddonatura.com. Full policy: /privacy-policy.",
+    "termsSummary": "Website use is governed by Reddonatura India Private Limited's Terms & Conditions. Product/pricing information is subject to change; a quote request is not a binding order — actual sales are governed by a separate written agreement. Reddonatura's name, logo, and 'Garbage to Green' / 'G2G' branding are protected intellectual property. Governing law: India, with courts of Bengaluru, Karnataka having jurisdiction. Full terms: /terms-and-conditions."
+  },
+
+  "generalFaqs": [
+    { "q": "What is an organic waste converter (OWC) and how does it work?", "a": "An organic waste converter (food waste composting machine) breaks down kitchen and food waste into nutrient-rich compost within 24 hours using controlled temperature, aeration, and moisture — far faster than traditional composting. Reddonatura's CE-certified OWC machines are used by hotels, hospitals, apartments, and municipalities in 20+ countries." },
+    { "q": "What is the difference between composting and biogas (waste-to-energy)?", "a": "Composting breaks down organic waste aerobically (with oxygen) into solid compost/fertiliser. Biogas plants break it down anaerobically (without oxygen) to produce methane-rich biogas — a renewable fuel for electricity, heating, or cooking — plus nutrient-rich digestate. Reddonatura offers both: organic waste digesters for compost, and RN Biogas plants for energy recovery." },
+    { "q": "How much food waste can a Reddonatura machine process per day?", "a": "Organic waste converters range from 25 kg/day (small residential/garden use) up to 1,250 kg/day and beyond for large hotels, hospitals, and municipal installations, plus custom-engineered systems for multi-tonne daily volumes. The team assesses daily waste volume before recommending a model." },
+    { "q": "Is Reddonatura's technology certified and compliant?", "a": "Yes — Reddonatura's organic waste converters and machinery are CE certified, meeting international safety and environmental standards, and align with India's Swachh Bharat Mission and Solid Waste Management Rules." },
+    { "q": "What industries use Reddonatura's solutions?", "a": "Hotels & resorts, restaurants & food chains, hospitals & healthcare, airports & transit hubs, municipal corporations, residential apartments, agriculture & food processing, commercial complexes, tourism & parks, and railway stations — 7,000+ clients across 20+ countries." },
+    { "q": "How does the 'Garbage to Green' (G2G) approach reduce environmental impact?", "a": "G2G diverts organic waste from landfills — where it would generate methane, a greenhouse gas 25x+ more potent than CO2 — and converts it into compost, biogas, or renewable energy, closing the waste loop and returning nutrients to soil." },
+    { "q": "What is the ROI for an organic waste management system?", "a": "Most clients recover investment through reduced waste disposal/transport costs and lower landfill fees, sometimes with revenue from compost or biogas by-products. Hospitality clients often report 50–70% waste-disposal cost reduction within the first year, alongside ESG/green-building benefits." },
+    { "q": "Do Reddonatura's machines require special installation or civil work?", "a": "Most organic waste converters and containerized biogas plants are delivered pre-assembled and factory-tested, needing minimal to no civil construction — just a stable surface, power connection, and (for some models) water/drainage. A site assessment is done beforehand." },
+    { "q": "What after-sales support and maintenance does Reddonatura provide?", "a": "Tiered maintenance packages (Basic, Standard, Premium) ranging from annual inspections to real-time remote monitoring and 24/7 dedicated support, with mechanical/electrical inspection reports, maintenance advisory, and genuine spare parts." },
+    { "q": "How do I get a quote or consultation?", "a": "Click 'Get a Quote' anywhere on the website, call +91 77609 87934, or email info@reddonatura.com. The team assesses facility type, daily waste volume, and goals to recommend composting, biogas, dewatering, or solar solutions." },
+    { "q": "What does a biogas plant produce and how efficient is it?", "a": "Biogas is roughly 60% methane / 40% CO2, produced anaerobically. 1 kg of food waste yields about 0.10–0.12 nm³ of biogas. Reddonatura's biogas plants can reduce life-cycle greenhouse gas emissions by up to 90% versus fossil fuels, and the leftover digestate is a nutrient-rich liquid biofertiliser." },
+    { "q": "What does the dewatering (pre-treatment) machine do?", "a": "It grinds food waste into fine particles and uses centrifugal dehydration to reduce waste volume by 60–70%, lowering transport and disposal costs. Grey water can go to an STP or be reused for gardening; it cannot process shells, bones, plastics, glass, metal, or cloth." },
+    { "q": "What can and can't the organic waste digester process?", "a": "It processes all food waste — raw ingredients, cooked food, and garden waste. It cannot process plastic, glass, metal, bones, chemicals, or other inorganic matter." }
+  ]
+}

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Phone, Mail, Bot, X, Sparkles } from "lucide-react";
+import { Phone, Mail, Bot, X } from "lucide-react";
+import { ChatWindow } from "./chat";
 
 const PHONE = "+917760987934";
 const EMAILS = [
@@ -77,70 +78,13 @@ export function FloatingActions() {
   return (
     <div className="fixed bottom-6 right-6 z-[60] flex flex-col items-end gap-4">
       <AnimatePresence>
-        {chatOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 18, scale: 0.94 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 14, scale: 0.94 }}
-            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="mb-1 w-[310px] max-w-[85vw] overflow-hidden rounded-[22px]"
-            style={{ backgroundColor: "#ffffff", boxShadow: "0 30px 70px rgba(5,49,20,0.4), 0 0 0 1px rgba(23,139,76,0.1)" }}
-          >
-            <div className="relative overflow-hidden px-5 py-5" style={{ background: "linear-gradient(135deg, #0B1F10 0%, #0D8239 90%)" }}>
-              <div className="absolute -top-8 -right-8 w-28 h-28 rounded-full" style={{ background: "radial-gradient(circle, rgba(217,182,92,0.35), transparent 70%)" }} />
-              <div className="relative flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="relative flex items-center justify-center w-10 h-10 rounded-full" style={{ background: "linear-gradient(145deg, #D9B65C, #A0780E)", boxShadow: "0 6px 16px rgba(160,120,14,0.5), inset 0 1px 1px rgba(255,255,255,0.4)" }}>
-                    <Bot className="w-5 h-5" style={{ color: "#0B1F10" }} />
-                  </div>
-                  <div>
-                    <div style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 700, fontSize: "0.98rem", color: "#ffffff" }}>Reddonatura</div>
-                    <div className="flex items-center gap-1.5 mt-0.5">
-                      <span className="relative flex w-1.5 h-1.5">
-                        <span className="absolute inline-flex h-full w-full rounded-full opacity-75 animate-ping" style={{ backgroundColor: "#4ade80" }} />
-                        <span className="relative inline-flex rounded-full w-1.5 h-1.5" style={{ backgroundColor: "#4ade80" }} />
-                      </span>
-                      <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "10.5px", letterSpacing: "0.04em", color: "rgba(255,255,255,0.8)" }}>Online now · replies instantly</span>
-                    </div>
-                  </div>
-                </div>
-                <button
-                  onClick={() => setChatOpen(false)}
-                  className="flex items-center justify-center w-7 h-7 rounded-full transition-colors duration-200 hover:bg-white/15"
-                  aria-label="Close chat"
-                >
-                  <X className="w-4 h-4" style={{ color: "rgba(255,255,255,0.85)" }} />
-                </button>
-              </div>
-            </div>
-
-            <div className="p-5" style={{ backgroundColor: "#F9F8F4" }}>
-              <div className="rounded-2xl rounded-tl-sm px-4 py-3 mb-4" style={{ backgroundColor: "#ffffff", border: "1px solid rgba(23,139,76,0.12)", boxShadow: "0 4px 14px rgba(5,49,20,0.06)" }}>
-                <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400, fontSize: "0.85rem", color: "#053114", lineHeight: 1.65 }}>
-                  <Sparkles className="inline w-3.5 h-3.5 mb-0.5 mr-1" style={{ color: "#A0780E" }} />
-                  Hi there! I'm the Reddonatura assistant. Tell us what you need and our team will get back to you shortly.
-                </p>
-              </div>
-              <button
-                onClick={openLeadForm}
-                className="group w-full flex items-center justify-center gap-2 py-3.5 rounded-full text-[11px] tracking-[0.12em] uppercase transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]"
-                style={{
-                  background: "linear-gradient(135deg, #1FA05A, #178B4C)",
-                  color: "#ffffff", fontFamily: "'DM Sans', sans-serif", fontWeight: 600,
-                  boxShadow: "0 12px 28px rgba(23,139,76,0.4), inset 0 1px 1px rgba(255,255,255,0.3)",
-                }}
-              >
-                Start a Conversation
-              </button>
-              <p className="mt-3.5 text-center" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "10.5px", color: "#9AA89B" }}>
-                Or reach us directly via call, email, or WhatsApp below.
-              </p>
-            </div>
-          </motion.div>
-        )}
+        {chatOpen && <ChatWindow onClose={() => setChatOpen(false)} onOpenLeadForm={openLeadForm} />}
       </AnimatePresence>
 
-      {actions.map((a, i) => (
+      {/* Hidden while the chat window is open — with the taller AI chat panel, keeping
+          these rendered would push the fixed bottom-anchored stack (and the chat header
+          with it) off the top of the viewport on shorter phone screens. */}
+      {!chatOpen && actions.map((a, i) => (
         <motion.div
           key={a.key}
           initial={{ opacity: 0, scale: 0.4, y: 14 }}
