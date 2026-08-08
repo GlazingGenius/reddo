@@ -33,7 +33,7 @@ import logoApple from "../../clientslogos/apple logo black.png";
 import logoAzim from "../../clientslogos/Azim_Premji_University_logo.png";
 
 import logoBharatPetroleum from "../../clientslogos/barathpetroleum.png";
-import logoIndianCentralBank from "../../clientslogos/indiancentralbank.png";
+//import logoIndianCentralBank from "../../clientslogos/indiancentralbank.png";
 import logoIndianRailway from "../../clientslogos/indianrailway.png";
 import logoRBI from "../../clientslogos/rbi.png";
 import logoDharwad from "../../clientslogos/dharwad.png";
@@ -89,7 +89,7 @@ const logos = [
   { src: logoAzim, name: "Azim Premji University" },
 
   { src: logoBharatPetroleum, name: "Bharat Petroleum" },
-{ src: logoIndianCentralBank, name: "Central Bank of India" },
+//{ src: logoIndianCentralBank, name: "Central Bank of India" },
 { src: logoIndianRailway, name: "Indian Railways" },
 { src: logoRBI, name: "Reserve Bank of India" },
 { src: logoDharwad, name: "Dharwad Municipal Corporation" },
