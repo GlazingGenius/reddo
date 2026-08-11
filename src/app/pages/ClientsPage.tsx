@@ -32,7 +32,7 @@ import logoBharatPetroleum from "../../clientslogos/barathpetroleum.png";
 import logoIndianCentralBank from "../../clientslogos/indiancentralbank.png";
 import logoIndianRailway from "../../clientslogos/indianrailway.png";
 import logoRBI from "../../clientslogos/rbi.png";
-import logoDharwad from "../../clientslogos/dharwad.png";
+//import logoDharwad from "../../clientslogos/dharwad.png";
 import logoPrisons from "../../clientslogos/prisons.png";
 import logoEstateRailway from "../../clientslogos/estaterailwa.png";
 import logoBSF from "../../clientslogos/bsf.png";
@@ -85,7 +85,7 @@ const logos = [
 { src: logoIndianCentralBank, name: "Central Bank of India" },
 { src: logoIndianRailway, name: "Indian Railways" },
 { src: logoRBI, name: "Reserve Bank of India" },
-{ src: logoDharwad, name: "Dharwad Municipal Corporation" },
+//{ src: logoDharwad, name: "Dharwad Municipal Corporation" },
 { src: logoPrisons, name: "Prisons Department" },
 { src: logoEstateRailway, name: "Estate Railway" },
 { src: logoBSF, name: "Border Security Force" },

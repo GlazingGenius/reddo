@@ -3,16 +3,8 @@ import { useInView } from "./hooks/useInView";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 //import { ArrowRight, CheckCircle2 } from "lucide-react";
 import aboutImg from "../../imports/aboutimg.jpeg";
-import { ArrowRight, CheckCircle2, Leaf } from "lucide-react";
+import { ArrowRight, Leaf } from "lucide-react";
 import { Link } from "react-router-dom";
-
-
-const credentials = [
-  "CE Certified",
-  "Operations spanning 24+ countries worldwide",
-  "Trusted by 1,500+ clients across 10 industries",
-  "Full lifecycle waste-to-resource solutions",
-];
 
 export function About() {
   const { ref, inView } = useInView();
@@ -163,32 +155,6 @@ export function About() {
               Our mission is simple: Reduce waste. Recover resources. Build a
               sustainable future.
             </motion.p>
-
-            {/* Credentials list */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="space-y-4 mb-12"
-            >
-              {credentials.map((item, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <CheckCircle2
-                    className="w-4 h-4 mt-0.5 flex-shrink-0"
-                    style={{ color: "#0D8239" }}
-                  />
-                  <span
-                    style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: "0.925rem",
-                      color: "#4A5C4B",
-                    }}
-                  >
-                    {item}
-                  </span>
-                </div>
-              ))}
-            </motion.div>
 
             <motion.a
   initial={{ opacity: 0 }}
