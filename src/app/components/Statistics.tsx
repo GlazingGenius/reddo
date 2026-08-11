@@ -234,16 +234,14 @@ export function VisionMission() {
 
             <span
               style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 600,
-                fontSize: "14px",
-                letterSpacing: "0.22em",
-                textTransform: "uppercase",
+                fontFamily: "'Playfair Display', Georgia, serif",
+                fontWeight: 400,
+                fontSize: "clamp(2.2rem, 3.5vw, 3rem)",
                 color: "#A0780E",
-                paddingBottom: "5px",
+                lineHeight: 1,
               }}
             >
-              PURPOSE
+              Purpose
             </span>
           </div>
 

@@ -81,13 +81,13 @@ export function Products() {
             <span style={{ fontFamily: "'Playfair Display', Georgia, serif", fontStyle: "normal", fontWeight: 400, fontSize: "clamp(2rem, 3.5vw, 3rem)", color: "#0D8239", lineHeight: 1 }}>
               Our
             </span>
-            <span style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: "14px", letterSpacing: "0.22em", textTransform: "uppercase", color: "#A0780E", paddingBottom: "5px" }}>
+            <span style={{ fontFamily: "'Playfair Display', Georgia, serif", fontStyle: "normal", fontWeight: 400, fontSize: "clamp(2rem, 3.5vw, 3rem)", color: "#A0780E", lineHeight: 1 }}>
               Solutions
             </span>
           </div>
-          <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.95rem", color: "#4A6B4D", maxWidth: "380px", lineHeight: 1.7 }}>
+         {/* <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.95rem", color: "#4A6B4D", maxWidth: "380px", lineHeight: 1.7 }}>
             Comprehensive waste-to-resource solutions across organics, energy, and remediation.
-          </p>
+          </p>*/}
         </motion.div>
       </div>
 

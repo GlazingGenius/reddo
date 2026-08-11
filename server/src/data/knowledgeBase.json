@@ -19,8 +19,8 @@
     "certifications": ["CE Certified (all organic waste converter machines)"],
     "compliance": "Aligned with India's Swachh Bharat Mission and supports compliance with Solid Waste Management Rules.",
     "stats": {
-      "clientsWorldwide": "7,000+ (also cited as 1,500+ direct installations across India)",
-      "countries": "20-24+",
+      "clientsWorldwide": "1,500+ installations worldwide",
+      "countries": "24+",
       "cities": "150+",
       "industriesServed": "10+",
       "yearsOfOperation": "13+ (since 2013)",
@@ -42,7 +42,7 @@
     "emails": ["info@reddonatura.com", "geetha@reddonatura.com", "naziya@reddonatura.com"],
     "address": "Sy. No 41/1, Veerenahalli Village, Virgonagar Industrial Estate, Bidarahalli Hobli, Post, beside Cipla Factory, Virgonagar, J.I. Veerenahalli, Karnataka 560049, India",
     "businessHours": "Monday – Saturday, 9:00 AM – 6:00 PM IST",
-    "howToGetQuote": "Click 'Get a Quote' anywhere on the website to open the enquiry form, call +91 77609 87934, message on WhatsApp, or email info@reddonatura.com. The team assesses facility type, daily waste volume, and goals before recommending a solution.",
+    "howToGetQuote": "Click 'Get a Quote' anywhere on the website to open the enquiry form, call +91 77609 87934 or +91 73384 62806, message on WhatsApp, or email info@reddonatura.com, geetha@reddonatura.com, or naziya@reddonatura.com. The team assesses facility type, daily waste volume, and goals before recommending a solution.",
     "website": "https://www.reddonatura.com",
     "pages": {
       "home": "/",
@@ -74,16 +74,13 @@
               ["25 KG", "1493", "580", "1188", "1.93", "350 kg"],
               ["50 KG", "1676", "700", "1341", "2.05", "450 kg"],
               ["75 KG", "1860", "792", "1127", "4.12", "550 kg"],
-              ["100 KG", "1860", "792", "1127", "4.12", "-"],
               ["125 KG", "2286", "944", "1432", "5.22", "700 kg"],
               ["200 KG", "2500", "975", "1432", "6.47", "750 kg"],
               ["250 KG", "2750", "1158", "1554", "8.87", "1020 kg"],
-              ["300 KG", "2750", "1158", "1554", "8.87", "-"],
               ["500 KG", "3000", "1432", "1860", "16.37", "1650 kg"],
-              ["750 KG", "3535", "1402", "1950", "22.25", "-"],
+              ["750 KG", "3535", "1402", "1950", "22.25", "2000 kg"],
               ["1000 KG", "3962", "2100", "2133", "27.25", "2900 kg"],
-              ["2000 KG", "4100", "2011", "2500", "57.5", "3900 kg"],
-              ["3000 KG", "4575", "2100", "2530", "76.5", "-"]
+              ["2000 KG", "4100", "2011", "2500", "57.5", "3900 kg"]
             ]
           }
         },
@@ -165,7 +162,7 @@
       "id": "organic-waste-digester",
       "name": "Organic Waste Digester (OWC)",
       "page": "/products/organic-waste-digester",
-      "summary": "CE-certified, fully automatic machines transforming food, garden, and agricultural organic waste into nutrient-rich compost. Decomposition takes about 24 hours. Zero harmful discharge; enclosed design prevents flies/pests.",
+      "summary": "CE-certified, fully automatic machines transforming food, garden, and agricultural organic waste into nutrient-rich pre-compost. Decomposition takes about 24–36 hours. Zero harmful discharge; enclosed design prevents flies/pests.",
       "tags": ["CE Certified", "Fully Automatic", "24-hour cycle", "Zero harmful discharge"],
       "features": ["Rapid Transformation Technology", "Smart Sensing & Automation", "Significant Waste Volume Reduction"],
       "benefits": ["Processes food, garden, and agricultural waste", "Scales from residential to industrial", "Automated, low-maintenance operation", "Reduces waste disposal costs", "Supports landfill diversion and GHG reduction compliance"],
@@ -279,16 +276,16 @@
         { "name": "Floating Drum", "tag": "Constant Pressure · Proven", "description": "Steel drum rises/falls with gas production for constant supply-line pressure; ideal for cooking-fuel applications in schools, hostels, community kitchens." }
       ],
       "specTable": {
-        "columns": ["Model", "Processing Capacity/Day", "Power", "Biogas Output (nm³/day)", "Units/Kitchens Served (approx.)", "Min. Area Required (m²)"],
+        "columns": ["Model", "Processing Capacity/Day", "Power", "Biogas Output (nm³/day)", "Min. Area Required (m²)"],
         "rows": [
-          ["RN BG 300", "300 kg", "3-Phase, 440V", "30–36", "450", "18"],
-          ["RN BG 500", "500 kg", "3-Phase, 440V", "60–64", "650", "21"],
-          ["RN BG 750", "750 kg", "3-Phase, 440V", "90–95", "900", "30"],
-          ["RN BG 1000", "1000 kg", "3-Phase, 440V", "120–130", "1200", "38"],
-          ["RN BG 1500", "1500 kg", "3-Phase, 440V", "180–190", "1700", "50"],
-          ["RN BG 2000", "2000 kg", "3-Phase, 440V", "240–260", "2400", "65"],
-          ["RN BG 2500", "2500 kg", "3-Phase, 440V", "330–340", "2800", "75"],
-          ["RN BG 5000", "5000 kg", "3-Phase, 440V", "660–680", "6500", "300"]
+          ["RN BG 300", "300 kg", "3-Phase, 440V", "30–36", "18"],
+          ["RN BG 500", "500 kg", "3-Phase, 440V", "60–64", "21"],
+          ["RN BG 750", "750 kg", "3-Phase, 440V", "90–95", "30"],
+          ["RN BG 1000", "1000 kg", "3-Phase, 440V", "120–130", "38"],
+          ["RN BG 1500", "1500 kg", "3-Phase, 440V", "180–190", "50"],
+          ["RN BG 2000", "2000 kg", "3-Phase, 440V", "240–260", "65"],
+          ["RN BG 2500", "2500 kg", "3-Phase, 440V", "330–340", "75"],
+          ["RN BG 5000", "5000 kg", "3-Phase, 440V", "660–680", "300"]
         ]
       },
       "features": ["Advanced anaerobic digestion technology", "Modular & scalable design", "Smart automation and real-time monitoring", "Low maintenance, consistent output"]
@@ -386,7 +383,7 @@
       { "tier": "Standard", "recommended": true, "includes": ["Bi-annual inspection", "Detailed reports", "Phone & email support", "Priority spare parts", "Remote diagnostics"] },
       { "tier": "Premium", "includes": ["Quarterly inspection", "Real-time monitoring", "24/7 dedicated support", "Express spare parts", "Plant optimisation", "Operator training"] }
     ],
-    "howToEnquire": "Enquire about a maintenance package via the Contact Us page or by calling +91 77609 87934."
+    "howToEnquire": "Enquire about a maintenance package via the Contact Us page or by calling +91 77609 87934 or +91 73384 62806."
   },
 
   "clients": {
@@ -422,16 +419,16 @@
   },
 
   "generalFaqs": [
-    { "q": "What is an organic waste converter (OWC) and how does it work?", "a": "An organic waste converter (food waste composting machine) breaks down kitchen and food waste into nutrient-rich compost within 24 hours using controlled temperature, aeration, and moisture — far faster than traditional composting. Reddonatura's CE-certified OWC machines are used by hotels, hospitals, apartments, and municipalities in 20+ countries." },
-    { "q": "What is the difference between composting and biogas (waste-to-energy)?", "a": "Composting breaks down organic waste aerobically (with oxygen) into solid compost/fertiliser. Biogas plants break it down anaerobically (without oxygen) to produce methane-rich biogas — a renewable fuel for electricity, heating, or cooking — plus nutrient-rich digestate. Reddonatura offers both: organic waste digesters for compost, and RN Biogas plants for energy recovery." },
+    { "q": "What is an organic waste converter (OWC) and how does it work?", "a": "An organic waste converter (food waste composting machine) breaks down kitchen and food waste into nutrient-rich pre-compost within 24–36 hours using controlled temperature, aeration, and moisture — far faster than traditional composting. Reddonatura's CE-certified OWC machines are used by hotels, hospitals, apartments, and municipalities in 20+ countries." },
+    { "q": "What is the difference between composting and biogas (waste-to-energy)?", "a": "Composting breaks down organic waste aerobically (with oxygen) into pre-compost that can be used as fertiliser. Biogas plants break down the same waste anaerobically (without oxygen) to produce methane-rich biogas — a renewable fuel that can be used for generating electricity, heating, or cooking gas — along with a nutrient-rich digestate. Reddonatura offers both: organic waste digesters for pre-compost, and RN Biogas plants for renewable energy recovery." },
     { "q": "How much food waste can a Reddonatura machine process per day?", "a": "Organic waste converters range from 25 kg/day (small residential/garden use) up to 1,250 kg/day and beyond for large hotels, hospitals, and municipal installations, plus custom-engineered systems for multi-tonne daily volumes. The team assesses daily waste volume before recommending a model." },
     { "q": "Is Reddonatura's technology certified and compliant?", "a": "Yes — Reddonatura's organic waste converters and machinery are CE certified, meeting international safety and environmental standards, and align with India's Swachh Bharat Mission and Solid Waste Management Rules." },
-    { "q": "What industries use Reddonatura's solutions?", "a": "Hotels & resorts, restaurants & food chains, hospitals & healthcare, airports & transit hubs, municipal corporations, residential apartments, agriculture & food processing, commercial complexes, tourism & parks, and railway stations — 7,000+ clients across 20+ countries." },
+    { "q": "What industries use Reddonatura's solutions?", "a": "Hotels & resorts, restaurants & food chains, hospitals & healthcare, airports & transit hubs, municipal corporations, residential apartments, agriculture & food processing, commercial complexes, tourism & parks, and railway stations — 1,500+ installations across 24+ countries." },
     { "q": "How does the 'Garbage to Green' (G2G) approach reduce environmental impact?", "a": "G2G diverts organic waste from landfills — where it would generate methane, a greenhouse gas 25x+ more potent than CO2 — and converts it into compost, biogas, or renewable energy, closing the waste loop and returning nutrients to soil." },
     { "q": "What is the ROI for an organic waste management system?", "a": "Most clients recover investment through reduced waste disposal/transport costs and lower landfill fees, sometimes with revenue from compost or biogas by-products. Hospitality clients often report 50–70% waste-disposal cost reduction within the first year, alongside ESG/green-building benefits." },
     { "q": "Do Reddonatura's machines require special installation or civil work?", "a": "Most organic waste converters and containerized biogas plants are delivered pre-assembled and factory-tested, needing minimal to no civil construction — just a stable surface, power connection, and (for some models) water/drainage. A site assessment is done beforehand." },
-    { "q": "What after-sales support and maintenance does Reddonatura provide?", "a": "Tiered maintenance packages (Basic, Standard, Premium) ranging from annual inspections to real-time remote monitoring and 24/7 dedicated support, with mechanical/electrical inspection reports, maintenance advisory, and genuine spare parts." },
-    { "q": "How do I get a quote or consultation?", "a": "Click 'Get a Quote' anywhere on the website, call +91 77609 87934, or email info@reddonatura.com. The team assesses facility type, daily waste volume, and goals to recommend composting, biogas, dewatering, or solar solutions." },
+    { "q": "What after-sales support and maintenance does Reddonatura provide?", "a": "Tiered maintenance packages (Basic, Standard, Premium) ranging from annual inspections to real-time remote monitoring and dedicated support, with mechanical/electrical inspection reports, maintenance advisory, and genuine spare parts." },
+    { "q": "How do I get a quote or consultation?", "a": "Click 'Get a Quote' anywhere on the website, call +91 77609 87934 or +91 73384 62806, or email info@reddonatura.com, geetha@reddonatura.com, or naziya@reddonatura.com. The team assesses facility type, daily waste volume, and goals to recommend composting, biogas, dewatering, or solar solutions." },
     { "q": "What does a biogas plant produce and how efficient is it?", "a": "Biogas is roughly 60% methane / 40% CO2, produced anaerobically. 1 kg of food waste yields about 0.10–0.12 nm³ of biogas. Reddonatura's biogas plants can reduce life-cycle greenhouse gas emissions by up to 90% versus fossil fuels, and the leftover digestate is a nutrient-rich liquid biofertiliser." },
     { "q": "What does the dewatering (pre-treatment) machine do?", "a": "It grinds food waste into fine particles and uses centrifugal dehydration to reduce waste volume by 60–70%, lowering transport and disposal costs. Grey water can go to an STP or be reused for gardening; it cannot process shells, bones, plastics, glass, metal, or cloth." },
     { "q": "What can and can't the organic waste digester process?", "a": "It processes all food waste — raw ingredients, cooked food, and garden waste. It cannot process plastic, glass, metal, bones, chemicals, or other inorganic matter." }

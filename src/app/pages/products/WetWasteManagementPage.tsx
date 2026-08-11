@@ -23,7 +23,7 @@ import Binlifter1 from "../../../imports/binlifter1.jpg";
 import Binlifter11 from "../../../imports/binlifter1.png";
 import Binlifter2 from "../../../imports/Biolifter2.jpg";
 import Binlifter3 from "../../../imports/Biolifter3.jpg";
-import { BadgeCheck } from "lucide-react";
+import Iso14001 from "../../../imports/iso14001.png";
 
 import pretreatment2 from "../../../imports/Pretreatment2.jpg";
 import pretreatment3 from "../../../imports/Pretreatment3.jpg";
@@ -149,16 +149,13 @@ const composingSubTabs = [
   ["25 KG", "1493", "580", "1188", "1.93", "350 kg"],
   ["50 KG", "1676", "700", "1341", "2.05", "450 kg"],
   ["75 KG", "1860", "792", "1127", "4.12", "550 kg"],
-  ["100 KG", "1860", "792", "1127", "4.12", ""],
   ["125 KG", "2286", "944", "1432", "5.22", "700 kg"],
   ["200 KG", "2500", "975", "1432", "6.47", "750 kg"],
   ["250 KG", "2750", "1158", "1554", "8.87", "1020 kg"],
-  ["300 KG", "2750", "1158", "1554", "8.87", ""],
   ["500 KG", "3000", "1432", "1860", "16.37", "1650 kg"],
-  ["750 KG", "3535", "1402", "1950", "22.25", ""],
+  ["750 KG", "3535", "1402", "1950", "22.25", "2000 kg"],
   ["1000 KG", "3962", "2100", "2133", "27.25", "2900 kg"],
   ["2000 KG", "4100", "2011", "2500", "57.5", "3900 kg"],
-  ["3000 KG", "4575", "2100", "2530", "76.5", ""],
 ],
     image: [img1,  Owcfull, Owcfull2],
   },
@@ -562,75 +559,14 @@ const [selectedCapacity, setSelectedCapacity] = useState("");
            </div>
 
 <div className="order-1 lg:order-2 w-full relative">
-  {/* CE Certification Card — automatic model only */}
+  {/* ISO 14001 Certification Seal — automatic model only */}
   {sub === "automatic" && (
-  <div
-    className="absolute z-20 -top-2 -left-2 scale-[0.62] origin-top-left sm:scale-100 sm:-top-4 sm:-left-4 md:-top-5 md:-left-5"
-  style={{
-  backgroundColor: "#0D8239",
-  width: "130px",
-  padding: "14px",
-  borderRadius: "4px",
-  border: "2px solid #D4AF37", // Gold border
-  boxShadow:
-    "0 20px 45px rgba(5,49,20,0.18), 0 0 0 1px rgba(255,215,0,0.35)",
-  textAlign: "center",
-}}
-  >
-    {/* Gold Badge */}
-    <div
-      style={{
-        width: "58px",
-        height: "58px",
-        margin: "0 auto",
-        borderRadius: "50%",
-        background:
-          "linear-gradient(135deg, #FFF4B0 0%, #FFD95A 35%, #D4A017 70%, #A97800 100%)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        boxShadow:
-          "0 6px 18px rgba(212,160,23,0.45), inset 0 2px 4px rgba(255,255,255,0.55)",
-        border: "2px solid rgba(255,255,255,0.45)",
-      }}
-    >
-      <BadgeCheck
-        size={34}
-        color="#ffffff"
-        strokeWidth={2.5}
-      />
-    </div>
-
-    {/* Title */}
-    <div
-      style={{
-        marginTop: "10px",
-        fontFamily: "'DM Sans', sans-serif",
-        fontWeight: 700,
-        fontSize: "0.82rem",
-        color: "#fff",
-        letterSpacing: "0.08em",
-        textTransform: "uppercase",
-        lineHeight: 1.3,
-      }}
-    >
-      CE Certified
-    </div>
-
-    {/* Subtitle */}
-    <div
-      style={{
-        marginTop: "4px",
-        fontFamily: "'DM Sans', sans-serif",
-        fontWeight: 400,
-        fontSize: "0.72rem",
-        color: "rgba(255,255,255,0.85)",
-        lineHeight: 1.4,
-      }}
-    >
-      European Standard
-    </div>
-  </div>
+  <img
+    src={Iso14001}
+    alt="ISO 14001 Certified — Environmental Management System"
+    className="absolute z-20 -top-2 -left-2 w-[72px] sm:w-[110px] sm:-top-4 sm:-left-4 md:-top-5 md:-left-5"
+    style={{ filter: "drop-shadow(0 12px 22px rgba(5,49,20,0.35))" }}
+  />
   )}
 
   <Swiper
@@ -730,6 +666,7 @@ const [selectedCapacity, setSelectedCapacity] = useState("");
 </div>
 )}
 
+{sub !== "semiauto" && (
 <div className="mt-16">
   <h3
   className="mb-6"
@@ -790,6 +727,7 @@ const [selectedCapacity, setSelectedCapacity] = useState("");
   </ul>
 </div>
 </div>
+)}
 
 
       </motion.div>

@@ -116,21 +116,6 @@ const specs = {
       "330–340",
       "660–680",
     ],
-    
-    
-
-    
-    [
-      "Suitable to cater No. of Units*/ Kitchens (+5%)",
-      "450",
-      "650",
-      "900",
-      "1200",
-      "1700",
-      "2400",
-      "2800",
-      "6500",
-    ],
     [
       "Min. Area Requirement (Machine + Operational combined) (m²)",
       "18",

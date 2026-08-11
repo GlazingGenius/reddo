@@ -104,12 +104,11 @@ export function About() {
     lineHeight: 1.2,
   }}
 >
-  Leading the World{" "}
+  Innovative Solutions for a{" "}
   <span style={{ color: "#0D8239" }}>
-    Toward
-  </span>
-  <br />
-  a Greener Tomorrow
+    Sustainable
+  </span>{" "}
+  Future
 </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
@@ -123,17 +122,19 @@ export function About() {
                 color: "#4A5C4B",
               }}
             >
-              Reddonatura is one of the world's leading waste solution
-              providers. Our success is driven by our commitment to green,
-              renewable solutions — and it begins with an environmentally sound
-              approach that transforms waste into something genuinely valuable.
+              Reddonatura is a leading waste management and environmental
+              technology company focused on transforming waste into valuable
+              resources. With over a decade of industry experience, we design
+              and manufacture innovative solutions for organic waste
+              processing, composting, shredding, dewatering and resource
+              recovery.
             </motion.p>
 
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="mb-12 leading-[1.8]"
+              className="mb-6 leading-[1.8]"
               style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 300,
@@ -141,16 +142,33 @@ export function About() {
                 color: "#4A5C4B",
               }}
             >
-              Through innovative, environmentally friendly technologies, we aim
-              to transform waste into resources — rendering a smooth transition
-              on every journey from garbage to green.
+              Serving clients across diverse sectors and international
+              markets, we combine engineering expertise, smart technology and
+              sustainable practices to deliver reliable, efficient and
+              environmentally responsible waste management solutions.
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="mb-12 leading-[1.8]"
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 500,
+                fontSize: "1.025rem",
+                color: "#0C1A0D",
+              }}
+            >
+              Our mission is simple: Reduce waste. Recover resources. Build a
+              sustainable future.
             </motion.p>
 
             {/* Credentials list */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
               className="space-y-4 mb-12"
             >
               {credentials.map((item, i) => (

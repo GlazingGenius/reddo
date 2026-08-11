@@ -4,11 +4,11 @@ import { PageLayout, Section, SectionLabel, FAQAccordion, PageCTA, usePageMeta }
 const faqs = [
   {
     q: "What is an organic waste converter (OWC) and how does it work?",
-    a: "An organic waste converter, sometimes called a food waste composting machine, breaks down kitchen and food waste into nutrient-rich compost within 24 hours using controlled temperature, aeration, and moisture — instead of the weeks or months traditional composting takes. Reddonatura's CE-certified OWC machines are used by hotels, hospitals, apartments, and municipalities across 20+ countries to convert daily food waste directly into usable compost on-site.",
+    a: "An organic waste converter, sometimes called a food waste composting machine, breaks down kitchen and food waste into nutrient-rich pre-compost within 24–36 hours using controlled temperature, aeration, and moisture — instead of the weeks or months traditional composting takes. Reddonatura's CE-certified OWC machines are used by hotels, hospitals, apartments, and municipalities across 20+ countries to convert daily food waste directly into usable pre-compost on-site.",
   },
   {
     q: "What is the difference between composting and biogas (waste-to-energy)?",
-    a: "Composting breaks down organic waste aerobically (with oxygen) into solid compost that can be used as fertiliser. Biogas plants break down the same waste anaerobically (without oxygen) to produce methane-rich biogas — a renewable fuel that can generate electricity, heating, or cooking gas — along with a nutrient-rich digestate. Reddonatura offers both: organic waste digesters for compost, and RN Biogas plants for renewable energy recovery.",
+    a: "Composting breaks down organic waste aerobically (with oxygen) into pre-compost that can be used as fertiliser. Biogas plants break down the same waste anaerobically (without oxygen) to produce methane-rich biogas — a renewable fuel that can be used for generating electricity, heating, or cooking gas — along with a nutrient-rich digestate. Reddonatura offers both: organic waste digesters for pre-compost, and RN Biogas plants for renewable energy recovery.",
   },
   {
     q: "How much food waste can a Reddonatura machine process per day?",
@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: "What industries use Reddonatura's waste-to-resource solutions?",
-    a: "Reddonatura serves over 10 industries including hotels and resorts, restaurants and food chains, hospitals and healthcare facilities, airports and transit hubs, municipal corporations, residential apartments, agriculture and food processing units, commercial complexes, and tourism and parks — with more than 7,000 clients worldwide across 20+ countries.",
+    a: "Reddonatura serves over 10 industries including hotels and resorts, restaurants and food chains, hospitals and healthcare facilities, airports and transit hubs, municipal corporations, residential apartments, agriculture and food processing units, commercial complexes, and tourism and parks — with 1,500+ installations worldwide across 24+ countries.",
   },
   {
     q: "How does the 'Garbage to Green' (G2G) approach reduce environmental impact?",
@@ -36,11 +36,11 @@ const faqs = [
   },
   {
     q: "What after-sales support and maintenance does Reddonatura provide?",
-    a: "We offer tiered maintenance packages ranging from annual inspections to real-time remote monitoring and 24/7 dedicated support. Every plan includes detailed mechanical and electrical inspection reports, maintenance advisory, and access to genuine spare parts, backed by our in-house team of trained engineers and electricians.",
+    a: "We offer tiered maintenance packages ranging from annual inspections to real-time remote monitoring and dedicated support. Every plan includes detailed mechanical and electrical inspection reports, maintenance advisory, and access to genuine spare parts, backed by our in-house team of trained engineers and electricians.",
   },
   {
     q: "How do I get a quote or consultation for a waste management solution?",
-    a: "You can request a free consultation and tailored quote by clicking \"Get a Quote\" anywhere on our website, calling us at +91 77609 87934, or emailing info@reddonatura.com. Our team will assess your facility type, daily waste volume, and goals to recommend the right combination of composting, biogas, dewatering, or solar solutions for your operation.",
+    a: "You can request a free consultation and tailored quote by clicking \"Get a Quote\" anywhere on our website, calling us at +91 77609 87934 or +91 73384 62806, or emailing info@reddonatura.com, geetha@reddonatura.com, or naziya@reddonatura.com. Our team will assess your facility type, daily waste volume, and goals to recommend the right combination of composting, biogas, dewatering, or solar solutions for your operation.",
   },
 ];
 

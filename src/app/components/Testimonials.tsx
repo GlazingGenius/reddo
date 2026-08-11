@@ -368,13 +368,13 @@ export default function Testimonials() {
           >
             Trusted by Industry Leaders
           </h2>
-          <p
+        {/*  <p
             className="max-w-2xl mx-auto leading-8"
             style={{ fontFamily: "Inter, sans-serif", fontSize: "17px", color: "rgba(255,255,255,0.6)", fontWeight: 400 }}
           >
             Government departments, defence establishments, public sector corporations
             and leading real estate developers — all relying on Reddonatura.
-          </p>
+          </p>*/}
         </motion.div>
 
         {/* Stats strip */}
