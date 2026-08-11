@@ -5,7 +5,6 @@ import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram, ArrowUpRig
 const quickLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
-  { href: "/service", label: "Services" },
   { href: "/clients", label: "Clients & Partners" },
   { href: "/faqs", label: "FAQs" },
   { href: "/contact", label: "Contact Us" },
