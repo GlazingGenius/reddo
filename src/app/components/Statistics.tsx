@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Eye, Target, CheckCircle2 } from "lucide-react";
 import bgVideo from "../../imports/Reddonatura_presentation_2026.pptx-3.MP4";
+import rnatureLogo from "../../imports/rnatura.png";
 
 
 
@@ -209,6 +210,11 @@ export function VisionMission() {
         className="relative overflow-hidden rounded-3xl"
         style={{ backgroundColor: "#053114" }}
       >
+       <img
+         src={rnatureLogo}
+         alt="rNature"
+         className="absolute top-5 right-5 md:top-8 md:right-8 w-[70px] sm:w-[90px] md:w-[110px] h-auto object-contain z-10"
+       />
        <div className="max-w-6xl mx-auto px-3 pt-8 pb-10">
 
         {/* Header */}
