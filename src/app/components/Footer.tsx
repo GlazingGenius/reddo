@@ -63,7 +63,7 @@ export function Footer() {
 
       <div className="max-w-7xl mx-auto px-6 pt-16 pb-10">
         {/* Main grid */}
-        <div className="grid md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-x-8 gap-y-12 mb-6">
+        <div className="grid md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-x-8 gap-y-12 mb-1">
           {/* Brand column */}
           <div>
             <div className="mb-6">
@@ -268,7 +268,7 @@ export function Footer() {
 
         {/* Certifications */}
         <div className="mb-8">
-          <div className="mb-4 text-center sm:text-left" style={labelStyle}>
+          <div className="mb-3 text-center sm:text-left" style={labelStyle}>
             Certifications
           </div>
           <div className="flex flex-wrap justify-center sm:justify-start gap-4">
