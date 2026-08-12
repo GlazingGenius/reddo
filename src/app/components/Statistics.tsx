@@ -213,7 +213,7 @@ export function VisionMission() {
        <img
          src={rnatureLogo}
          alt="rNature"
-         className="absolute top-5 right-5 md:top-8 md:right-8 w-[70px] sm:w-[90px] md:w-[110px] h-auto object-contain z-10"
+         className="absolute top-5 right-5 md:top-8 md:right-8 w-[90px] sm:w-[115px] md:w-[140px] h-auto object-contain z-10"
        />
        <div className="max-w-6xl mx-auto px-3 pt-8 pb-10">
 
