@@ -63,7 +63,7 @@ export function Footer() {
 
       <div className="max-w-7xl mx-auto px-6 pt-16 pb-10">
         {/* Main grid */}
-        <div className="grid md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-x-8 gap-y-12 mb-1">
+        <div className="grid md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-x-8 gap-y-12 mb-0">
           {/* Brand column */}
           <div>
             <div className="mb-6">
@@ -246,7 +246,7 @@ export function Footer() {
     </div>
 
               <div
-                className="mt-8 pt-8"
+                className="mt-5 pt-5"
                 style={{ borderTop: "1px solid rgba(245,240,232,0.08)" }}
               >
                 <a
@@ -268,7 +268,7 @@ export function Footer() {
 
         {/* Certifications */}
         <div className="mb-8">
-          <div className="mb-3 text-center sm:text-left" style={labelStyle}>
+          <div className="mb-2 text-center sm:text-left" style={labelStyle}>
             Certifications
           </div>
           <div className="flex flex-wrap justify-center sm:justify-start gap-4">
