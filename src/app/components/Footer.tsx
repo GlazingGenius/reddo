@@ -63,7 +63,7 @@ export function Footer() {
 
       <div className="max-w-7xl mx-auto px-6 pt-16 pb-10">
         {/* Main grid */}
-        <div className="grid md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-x-8 gap-y-12 mb-16">
+        <div className="grid md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-x-8 gap-y-12 mb-6">
           {/* Brand column */}
           <div>
             <div className="mb-6">
@@ -245,30 +245,6 @@ export function Footer() {
       </span>
     </div>
 
-    <div>
-      <div className="mb-3" style={labelStyle}>
-        Certifications
-      </div>
-      <div className="grid grid-cols-2 gap-2 max-w-[220px]">
-        {certifications.map((c) => (
-          <div
-            key={c.alt}
-            className="flex items-center justify-center rounded-md p-2"
-            style={{ backgroundColor: "#ffffff" }}
-          >
-            <img
-              src={c.src}
-              alt={c.alt}
-              className="w-full h-auto object-contain"
-              style={{ maxHeight: "44px" }}
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-
-
-
               <div
                 className="mt-8 pt-8"
                 style={{ borderTop: "1px solid rgba(245,240,232,0.08)" }}
@@ -287,6 +263,28 @@ export function Footer() {
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Certifications */}
+        <div className="mb-8">
+          <div className="mb-4 text-center sm:text-left" style={labelStyle}>
+            Certifications
+          </div>
+          <div className="flex flex-wrap justify-center sm:justify-start gap-4">
+            {certifications.map((c) => (
+              <div
+                key={c.alt}
+                className="flex items-center justify-center rounded-md p-2.5"
+                style={{ backgroundColor: "#ffffff", width: "148px", height: "108px" }}
+              >
+                <img
+                  src={c.src}
+                  alt={c.alt}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            ))}
           </div>
         </div>
 
