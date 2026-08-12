@@ -1,6 +1,17 @@
 import { Link } from "react-router-dom";
 import logo from "../../imports/footer.png";
+import iso14001 from "../../imports/iso14001.png";
+import isoQms from "../../imports/iso_qms.webp";
+import iso45001 from "../../imports/iso_45001.webp";
+import tuvSud from "../../imports/TUV_SUD_South_Asia_Logo.jpg";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram, ArrowUpRight } from "lucide-react";
+
+const certifications = [
+  { src: iso14001, alt: "ISO 14001 Certified" },
+  { src: isoQms, alt: "ISO 9001:2015 Certified" },
+  { src: iso45001, alt: "ISO 45001:2018 Certified" },
+  { src: tuvSud, alt: "TÜV SÜD South Asia" },
+];
 
 const quickLinks = [
   { href: "/", label: "Home" },
@@ -234,12 +245,28 @@ export function Footer() {
       </span>
     </div>
 
-    <div
-      
-    >
-      
+    <div>
+      <div className="mb-3" style={labelStyle}>
+        Certifications
+      </div>
+      <div className="grid grid-cols-2 gap-2 max-w-[220px]">
+        {certifications.map((c) => (
+          <div
+            key={c.alt}
+            className="flex items-center justify-center rounded-md p-2"
+            style={{ backgroundColor: "#ffffff" }}
+          >
+            <img
+              src={c.src}
+              alt={c.alt}
+              className="w-full h-auto object-contain"
+              style={{ maxHeight: "44px" }}
+            />
+          </div>
+        ))}
+      </div>
     </div>
-  
+
 
 
               <div
