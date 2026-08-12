@@ -79,7 +79,7 @@ const navLinks = [
   //{ label: "Services",           href: "/service",  children: null },
  // { label: "Waste Calculator", href: "/waste-calculator", children: null },
   { label: "Clients & Partners",href: "/clients",  children: null },
-  { label: "FAQs",               href: "/faqs",     children: null },
+  //{ label: "FAQs",               href: "/faqs",     children: null },
   { label: "Contact Us",        href: "/contact",  children: null },
 ];
 
