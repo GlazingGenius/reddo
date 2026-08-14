@@ -210,10 +210,17 @@ export function VisionMission() {
         className="relative overflow-hidden rounded-3xl"
         style={{ backgroundColor: "#053114" }}
       >
+       {/* Mobile: logo sits inline above the heading so it never collides with text */}
        <img
          src={rnatureLogo}
          alt="rNature"
-         className="absolute top-5 right-5 md:top-8 md:right-8 w-[90px] sm:w-[115px] md:w-[140px] h-auto object-contain z-10"
+         className="block sm:hidden mx-auto mt-6 w-[80px] h-auto object-contain"
+       />
+       {/* sm and up: logo becomes a corner badge, clear of the heading */}
+       <img
+         src={rnatureLogo}
+         alt="rNature"
+         className="hidden sm:block absolute sm:top-8 sm:right-8 sm:w-[115px] md:w-[140px] h-auto object-contain z-10"
        />
        <div className="max-w-6xl mx-auto px-3 pt-8 pb-10">
 
