@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     q: "How much food waste can a Reddonatura machine process per day?",
-    a: "Our organic waste converters are available in capacities ranging from 25 kg/day for small residential or garden use up to 1,250 kg/day and beyond for large hotels, hospitals, and municipal installations. We also offer custom-engineered systems for facilities processing several tonnes of organic waste daily. Our team assesses your daily waste volume before recommending the right model.",
+    a: "Our organic waste converters are available in capacities ranging from 25 kg/day for small residential or garden use up to 2,000 kg/day and beyond for large hotels, hospitals, and municipal installations. We also offer custom-engineered systems for facilities processing several tonnes of organic waste daily. Our team assesses your daily waste volume before recommending the right model.",
   },
   {
     q: "Is Reddonatura's waste management technology certified and compliant?",
